@@ -5,7 +5,312 @@
 
 
 
+.header {
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.logo {
+  &__img {}
+}
+
+.menu {
+
+  // .menu__list
+
+  &__list {
+    display: flex;
+  }
+
+  // .menu__item
+
+  &__item {
+
+    &:not(:last-child) {
+      margin-right: 35px;
+    }
+  }
+
+  // .menu__link
+
+  &__link {
+    @extend %rubik-500;
+    font-size: 15px;
+    color: $subtitle;
+    padding-bottom: 5px;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s ease-in;
+
+    &:hover {
+      color: #000;
+      border-color: #000;
+    }
+  }
+}
+
+.nav-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease-in;
+
+  &:hover {
+    transform: translateY(-3px);
+  }
+}
+
+.user-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__search-btn {
+    margin-right: 20px;
+    background-color: #edf1f4;
+  }
+
+  // .user-nav__wrap
+
+  &__wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 45px 20px 45px 0;
+    padding-top: 10px;
+    width: 180px;
+    height: 50px;
+    border: none;
+    border-radius: 50px;
+    background-color: $icon-head;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      width: 1px;
+      height: 30px;
+      background-color: #fde7d3;
+    }
+  }
+
+  // .user-nav__favorites
+
+  &__favorites,
+  &__basket {
+    position: relative;
+    transition: transform 0.1s ease-in;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  // .user-nav__basket
+
+  &__basket {
+    // position: relative;
+  }
+
+  &__num {
+    position: absolute;
+    bottom: 15px;
+    left: 12px;
+    text-align: center;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    font-size: 10px;
+    line-height: 15px;
+    color: #243f4d;
+    background-color: #fff;
+  }
+
+  // .user-nav__menu-more
+
+  &__menu-more {
+    padding-top: 5px;
+    background-color: $icon-burger;
+  }
+}
 
 
+// === footer ===
+.footer {
+  @extend %rubik-400;
+  font-size: 14px;
+  color: $footer-text;
+  background-color: #fff;
+
+  // .footer__copy
+
+  &__copy {}
+}
+
+.footer-top {
+  display: flex;
+  // justify-content: space-between;
+  padding: 80px 0;
+  border-bottom: 1px solid #dae4e9;
+
+
+  &__address {
+    width: 200px;
+    margin-right: 100px;
+  }
+
+  &__services {
+    width: 130px;
+    margin-right: 175px;
+  }
+
+  &__account {
+    width: 100px;
+    margin-right: 205px;
+  }
+
+  &__form {
+    width: 270px;
+  }
+
+  &__item {
+    &:not(:first-child) {
+      padding-top: 20px;
+    }
+
+
+
+  }
+
+  // .footer-top__list
+
+  &__list {
+    // margin-top: 30px;
+  }
+
+  // .footer-top__list-item
+
+  &__list-item {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  // .footer-top__link
+
+  &__link {}
+
+  // .footer-top__title
+
+  &__title {
+    margin-bottom: 30px;
+    @extend %dmsans-700;
+    font-size: 16px;
+    line-height: 1.3;
+    color: $footer-title;
+    text-transform: uppercase;
+  }
+
+  // .footer-top__text
+
+  &__text {
+    margin-bottom: 35px;
+  }
+}
+
+.logo {
+
+  // .logo__img
+
+  &__img {}
+}
+
+.footer-logo {
+  display: block;
+  margin-bottom: 30px;
+}
+
+.footer-form {
+
+  // .footer-form__input
+
+  &__input {
+    margin: 0;
+    padding: 12px;
+    width: 170px;
+    border: none;
+    color: #234969;
+    outline: transparent;
+    background-color: #fef7f0;
+    transition: background-color 0.2s ease-in;
+
+    &:focus {
+      background-color: $icon-head;
+    }
+  }
+
+  // .footer-form__btn
+
+  &__btn {
+    margin: 0;
+    padding: 12px;
+    @extend %dmsans-400;
+    font-size: 14px;
+    border: none;
+    color: #fff;
+    background-color: #a3bbc8;
+    cursor: pointer;
+    transform: translateX(-4px);
+    transition: background-color 0.2s ease-in;
+
+    &:hover {
+      background-color: #7cb3d1;
+    }
+
+    &:active {
+      background-color: #000;
+    }
+  }
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 0;
+  // .footer-bottom__list
+
+  &__list {
+    display: flex;
+
+  }
+
+  // .footer-bottom__item
+
+  &__item {
+    position: relative;
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+
+    &:not(:last-child)::after {
+      content: '|';
+      position: absolute;
+      right: -17px;
+
+    }
+  }
+
+  // .footer-bottom__link
+
+  &__link {}
+}
+
+// === / footer ===
 
 @import 'media';
