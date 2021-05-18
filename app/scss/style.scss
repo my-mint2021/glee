@@ -149,7 +149,9 @@
   // padding: 220px 300px 50px;
   // .top-slider__inner
 
-  &__inner {}
+  &__inner {
+    padding: 200px 295px 45px;
+  }
 
   // .top-slider__item
 
@@ -158,6 +160,7 @@
   &__wrap {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 200px;
   }
 
   // .top-slider__content
