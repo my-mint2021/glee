@@ -1,6 +1,7 @@
 @import 'vars';
 @import 'fonts';
 @import 'reset';
+@import 'libs';
 @import 'global';
 
 
@@ -140,6 +141,132 @@
 }
 
 
+// === main ===
+.main {}
+
+.top-slider {
+  background-color: $icon-head;
+  // padding: 220px 300px 50px;
+  // .top-slider__inner
+
+  &__inner {}
+
+  // .top-slider__item
+
+  &__item {}
+
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  // .top-slider__content
+
+  &__content {}
+
+  // .top-slider__title
+
+  &__title {
+    margin-bottom: 40px;
+    max-width: 500px;
+    @extend %rubik-500;
+    font-size: 72px;
+    line-height: 1;
+    text-transform: uppercase;
+    color: $slider-title;
+  }
+
+  // .top-slider__text
+
+  &__text {
+    margin-bottom: 40px;
+    max-width: 385px;
+    font-size: 18px;
+    line-height: 1.7;
+    color: $slider-subtitle;
+  }
+
+  // .top-slider__link
+
+  &__link {
+    position: relative;
+    display: inline-block;
+    padding: 25px 100px 25px 25px;
+    @extend %rubik-500;
+    font-size: 15px;
+    color: #fff;
+    background-color: $icon-burger;
+
+    &::after {
+      content: '';
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 25px;
+      height: 10px;
+      background-image: url(../images/icon/bg-arrow.png);
+      background-repeat: no-repeat;
+
+    }
+  }
+
+  // .top-slider__images
+
+  &__images {}
+
+
+  .slick-dots {
+    display: flex;
+    justify-content: center;
+
+    li {
+      button {
+        margin-right: 10px;
+        width: 30px;
+        height: 30px;
+        border: none;
+        border-radius: 50%;
+        color: #667983;
+        background-color: $slider-btn;
+        cursor: pointer;
+      }
+
+      &.slick-active button{
+        color: $slider-title;
+        background-color: #fff;
+      }
+
+    }
+  }
+}
+
+.container-large {}
+
+// .slick-dots{
+//   display: flex;
+//   justify-content: center;
+//   button{
+//     margin-right: 10px;
+//     width: 30px;
+//     height: 30px;
+//     border: none;
+//     border-radius: 50%;
+//     color: #667983;
+//     background-color: $slider-btn;
+//   }
+// }
+
+// .slick-active button{
+
+//   color: $slider-title;
+//   background-color: #fff;
+// }
+
+// === / main ===
+
+
+
 // === footer ===
 .footer {
   @extend %rubik-400;
@@ -203,7 +330,13 @@
 
   // .footer-top__link
 
-  &__link {}
+  &__link {
+    transition: color 0.2s;
+
+    &:hover {
+      color: #000;
+    }
+  }
 
   // .footer-top__title
 
@@ -308,7 +441,15 @@
 
   // .footer-bottom__link
 
-  &__link {}
+  &__link {
+    padding-bottom: 5px;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom-color 0.2s;
+
+    &:hover {
+      border-bottom-color: $footer-text;
+    }
+  }
 }
 
 // === / footer ===
