@@ -42,7 +42,15 @@ $footer-text: #7b7b7b;
   font-weight: 700;
 }
 
-// %btn{
-//   color: #fff;
-//   background-color: $icon-burger;
-// }
+%btn{
+  color: #fff;
+  background-color: $icon-burger;
+  transition: background-color 0.2s ease-in;
+  &:hover {
+    background-color: #7cb3d1;
+  }
+
+  &:active {
+    background-color: #000;
+  }
+}

@@ -94,6 +94,7 @@
       content: '';
       position: absolute;
       left: 50%;
+      top: 10px;
       width: 1px;
       height: 30px;
       background-color: #fde7d3;
@@ -145,7 +146,9 @@
 .main {}
 
 .top-slider {
-  background-color: $icon-head;
+  background-repeat: no-repeat;
+  background-size: cover;
+  // background-color: $icon-head;
   // padding: 220px 300px 50px;
   // .top-slider__inner
 
@@ -192,13 +195,12 @@
   // .top-slider__link
 
   &__link {
+    @extend %rubik-500;
+    @extend %btn;
     position: relative;
     display: inline-block;
     padding: 25px 100px 25px 25px;
-    @extend %rubik-500;
     font-size: 15px;
-    color: #fff;
-    background-color: $icon-burger;
 
     &::after {
       content: '';
@@ -210,8 +212,15 @@
       height: 10px;
       background-image: url(../images/icon/bg-arrow.png);
       background-repeat: no-repeat;
-
     }
+
+    // &:hover {
+    //   background-color: #7cb3d1;
+    // }
+
+    // &:active {
+    //   background-color: #000;
+    // }
   }
 
   // .top-slider__images
@@ -224,8 +233,11 @@
     justify-content: center;
 
     li {
-      button {
+      &:not(:last-child) {
         margin-right: 10px;
+      }
+
+      button {
         width: 30px;
         height: 30px;
         border: none;
@@ -235,7 +247,7 @@
         cursor: pointer;
       }
 
-      &.slick-active button{
+      &.slick-active button {
         color: $slider-title;
         background-color: #fff;
       }
@@ -244,27 +256,128 @@
   }
 }
 
-.container-large {}
+// === services ===
+.services {
+  background-color: #fef7f0;
+  padding: 45px 150px;
 
-// .slick-dots{
-//   display: flex;
-//   justify-content: center;
-//   button{
-//     margin-right: 10px;
-//     width: 30px;
-//     height: 30px;
-//     border: none;
-//     border-radius: 50%;
-//     color: #667983;
-//     background-color: $slider-btn;
-//   }
-// }
+  // .services__inner
 
-// .slick-active button{
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
 
-//   color: $slider-title;
-//   background-color: #fff;
-// }
+  // .services__item
+
+  &__item {
+    display: flex;
+    max-width: 290px;
+  }
+
+  // .services__img
+
+  &__img {
+    position: relative;
+
+    // background-color: red;
+    margin-right: 20px;
+    padding-top: 10px;
+    align-self: flex-start;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      right: -5px;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: #dfe3e294;
+    }
+  }
+
+
+
+  // .services__content
+
+  &__content {}
+
+  // .services__descr
+
+  &__descr {
+    // margin-bottom: 15px;
+    @extend %dmsans-700;
+    font-size: 18px;
+    line-height: 2.2;
+    color: $slider-subtitle;
+  }
+
+  // .services__text
+
+  &__text {
+    @extend %dmsans-400;
+    font-size: 16px;
+    line-height: 1.9;
+    color: $slider-descr;
+  }
+}
+
+
+// === / services ===
+
+
+// === week ===
+.week {
+  padding: 75px 0;
+  // .week__filter
+
+  &__filter {
+    display: flex;
+    justify-content: center;
+
+  }
+
+  // .week__wrapper
+
+  &__wrapper {
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+
+  // .week__btn
+
+  &__btn {
+    @extend %dmsans-700;
+    border: none;
+    background-color: transparent;
+    font-size: 16px;
+    color: #8b8b8b;
+    cursor: pointer;
+    transition: color 0.2s ease-in;
+
+    &--active {
+      color: #000;
+    }
+    &:hover{
+      color: #000;
+    }
+  }
+}
+
+.container {}
+
+.title {
+  @extend %dmsans-700;
+  margin-bottom: 35px;
+  text-align: center;
+  font-size: 36px;
+  color: $title;
+}
+
+
+// === / week ===
 
 // === / main ===
 
@@ -393,24 +506,14 @@
   // .footer-form__btn
 
   &__btn {
+    @extend %dmsans-400;
+    @extend %btn;
     margin: 0;
     padding: 12px;
-    @extend %dmsans-400;
     font-size: 14px;
     border: none;
-    color: #fff;
-    background-color: #a3bbc8;
     cursor: pointer;
     transform: translateX(-4px);
-    transition: background-color 0.2s ease-in;
-
-    &:hover {
-      background-color: #7cb3d1;
-    }
-
-    &:active {
-      background-color: #000;
-    }
   }
 }
 
