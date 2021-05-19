@@ -12,28 +12,16 @@
   }
 }
 
-.logo {
-  &__img {}
-}
-
 .menu {
-
-  // .menu__list
-
   &__list {
     display: flex;
   }
 
-  // .menu__item
-
   &__item {
-
     &:not(:last-child) {
       margin-right: 35px;
     }
   }
-
-  // .menu__link
 
   &__link {
     @extend %rubik-500;
@@ -44,22 +32,29 @@
     transition: border-color 0.2s ease-in;
 
     &:hover {
-      color: #000;
-      border-color: #000;
+      color: $black;
+      border-color: $black;
     }
   }
 }
 
 .nav-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 50px;
   height: 50px;
   border-radius: 50%;
   border: none;
   cursor: pointer;
-  transition: transform 0.2s ease-in;
+  transition: background-color 0.2s ease-in;
 
   &:hover {
-    transform: translateY(-3px);
+    background-color: #436372;
+
+    & svg path {
+      fill: $icon-head;
+    }
   }
 }
 
@@ -68,12 +63,10 @@
   align-items: center;
   justify-content: space-between;
 
-  &__search-btn {
+  &__search {
     margin-right: 20px;
     background-color: #edf1f4;
   }
-
-  // .user-nav__wrap
 
   &__wrap {
     position: relative;
@@ -91,87 +84,108 @@
     &::before {
       content: '';
       position: absolute;
-      left: 50%;
-      top: 10px;
+      z-index: 5;
+      top: 9px;
       width: 1px;
-      height: 30px;
-      background-color: #fde7d3;
+      height: 32px;
+      background-color: $white;
     }
   }
 
-  // .user-nav__favorites
+  &__left,
+  &__right {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease-in,
+      color 0.3s ease-in,
+      fill 0.3s ease-in;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $subtitle;
+
+      & svg path {
+        fill: $white;
+      }
+
+      & span {
+        color: $black;
+        background-color: $icon-head;
+      }
+    }
+  }
+
+  &__left {
+    left: 0;
+    right: 50%;
+    border-radius: 50px 0 0 50px;
+  }
+
+  &__right {
+    border-radius: 0 50px 50px 0;
+    left: 50%;
+    right: 0;
+  }
 
   &__favorites,
   &__basket {
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     transition: transform 0.1s ease-in;
-
-    &:hover {
-      transform: scale(1.1);
-    }
   }
 
-  // .user-nav__basket
-
-  &__basket {
-    // position: relative;
+  &__basket:hover {
+    &::after {
+      background-color: $subtitle;
+    }
   }
 
   &__num {
     position: absolute;
-    bottom: 15px;
-    left: 12px;
-    text-align: center;
+    top: 10px;
+    left: 50px;
     width: 15px;
     height: 15px;
-    border-radius: 50%;
+    text-align: center;
     font-size: 10px;
     line-height: 15px;
-    color: #243f4d;
-    background-color: #fff;
+    border-radius: 50%;
+    color: $slider-title;
+    background-color: $white;
   }
 
-  // .user-nav__menu-more
-
-  &__menu-more {
-    padding-top: 5px;
+  &__menu {
     background-color: $icon-burger;
   }
 }
 
-
 // === main ===
-.main {}
-
 .top-slider {
   background-repeat: no-repeat;
   background-size: cover;
-  // background-color: $icon-head;
-  // padding: 220px 300px 50px;
-  // .top-slider__inner
 
   &__inner {
-    // padding: 200px 295px 45px;
     padding: 235px 0 45px;
   }
 
-  // .top-slider__item
-
-  &__item {}
-
   &__wrap {
     display: flex;
-    // justify-content: space-between;
     justify-content: center;
     align-items: center;
     margin-bottom: 200px;
   }
-
-  // .top-slider__content
-
-  &__content {}
-
-  // .top-slider__title
 
   &__title {
     margin-bottom: 40px;
@@ -183,8 +197,6 @@
     color: $slider-title;
   }
 
-  // .top-slider__text
-
   &__text {
     margin-bottom: 40px;
     max-width: 385px;
@@ -193,14 +205,12 @@
     color: $slider-subtitle;
   }
 
-  // .top-slider__link
-
   &__link {
-    @extend %rubik-500;
-    @extend %btn;
     position: relative;
     display: inline-block;
     padding: 25px 100px 25px 25px;
+    @extend %rubik-500;
+    @extend %btn;
     font-size: 15px;
 
     &::after {
@@ -208,26 +218,13 @@
       position: absolute;
       right: 20px;
       top: 50%;
-      transform: translateY(-50%);
       width: 25px;
       height: 10px;
       background-image: url(../images/icon/bg-arrow.png);
       background-repeat: no-repeat;
+      transform: translateY(-50%);
     }
-
-    // &:hover {
-    //   background-color: #7cb3d1;
-    // }
-
-    // &:active {
-    //   background-color: #000;
-    // }
   }
-
-  // .top-slider__images
-
-  &__images {}
-
 
   .slick-dots {
     display: flex;
@@ -251,42 +248,31 @@
 
       &.slick-active button {
         color: $slider-title;
-        background-color: #fff;
+        background-color: $white;
       }
-
     }
   }
 }
 
 // === services ===
-
-//--------------------------
 .services {
-  background-color: #fef7f0;
-  // .services__inner
+  background-color: $slider-descr-bg;
 
   &__inner {
     display: flex;
     justify-content: space-between;
   }
 
-  // .services__item
-
   &__item {
-
     display: flex;
-    width: 100%;
     justify-content: center;
-    padding: 48px;
     width: 100%;
+    padding: 48px;
 
-    // max-width: 290px;
     &:not(:last-child) {
       border-right: 1px solid rgba(36, 63, 77, .1);
     }
   }
-
-  // .services__cont
 
   &__content {
     position: relative;
@@ -298,7 +284,6 @@
     &::after {
       content: '';
       position: absolute;
-
       width: 20px;
       height: 20px;
       border-radius: 50%;
@@ -311,7 +296,7 @@
 
     &::after {
       top: 40px;
-    left: 35px;
+      left: 35px;
     }
   }
 
@@ -354,24 +339,18 @@
 // === week ===
 .week {
   padding: 75px 0;
-  // .week__filter
 
   &__filter {
     display: flex;
     justify-content: center;
     margin-bottom: 80px;
-
   }
-
-  // .week__wrapper
 
   &__wrapper {
     &:not(:last-child) {
       margin-right: 30px;
     }
   }
-
-  // .week__btn
 
   &__filter-btn {
     @extend %dmsans-700;
@@ -383,11 +362,11 @@
     transition: color 0.2s ease-in;
 
     &--active {
-      color: #000;
+      color: $black;
     }
 
     &:hover {
-      color: #000;
+      color: $black;
     }
   }
 }
@@ -401,16 +380,11 @@
 }
 
 .week {
-
-  // .week__items
-
   &__items {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 45px 30px;
   }
-
-  // .week__item
 
   &__item {
     position: relative;
@@ -421,7 +395,7 @@
     padding: 25px 0 35px;
     max-width: 270px;
     height: 380px;
-    background-color: #fff;
+    background-color: $white;
     border-radius: 10px;
     box-shadow: 0 0 20px 20px $tabs-bg;
 
@@ -432,27 +406,13 @@
     }
   }
 
-  // .week__images
-
-  &__images {
-    // margin-bottom: 75px;
-  }
-
-  // .week__img
-
-  &__img {}
-
-  // .week__buttons
-
   &__buttons {
     position: absolute;
-    display: flex;
     top: 50%;
+    display: flex;
     opacity: 0;
     transition: opacity 0.2s ease-in;
   }
-
-  // .week__btn
 
   &__btn {
     display: flex;
@@ -462,7 +422,7 @@
     height: 45px;
     border-radius: 50%;
     border: none;
-    background-color: #fff;
+    background-color: $white;
     cursor: pointer;
     box-shadow: 0 0 10px 5px $tabs-bg;
     transition: background-color 0.2s ease-in, fill 0.2s ease-in;
@@ -473,45 +433,26 @@
 
     &:hover {
       background-color: $icon-burger;
-
       svg path {
-        fill: #fff;
+        fill: $white;
       }
     }
 
     &:active {
-      background-color: #000;
+      background-color: $black;
     }
   }
 
-  // .week__btn--search
-
-  &__btn--search {}
-
-  // .week__btn--basket
-
-  &__btn--basket {}
-
-  // .week__btn--favorites
-
-  &__btn--favorites {}
-
-  // .week__content
-
   &__content {
+    text-align: center;
     font-size: 16px;
     line-height: 2.5;
-    text-align: center;
   }
-
-  // .week__name
 
   &__name {
     @extend %dmsans-500;
     color: $slider-title;
   }
-
-  // .week__cost
 
   &__cost {
     @extend %dmsans-700;
@@ -528,104 +469,61 @@
   @extend %rubik-400;
   font-size: 14px;
   color: $footer-text;
-  background-color: #fff;
-
-  // .footer__copy
-
-  &__copy {}
+  background-color: $white;
 }
 
 .footer-top {
   display: flex;
-  // flex-wrap: wrap;
-  // justify-content: space-between;
   padding: 80px 0;
   border-bottom: 1px solid #dae4e9;
-
-
   &__address {
     width: 200px;
     margin-right: 100px;
   }
-
   &__services {
     width: 130px;
     margin-right: 175px;
   }
-
   &__account {
     width: 100px;
     margin-right: 205px;
   }
-
   &__form {
     width: 270px;
   }
-
   &__item {
     &:not(:first-child) {
       padding-top: 20px;
     }
   }
-
-  // .footer-top__list
-
-  &__list {
-    // margin-top: 30px;
-  }
-
-  // .footer-top__list-item
-
   &__list-item {
     &:not(:last-child) {
       margin-bottom: 20px;
     }
   }
-
-  // .footer-top__link
-
   &__link {
     transition: color 0.2s;
-
     &:hover {
-      color: #000;
+      color: $black;
     }
   }
-
-  // .footer-top__title
-
   &__title {
     margin-bottom: 30px;
     @extend %dmsans-700;
     font-size: 16px;
     line-height: 1.3;
-    color: $footer-title;
     text-transform: uppercase;
+    color: $footer-title;
   }
-
-  // .footer-top__text
-
   &__text {
     margin-bottom: 35px;
   }
 }
-
-.logo {
-
-  // .logo__img
-
-  &__img {}
-}
-
 .footer-logo {
   display: block;
   margin-bottom: 30px;
 }
-
 .footer-form {
-
-  // .footer-form__input
-
   &__input {
     margin: 0;
     padding: 12px;
@@ -633,16 +531,12 @@
     border: none;
     color: #234969;
     outline: transparent;
-    background-color: #fef7f0;
+    background-color: $slider-descr-bg;
     transition: background-color 0.2s ease-in;
-
     &:focus {
       background-color: $icon-head;
     }
   }
-
-  // .footer-form__btn
-
   &__btn {
     @extend %dmsans-400;
     @extend %btn;
@@ -654,48 +548,31 @@
     transform: translateX(-4px);
   }
 }
-
 .footer-bottom {
   display: flex;
   justify-content: space-between;
   padding: 40px 0;
-  // .footer-bottom__list
-
   &__list {
     display: flex;
-
   }
-
-  // .footer-bottom__item
-
   &__item {
     position: relative;
-
     &:not(:last-child) {
       margin-right: 30px;
     }
-
     &:not(:last-child)::after {
       content: '|';
       position: absolute;
       right: -17px;
-
     }
   }
-
-  // .footer-bottom__link
-
   &__link {
     padding-bottom: 5px;
     border-bottom: 1px solid transparent;
     transition: border-bottom-color 0.2s;
-
     &:hover {
       border-bottom-color: $footer-text;
     }
   }
 }
-
 // === / footer ===
-
-@import 'media';
