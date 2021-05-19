@@ -4,8 +4,6 @@
 @import 'libs';
 @import 'global';
 
-
-
 .header {
   &__inner {
     display: flex;
@@ -153,7 +151,8 @@
   // .top-slider__inner
 
   &__inner {
-    padding: 200px 295px 45px;
+    // padding: 200px 295px 45px;
+    padding: 235px 0 45px;
   }
 
   // .top-slider__item
@@ -162,7 +161,9 @@
 
   &__wrap {
     display: flex;
-    justify-content: space-between;
+    // justify-content: space-between;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 200px;
   }
 
@@ -175,7 +176,7 @@
   &__title {
     margin-bottom: 40px;
     max-width: 500px;
-    @extend %rubik-500;
+    @extend %rubik-700;
     font-size: 72px;
     line-height: 1;
     text-transform: uppercase;
@@ -259,7 +260,7 @@
 // === services ===
 .services {
   background-color: #fef7f0;
-  padding: 45px 150px;
+  // padding: 45px 150px;
 
   // .services__inner
 
@@ -272,7 +273,14 @@
 
   &__item {
     display: flex;
-    max-width: 290px;
+    width: 100%;
+    justify-content: center;
+    padding: 48px;
+    width: 100%;
+    // max-width: 290px;
+    &:not(:last-child){
+      border-right: 1px solid rgba(36,63,77,.1);
+    }
   }
 
   // .services__img
@@ -301,7 +309,9 @@
 
   // .services__content
 
-  &__content {}
+  &__content {
+    max-width: 215px;
+  }
 
   // .services__descr
 
