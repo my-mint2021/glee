@@ -5,7 +5,6 @@ $slider-subtitle: #414141;
 $slider-descr-bg: #fef7f0;
 $slider-descr: #585858;
 $slider-btn: #fde3cc;
-
 $tab-off: #585858;
 $icon: #edf1f4;
 $icon-head: #fcd7b6;
@@ -14,9 +13,7 @@ $more-bg: #feefe2;
 $tabs-bg: #f8f8f8;
 $footer-title: #1f2044;
 $footer-text: #7b7b7b;
-
-
-
+// очень много переменных по цветам, я так понял нужно только основные добавить а остальные писать как обычно??
 %rubik-400 {
   font-family: 'Rubik-Regular', sans-serif;
   font-weight: 400;

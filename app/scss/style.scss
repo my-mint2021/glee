@@ -335,6 +335,7 @@
   &__filter {
     display: flex;
     justify-content: center;
+    margin-bottom: 80px;
 
   }
 
@@ -348,7 +349,7 @@
 
   // .week__btn
 
-  &__btn {
+  &__filter-btn {
     @extend %dmsans-700;
     border: none;
     background-color: transparent;
@@ -360,13 +361,12 @@
     &--active {
       color: #000;
     }
-    &:hover{
+
+    &:hover {
       color: #000;
     }
   }
 }
-
-.container {}
 
 .title {
   @extend %dmsans-700;
@@ -376,12 +376,124 @@
   color: $title;
 }
 
+.week {
+
+  // .week__items
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 45px 30px;
+  }
+
+  // .week__item
+
+  &__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 25px 0 35px;
+    max-width: 270px;
+    height: 380px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 20px $tabs-bg;
+    &:hover{
+      .week__buttons{
+        opacity: 1;
+      }
+    }
+  }
+
+  // .week__images
+
+  &__images {
+    // margin-bottom: 75px;
+  }
+
+  // .week__img
+
+  &__img {}
+
+  // .week__buttons
+
+  &__buttons {
+    position: absolute;
+    display: flex;
+    top: 50%;
+    opacity: 0;
+    transition: opacity 0.2s ease-in;
+  }
+
+  // .week__btn
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: none;
+    background-color: #fff;
+    cursor: pointer;
+    box-shadow: 0 0 10px 5px $tabs-bg;
+    transition: background-color 0.2s ease-in, fill 0.2s ease-in;
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+
+    &:hover {
+      background-color: $icon-burger;
+      svg path {
+        fill: #fff;
+      }
+    }
+    &:active{
+      background-color: #000;
+    }
+  }
+
+  // .week__btn--search
+
+  &__btn--search {}
+
+  // .week__btn--basket
+
+  &__btn--basket {}
+
+  // .week__btn--favorites
+
+  &__btn--favorites {}
+
+  // .week__content
+
+  &__content {
+    font-size: 16px;
+    line-height: 2.5;
+    text-align: center;
+  }
+
+  // .week__name
+
+  &__name {
+    @extend %dmsans-500;
+    color: $slider-title;
+  }
+
+  // .week__cost
+
+  &__cost {
+   @extend %dmsans-700;
+    color: $icon-burger;
+  }
+}
 
 // === / week ===
 
 // === / main ===
-
-
 
 // === footer ===
 .footer {
@@ -397,6 +509,7 @@
 
 .footer-top {
   display: flex;
+  // flex-wrap: wrap;
   // justify-content: space-between;
   padding: 80px 0;
   border-bottom: 1px solid #dae4e9;
@@ -425,9 +538,6 @@
     &:not(:first-child) {
       padding-top: 20px;
     }
-
-
-
   }
 
   // .footer-top__list
