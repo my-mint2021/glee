@@ -13,9 +13,9 @@
 }
 
 .menu {
-  &__list {
+  
     display: flex;
-  }
+  
 
   &__item {
     &:not(:last-child) {
@@ -178,6 +178,8 @@
 
   &__inner {
     padding: 235px 0 45px;
+    margin: 0 auto;
+
   }
 
   &__wrap {

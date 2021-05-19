@@ -13,13 +13,12 @@
 <body>
   <header class="header">
     <div class="container container--large">
-      <div class="header__inner">
+      <nav class="header__inner">
         <a class="logo" href="#">
           <img class="logo__img" src="images/logo.png" alt="logo">
         </a>
 
-        <nav class="menu">
-          <ul class="menu__list">
+          <ul class="menu">
             <li class="menu__item">
               <a class="menu__link" href="#">Home <span>+</span></a>
             </li>
@@ -44,8 +43,7 @@
               <a class="menu__link" href="#">Contact</a>
             </li>
           </ul>
-        </nav>
-
+   
         <div class="user-nav">
           <button class="user-nav__search nav-btn" type="button">
             <svg width="17" height="17" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -99,17 +97,17 @@
             <span class="visually-hidden">link user menu</span>
           </button>
         </div>
-      </div>
+      </nav>
     </div>
   </header>
 
-
+<!-- 9 минут слайдер -->
   <main class="main">
-    <section class="top-slider" style="background-image: url(images/slider-bg.png);">
-      <div class="container-large">
-        <div class="top-slider__inner">
+    <section class="top-slider" >
+      <div class="container container--large">
+        <ul class="top-slider__inner" style="background-image: url(images/slider-bg.png);">
 
-          <div class="top-slider__item">
+          <li class="top-slider__item">
             <div class="top-slider__wrap">
               <div class="top-slider__content">
                 <!-- можно ли указать для слайдера h1, по сути он один на странице всегда будет -->
@@ -126,26 +124,9 @@
               </div>
               <img class="top-slider__images" src="images/slider-img.png" alt="slider image">
             </div>
-          </div>
-          <div class="top-slider__item">
-            <div class="top-slider__wrap">
-              <div class="top-slider__content">
-                <h2 class="top-slider__title">
-                  smart and trendy
-                </h2>
-                <p class="top-slider__text">
-                  Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-                </p>
-                <a class="top-slider__link" href="#">
-                  Shop Now
-                  <span class="visually-hidden">button shop now</span>
-                </a>
-              </div>
-              <img class="top-slider__images" src="images/slider-img.png" alt="slider image">
-            </div>
-          </div>
+          </li>
 
-          <div class="top-slider__item">
+          <li class="top-slider__item">
             <div class="top-slider__wrap">
               <div class="top-slider__content">
                 <h2 class="top-slider__title">
@@ -161,8 +142,26 @@
               </div>
               <img class="top-slider__images" src="images/slider-img.png" alt="slider image">
             </div>
-          </div>
-        </div>
+          </li>
+
+          <li class="top-slider__item">
+            <div class="top-slider__wrap">
+              <div class="top-slider__content">
+                <h2 class="top-slider__title">
+                  smart and trendy
+                </h2>
+                <p class="top-slider__text">
+                  Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                </p>
+                <a class="top-slider__link" href="#">
+                  Shop Now
+                  <span class="visually-hidden">button shop now</span>
+                </a>
+              </div>
+              <img class="top-slider__images" src="images/slider-img.png" alt="slider image">
+            </div>
+          </li>
+        </ul>
       </div>
     </section>
 
