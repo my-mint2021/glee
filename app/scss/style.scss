@@ -288,7 +288,7 @@
 
   // .services__cont
 
-  &__cont {
+  &__content {
     position: relative;
     padding-left: 80px;
     max-width: 306px;
@@ -306,7 +306,7 @@
     }
   }
 
-  &__cont--support {
+  &__content--support {
     background-image: url(../images/icon/time.svg);
 
     &::after {
@@ -329,7 +329,7 @@
     color: $slider-descr;
   }
 
-  &__cont--delivery {
+  &__content--delivery {
     background-image: url(../images/icon/delivery-truck.svg);
 
     &::after {
@@ -338,7 +338,7 @@
     }
   }
 
-  &__cont--card {
+  &__content--card {
     background-image: url(../images/icon/credit-card.svg);
 
     &::after {
@@ -347,7 +347,6 @@
     }
   }
 }
-
 
 // === / services ===
 
