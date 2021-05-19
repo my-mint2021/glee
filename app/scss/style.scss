@@ -246,6 +246,7 @@
         color: #667983;
         background-color: $slider-btn;
         cursor: pointer;
+        transition: color 0.2s ease-in, background-color 0.2s ease-in;
       }
 
       &.slick-active button {
@@ -258,10 +259,10 @@
 }
 
 // === services ===
+
+//--------------------------
 .services {
   background-color: #fef7f0;
-  // padding: 45px 150px;
-
   // .services__inner
 
   &__inner {
@@ -272,32 +273,32 @@
   // .services__item
 
   &__item {
+
     display: flex;
     width: 100%;
     justify-content: center;
     padding: 48px;
     width: 100%;
+
     // max-width: 290px;
-    &:not(:last-child){
-      border-right: 1px solid rgba(36,63,77,.1);
+    &:not(:last-child) {
+      border-right: 1px solid rgba(36, 63, 77, .1);
     }
   }
 
-  // .services__img
+  // .services__cont
 
-  &__img {
+  &__cont {
     position: relative;
-
-    // background-color: red;
-    margin-right: 20px;
-    padding-top: 10px;
-    align-self: flex-start;
+    padding-left: 80px;
+    max-width: 306px;
+    background-position: 0 13px;
+    background-repeat: no-repeat;
 
     &::after {
       content: '';
       position: absolute;
-      bottom: -2px;
-      right: -5px;
+
       width: 20px;
       height: 20px;
       border-radius: 50%;
@@ -305,31 +306,45 @@
     }
   }
 
+  &__cont--support {
+    background-image: url(../images/icon/time.svg);
 
-
-  // .services__content
-
-  &__content {
-    max-width: 215px;
+    &::after {
+      top: 40px;
+    left: 35px;
+    }
   }
 
-  // .services__descr
-
   &__descr {
-    // margin-bottom: 15px;
     @extend %dmsans-700;
     font-size: 18px;
     line-height: 2.2;
     color: $slider-subtitle;
   }
 
-  // .services__text
-
   &__text {
     @extend %dmsans-400;
     font-size: 16px;
     line-height: 1.9;
     color: $slider-descr;
+  }
+
+  &__cont--delivery {
+    background-image: url(../images/icon/delivery-truck.svg);
+
+    &::after {
+      top: 27px;
+      left: 35px;
+    }
+  }
+
+  &__cont--card {
+    background-image: url(../images/icon/credit-card.svg);
+
+    &::after {
+      top: 45px;
+      left: 35px;
+    }
   }
 }
 
@@ -410,8 +425,9 @@
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 0 20px 20px $tabs-bg;
-    &:hover{
-      .week__buttons{
+
+    &:hover {
+      .week__buttons {
         opacity: 1;
       }
     }
@@ -451,17 +467,20 @@
     cursor: pointer;
     box-shadow: 0 0 10px 5px $tabs-bg;
     transition: background-color 0.2s ease-in, fill 0.2s ease-in;
+
     &:not(:last-child) {
       margin-right: 15px;
     }
 
     &:hover {
       background-color: $icon-burger;
+
       svg path {
         fill: #fff;
       }
     }
-    &:active{
+
+    &:active {
       background-color: #000;
     }
   }
@@ -496,7 +515,7 @@
   // .week__cost
 
   &__cost {
-   @extend %dmsans-700;
+    @extend %dmsans-700;
     color: $icon-burger;
   }
 }
