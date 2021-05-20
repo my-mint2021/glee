@@ -208,7 +208,7 @@
   &__name {
     margin-bottom: 40px;
     max-width: 500px;
-    @extend %rubik-700;
+    @extend %rubik-500;
     font-size: 72px;
     line-height: 1;
     text-transform: uppercase;
@@ -382,6 +382,7 @@
   &__button {
     @extend %dmsans-700;
     border: none;
+    padding: 0;
     background-color: transparent;
     font-size: 16px;
     color: #8b8b8b;
@@ -405,9 +406,9 @@
   font-size: 36px;
   color: $title;
 }
-.product-card{
 
-}
+.product-card {}
+
 .products-week {
   &__items {
     display: grid;
@@ -473,11 +474,6 @@
     }
   }
 
-  // &__content {
-  //   text-align: center;
-  //   font-size: 16px;
-  //   line-height: 2.5;
-  // }
 
   &__name {
     @extend %dmsans-500;
@@ -502,7 +498,8 @@
   font-size: 14px;
   color: $footer-text;
   background-color: $white;
-  &__logo{
+
+  &__logo {
     display: block;
     margin-bottom: 30px;
   }
@@ -519,7 +516,7 @@
   }
 
   &__services {
-    width: 130px;
+    width: 135px;
     margin-right: 175px;
   }
 
@@ -528,9 +525,6 @@
     margin-right: 205px;
   }
 
-  &__form {
-    width: 270px;
-  }
 
   &__item {
     &:not(:first-child) {
@@ -566,11 +560,9 @@
   }
 }
 
-.footer-logo {
+.form {
+  width: 270px;
 
-}
-
-.footer-form {
   &__input {
     margin: 0;
     padding: 12px;
@@ -595,6 +587,7 @@
     border: none;
     cursor: pointer;
     transform: translateX(-4px);
+    // как сместить по другому?
   }
 }
 
