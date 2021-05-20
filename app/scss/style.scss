@@ -1,5 +1,5 @@
-@import 'vars';
 @import 'fonts';
+@import 'vars';
 @import 'reset';
 @import 'libs';
 @import 'global';
@@ -13,9 +13,7 @@
 }
 
 .menu {
-
   display: flex;
-
 
   &__item {
     &:not(:last-child) {
@@ -228,6 +226,7 @@
     display: inline-block;
     padding: 25px 100px 25px 25px;
     @extend %rubik-500;
+
     @extend %btn;
     font-size: 15px;
 
@@ -389,10 +388,7 @@
     cursor: pointer;
     transition: color 0.2s ease-in;
 
-    &--active {
-      color: $black;
-    }
-
+    &--active,
     &:hover {
       color: $black;
     }
@@ -407,8 +403,6 @@
   color: $title;
 }
 
-.product-card {}
-
 .products-week {
   &__items {
     display: grid;
@@ -416,75 +410,84 @@
     grid-gap: 45px 30px;
   }
 
-  &__item {
+
+  .products-card {
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     padding: 25px 0 35px;
     max-width: 270px;
-    height: 380px;
+    min-height: 380px;
     background-color: $white;
     border-radius: 10px;
     box-shadow: 0 0 20px 20px $tabs-bg;
 
     &:hover {
-      .products-week__nav {
+      .products-card__nav {
         opacity: 1;
       }
     }
-  }
 
-  &__nav {
-    position: absolute;
-    top: 50%;
-    display: flex;
-    opacity: 0;
-    transition: opacity 0.2s ease-in;
-  }
-
-  &__btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    border: 1px solid $icon-burger;
-    background-color: $white;
-    cursor: pointer;
-    box-shadow: 0 0 10px 5px $tabs-bg;
-    transition: background-color 0.2s ease-in, fill 0.2s ease-in;
-
-    &:not(:last-child) {
-      margin-right: 15px;
+    &__link {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
     }
 
-    &:hover {
-      background-color: $icon-burger;
+    &__nav {
+      position: absolute;
+      top: 50%;
+      display: flex;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.2s ease-in;
+    }
 
-      svg path {
-        fill: $white;
+    &__btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      border: 1px solid $icon-burger;
+      background-color: $white;
+      cursor: pointer;
+      box-shadow: 0 0 10px 5px $tabs-bg;
+      transition: background-color 0.2s ease-in, fill 0.2s ease-in;
+
+      &:not(:last-child) {
+        margin-right: 15px;
+      }
+
+      &:hover {
+        background-color: $icon-burger;
+
+        svg path {
+          fill: $white;
+        }
+      }
+
+      &:active {
+        background-color: $black;
       }
     }
 
-    &:active {
-      background-color: $black;
+    &__name {
+      @extend %dmsans-500;
+      font-size: 16px;
+      line-height: 2;
+      color: $slider-title;
     }
-  }
 
-
-  &__name {
-    @extend %dmsans-500;
-    font-size: 16px;
-    line-height: 2;
-    color: $slider-title;
-  }
-
-  &__cost {
-    @extend %dmsans-700;
-    color: $icon-burger;
+    &__cost {
+      @extend %dmsans-700;
+      color: $icon-burger;
+    }
   }
 }
 
@@ -497,7 +500,6 @@
   @extend %rubik-400;
   font-size: 14px;
   color: $footer-text;
-  background-color: $white;
 
   &__logo {
     display: block;
@@ -586,8 +588,6 @@
     font-size: 14px;
     border: none;
     cursor: pointer;
-    transform: translateX(-4px);
-    // как сместить по другому?
   }
 }
 
