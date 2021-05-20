@@ -13,9 +13,9 @@
 }
 
 .menu {
-  
-    display: flex;
-  
+
+  display: flex;
+
 
   &__item {
     &:not(:last-child) {
@@ -173,23 +173,39 @@
 
 // === main ===
 .top-slider {
-  background-repeat: no-repeat;
-  background-size: cover;
 
   &__inner {
-    padding: 235px 0 45px;
-    margin: 0 auto;
+    background-color: $icon-head;
+  }
 
+  &__item {
+    padding: 220px 0 280px;
   }
 
   &__wrap {
+    position: relative;
     display: flex;
-    justify-content: center;
     align-items: center;
-    margin-bottom: 200px;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 0 15px;
+    min-width: 320px;
+    max-width: 1200px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      right: -55px;
+      top: 50%;
+      width: 634px;
+      height: 634px;
+      border-radius: 50%;
+      background-image: linear-gradient(to left, $white 0%, rgba($white, 0) 100%);
+      transform: translateY(-50%);
+    }
   }
 
-  &__title {
+  &__name {
     margin-bottom: 40px;
     max-width: 500px;
     @extend %rubik-700;
@@ -228,9 +244,18 @@
     }
   }
 
+  &__images {
+    position: relative;
+
+
+  }
+
   .slick-dots {
+    position: absolute;
     display: flex;
-    justify-content: center;
+    left: 50%;
+    bottom: 40px;
+    transform: translateX(-50%);
 
     li {
       &:not(:last-child) {
@@ -258,11 +283,11 @@
 
 // === services ===
 .services {
-  background-color: $slider-descr-bg;
 
   &__inner {
     display: flex;
     justify-content: space-between;
+    background-color: $slider-descr-bg;
   }
 
   &__item {
@@ -279,7 +304,7 @@
   &__content {
     position: relative;
     padding-left: 80px;
-    max-width: 306px;
+    max-width: 315px;
     background-position: 0 13px;
     background-repeat: no-repeat;
 
@@ -339,7 +364,7 @@
 
 
 // === week ===
-.week {
+.products-week {
   padding: 75px 0;
 
   &__filter {
@@ -354,7 +379,7 @@
     }
   }
 
-  &__filter-btn {
+  &__button {
     @extend %dmsans-700;
     border: none;
     background-color: transparent;
@@ -380,8 +405,10 @@
   font-size: 36px;
   color: $title;
 }
+.product-card{
 
-.week {
+}
+.products-week {
   &__items {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -402,13 +429,13 @@
     box-shadow: 0 0 20px 20px $tabs-bg;
 
     &:hover {
-      .week__buttons {
+      .products-week__nav {
         opacity: 1;
       }
     }
   }
 
-  &__buttons {
+  &__nav {
     position: absolute;
     top: 50%;
     display: flex;
@@ -423,7 +450,7 @@
     width: 45px;
     height: 45px;
     border-radius: 50%;
-    border: none;
+    border: 1px solid $icon-burger;
     background-color: $white;
     cursor: pointer;
     box-shadow: 0 0 10px 5px $tabs-bg;
@@ -435,6 +462,7 @@
 
     &:hover {
       background-color: $icon-burger;
+
       svg path {
         fill: $white;
       }
@@ -445,14 +473,16 @@
     }
   }
 
-  &__content {
-    text-align: center;
-    font-size: 16px;
-    line-height: 2.5;
-  }
+  // &__content {
+  //   text-align: center;
+  //   font-size: 16px;
+  //   line-height: 2.5;
+  // }
 
   &__name {
     @extend %dmsans-500;
+    font-size: 16px;
+    line-height: 2;
     color: $slider-title;
   }
 
@@ -472,43 +502,56 @@
   font-size: 14px;
   color: $footer-text;
   background-color: $white;
+  &__logo{
+    display: block;
+    margin-bottom: 30px;
+  }
 }
 
 .footer-top {
   display: flex;
   padding: 80px 0;
   border-bottom: 1px solid #dae4e9;
+
   &__address {
     width: 200px;
     margin-right: 100px;
   }
+
   &__services {
     width: 130px;
     margin-right: 175px;
   }
+
   &__account {
     width: 100px;
     margin-right: 205px;
   }
+
   &__form {
     width: 270px;
   }
+
   &__item {
     &:not(:first-child) {
       padding-top: 20px;
     }
   }
-  &__list-item {
+
+  &__wrapper {
     &:not(:last-child) {
       margin-bottom: 20px;
     }
   }
+
   &__link {
     transition: color 0.2s;
+
     &:hover {
       color: $black;
     }
   }
+
   &__title {
     margin-bottom: 30px;
     @extend %dmsans-700;
@@ -517,14 +560,16 @@
     text-transform: uppercase;
     color: $footer-title;
   }
+
   &__text {
     margin-bottom: 35px;
   }
 }
+
 .footer-logo {
-  display: block;
-  margin-bottom: 30px;
+
 }
+
 .footer-form {
   &__input {
     margin: 0;
@@ -535,10 +580,12 @@
     outline: transparent;
     background-color: $slider-descr-bg;
     transition: background-color 0.2s ease-in;
+
     &:focus {
       background-color: $icon-head;
     }
   }
+
   &__btn {
     @extend %dmsans-400;
     @extend %btn;
@@ -550,31 +597,39 @@
     transform: translateX(-4px);
   }
 }
+
 .footer-bottom {
   display: flex;
   justify-content: space-between;
   padding: 40px 0;
+
   &__list {
     display: flex;
   }
+
   &__item {
     position: relative;
+
     &:not(:last-child) {
       margin-right: 30px;
     }
+
     &:not(:last-child)::after {
       content: '|';
       position: absolute;
       right: -17px;
     }
   }
+
   &__link {
     padding-bottom: 5px;
     border-bottom: 1px solid transparent;
     transition: border-bottom-color 0.2s;
+
     &:hover {
       border-bottom-color: $footer-text;
     }
   }
 }
+
 // === / footer ===

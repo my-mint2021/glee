@@ -5,5 +5,5 @@ $(function(){
   });
 
 
-  var mixer = mixitup('.week__items');
+  var mixer = mixitup('.products-week__items');
 });
