@@ -1,0 +1,196 @@
+.header {
+  flex: 1 0 auto;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.logo {
+  &__img {
+    object-fit: contain;
+  }
+}
+
+.menu {
+  display: flex;
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 35px;
+    }
+  }
+
+  &__link {
+    @extend %rubik-500;
+    font-size: 15px;
+    color: $subtitle;
+    padding-bottom: 5px;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s ease-in;
+
+    &:hover {
+      color: $black;
+      border-color: $black;
+    }
+  }
+}
+
+.nav-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in;
+
+  &:hover {
+    background-color: #436372;
+
+    & svg {
+      fill: $icon-head;
+    }
+  }
+}
+
+.user-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__icon-search {
+    width: 17px;
+    height: 17px;
+    fill: $slider-title;
+  }
+
+  &__icon-like {
+    width: 19px;
+    height: 18px;
+    fill: $slider-title;
+  }
+
+  &__icon-basket {
+    width: 20px;
+    height: 18px;
+    fill: $slider-title;
+  }
+
+  &__icon-menu {
+    width: 21px;
+    height: 22px;
+    fill: $white;
+  }
+
+  &__search {
+    margin-right: 20px;
+    background-color: #edf1f4;
+  }
+
+  &__wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 45px 20px 45px 0;
+    padding-top: 10px;
+    width: 180px;
+    height: 50px;
+    border: none;
+    border-radius: 50px;
+    background-color: $icon-head;
+
+    &::before {
+      content: '';
+      position: absolute;
+      z-index: 5;
+      top: 9px;
+      width: 1px;
+      height: 32px;
+      background-color: $white;
+    }
+  }
+
+  &__left,
+  &__right {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease-in,
+      color 0.3s ease-in,
+      fill 0.3s ease-in;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $subtitle;
+
+      & svg {
+        fill: $white;
+      }
+
+      & span {
+        color: $black;
+        background-color: $icon-head;
+      }
+    }
+  }
+
+  &__left {
+    left: 0;
+    right: 50%;
+    border-radius: 50px 0 0 50px;
+  }
+
+  &__right {
+    border-radius: 0 50px 50px 0;
+    left: 50%;
+    right: 0;
+  }
+
+  &__favorites,
+  &__basket {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.1s ease-in;
+  }
+
+  &__basket:hover {
+    &::after {
+      background-color: $subtitle;
+    }
+  }
+
+  &__num {
+    position: absolute;
+    top: 10px;
+    left: 50px;
+    width: 15px;
+    height: 15px;
+    text-align: center;
+    font-size: 10px;
+    line-height: 15px;
+    border-radius: 50%;
+    color: $slider-title;
+    background-color: $white;
+  }
+
+  &__menu {
+    background-color: $icon-burger;
+  }
+}

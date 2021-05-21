@@ -1,0 +1,9 @@
+/* stylelint-disable */
+@mixin line-clamp($property) {
+  -webkit-line-clamp: $property;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+// @include line-clamp();

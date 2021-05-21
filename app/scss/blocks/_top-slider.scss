@@ -1,0 +1,120 @@
+.top-slider {
+
+  &__inner {
+    background-color: $icon-head;
+  }
+
+  &__item {
+    padding: 220px 0 280px;
+  }
+
+  &__wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 0 15px;
+    min-width: 320px;
+    max-width: 1200px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      right: -55px;
+      top: 50%;
+      width: 634px;
+      height: 634px;
+      border-radius: 50%;
+      background-image: linear-gradient(to left, $white 0%, rgba($white, 0) 100%);
+      transform: translateY(-50%);
+    }
+  }
+
+  &__name {
+    @include line-clamp(1);
+    margin-bottom: 40px;
+    max-width: 500px;
+    @extend %rubik-500;
+    font-size: 72px;
+    line-height: 1;
+    text-transform: uppercase;
+    color: $slider-title;
+    // text-overflow: ellipsis;
+    // white-space: nowrap; /* Запрещаем перенос строк */
+    // overflow: hidden; /* Обрезаем все, что не помещается в область */
+    // background: #fc0; /* Цвет фона */
+    // padding: 5px; /* Поля вокруг текста */
+  }
+
+  &__text {
+    @include line-clamp(1);
+    margin-bottom: 40px;
+    max-width: 385px;
+    font-size: 18px;
+    line-height: 1.7;
+    color: $slider-subtitle;
+  }
+
+  &__link {
+    position: relative;
+    display: inline-block;
+    padding: 25px 100px 25px 25px;
+    @extend %rubik-500;
+
+    @extend %btn;
+    font-size: 15px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      width: 25px;
+      height: 10px;
+      background-image: url(../images/icon/bg-arrow.png);
+      background-repeat: no-repeat;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__images {
+    // position: relative;
+
+
+  }
+
+  &__img {
+    object-fit: contain;
+  }
+
+  .slick-dots {
+    position: absolute;
+    display: flex;
+    left: 50%;
+    bottom: 40px;
+    transform: translateX(-50%);
+
+    li {
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+
+      button {
+        width: 30px;
+        height: 30px;
+        border: none;
+        border-radius: 50%;
+        color: #667983;
+        background-color: $slider-btn;
+        cursor: pointer;
+        transition: color 0.2s ease-in, background-color 0.2s ease-in;
+      }
+
+      &.slick-active button {
+        color: $slider-title;
+        background-color: $white;
+      }
+    }
+  }
+}
