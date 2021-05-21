@@ -5,7 +5,8 @@
   }
 
   &__item {
-    padding: 220px 0 280px;
+    height: 820px;
+    display: flex !important;
   }
 
   &__wrap {
@@ -30,7 +31,12 @@
       transform: translateY(-50%);
     }
   }
-
+  &__content{
+    display: flex;
+    flex-direction: column;
+    max-height: 400px;
+    overflow: hidden;
+  }
   &__name {
     @include line-clamp(2);
     @extend %rubik-700;
@@ -55,6 +61,7 @@
   &__link {
     position: relative;
     display: inline-block;
+    align-self: flex-start;
     padding: 25px 100px 25px 25px;
     @extend %rubik-500;
     @extend %btn;
@@ -72,9 +79,12 @@
       transform: translateY(-50%);
     }
   }
-
+  &__images{
+    position: relative;
+    z-index: 5;
+  }
   &__img {
-    object-fit: contain;
+    // object-fit: contain;
   }
 
   .slick-dots {

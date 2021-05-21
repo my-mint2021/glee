@@ -1,0 +1,138 @@
+html,
+body {
+  height: 100%;
+}
+
+img {
+  object-fit: contain;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  @extend %rubik-400;
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: #fff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+
+  &--large {
+    max-width: 1800px;
+  }
+}
+
+.menu {
+  display: flex;
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 35px;
+    }
+  }
+
+  &__link {
+    @extend %rubik-500;
+    font-size: 15px;
+    color: $subtitle;
+    padding-bottom: 5px;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s ease-in;
+    outline: 2px solid transparent;
+
+    &:hover {
+      color: $black;
+      border-color: $black;
+    }
+
+    &:active {
+      font-weight: 700;
+    }
+
+    &:focus {
+      outline-color: $icon-head;
+    }
+  }
+}
+
+.title {
+  @extend %dmsans-700;
+  margin-bottom: 35px;
+  text-align: center;
+  font-size: 36px;
+  color: $title;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+
+.filter {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 80px;
+
+  &__wrapper {
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+
+  &__button {
+    @extend %dmsans-700;
+    border: none;
+    padding: 0;
+    background-color: transparent;
+    font-size: 16px;
+    color: #8b8b8b;
+    cursor: pointer;
+    transition: color 0.2s ease-in;
+    outline: 2px solid transparent;
+
+    &--active,
+    &:hover {
+      color: $black;
+    }
+
+    &:focus {
+      outline-color: $icon-head;
+    }
+  }
+}
+
+
+.nav-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in;
+  outline: 2px solid transparent;
+  &:hover {
+    background-color: #436372;
+
+    & svg {
+      fill: $icon-head;
+    }
+  }
+  &:focus{
+    outline-color: $icon-head;
+  }
+}

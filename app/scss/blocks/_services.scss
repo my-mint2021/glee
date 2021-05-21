@@ -11,6 +11,10 @@
     justify-content: center;
     width: 100%;
     padding: 48px;
+    max-height: 200px;
+    
+    overflow: hidden;
+
 
     &:not(:last-child) {
       border-right: 1px solid rgba(36, 63, 77, .1);
@@ -35,6 +39,7 @@
   }
 
   &__title {
+    @include line-clamp(2);
     @extend %dmsans-700;
     font-size: 18px;
     line-height: 2.2;
@@ -42,6 +47,7 @@
   }
 
   &__text {
+    @include line-clamp(3);
     @extend %dmsans-400;
     font-size: 16px;
     line-height: 1.9;

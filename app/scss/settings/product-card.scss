@@ -1,4 +1,4 @@
-.products-card {
+.product-card {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -13,7 +13,7 @@
   outline:2px solid transparent;
 
   &:hover {
-    .products-card__nav {
+    .product-card__nav {
       opacity: 1;
     }
   }
@@ -55,7 +55,7 @@
   }
 
   &__img {
-    object-fit: contain;
+    // object-fit: contain;
     margin: 0 auto;
   }
 
@@ -69,17 +69,12 @@
   }
 
   &__btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 45px;
     height: 45px;
-    border-radius: 50%;
     border: 1px solid $icon-burger;
     background-color: $white;
-    cursor: pointer;
     box-shadow: 0 0 10px 5px $tabs-bg;
-    transition: background-color 0.2s ease-in, fill 0.2s ease-in;
+    transition: fill 0.2s ease-in;
     outline:2px solid transparent;
     &:not(:last-child) {
       margin-right: 15px;
@@ -96,9 +91,6 @@
     &:active {
       background-color: $black;
     }
-    &:focus{
-      outline-color: $icon-head;
-  }
   }
 
   &__name {
