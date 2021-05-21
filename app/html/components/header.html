@@ -1,0 +1,77 @@
+<header class="header">
+  <h1 class="sr-only">The best furniture store</h1>
+  <div class="container container--large">
+    <nav class="header__inner">
+      <a class="logo" href="#">
+        <img class="logo__img" src="images/logo.png" width="150" height="40" alt="logo">
+      </a>
+
+      <ul class="menu">
+        <li class="menu__item">
+          <a class="menu__link" href="#">Home <span>+</span></a>
+        </li>
+
+        <li class="menu__item">
+          <a class="menu__link" href="#">About</a>
+        </li>
+
+        <li class="menu__item">
+          <a class="menu__link" href="#">Services</a>
+        </li>
+
+        <li class="menu__item">
+          <a class="menu__link" href="#">Pages <span>+</span></a>
+        </li>
+
+        <li class="menu__item">
+          <a class="menu__link" href="#">News</a>
+        </li>
+
+        <li class="menu__item">
+          <a class="menu__link" href="#">Contact</a>
+        </li>
+      </ul>
+
+      <div class="user-nav">
+        <button class="user-nav__search nav-btn" type="button">
+          <svg class="user-nav__icon-search">
+            <use xlink:href="images/sprite.svg#search-icon"></use>
+          </svg>
+        </button>
+        <span class="sr-only">Clicking on the button will open the SEARCH window</span>
+
+        <div class="user-nav__wrap">
+          
+          <div class="user-nav__left">
+            <!-- !доп обертки для hover -->
+            <a class="user-nav__favorites" href="#">
+              <svg class="user-nav__icon-like">
+                <use xlink:href="images/sprite.svg#like-icon"></use>
+              </svg>
+              <span class="user-nav__num">0</span>
+            </a>
+            <span class="sr-only">When you click on the button, the product will be added to your favorites</span>
+          </div>
+
+          <div class="user-nav__right">
+            <!-- !доп обертки для hover -->
+            <a class="user-nav__basket" href="#">
+              <svg class="user-nav__icon-basket">
+                <use xlink:href="images/sprite.svg#basket-icon"></use>
+              </svg>
+              <span class="user-nav__num">0</span>
+              <span class="sr-only">When you click on the button, the product will be added to the cart</span>
+            </a>
+          </div>
+        </div>
+
+        <button class="user-nav__menu nav-btn">
+          <svg class="user-nav__icon-menu">
+            <use xlink:href="images/sprite.svg#menu-icon"></use>
+          </svg>
+          <span class="sr-only">Clicking on the button will open your profile</span>
+        </button>
+      </div>
+    </nav>
+  </div>
+</header>

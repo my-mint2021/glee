@@ -6,17 +6,20 @@
 
 .header {
   flex: 1 0 auto;
+
   &__inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 }
-.logo{
-  &__img{
+
+.logo {
+  &__img {
     object-fit: contain;
   }
 }
+
 .menu {
   display: flex;
 
@@ -55,7 +58,7 @@
   &:hover {
     background-color: #436372;
 
-    & svg path {
+    & svg {
       fill: $icon-head;
     }
   }
@@ -65,6 +68,30 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  &__icon-search {
+    width: 17px;
+    height: 17px;
+    fill: $slider-title;
+  }
+
+  &__icon-like {
+    width: 19px;
+    height: 18px;
+    fill: $slider-title;
+  }
+
+  &__icon-basket {
+    width: 20px;
+    height: 18px;
+    fill: $slider-title;
+  }
+
+  &__icon-menu {
+    width: 21px;
+    height: 22px;
+    fill: $white;
+  }
 
   &__search {
     margin-right: 20px;
@@ -112,7 +139,7 @@
     &:hover {
       background-color: $subtitle;
 
-      & svg path {
+      & svg {
         fill: $white;
       }
 
@@ -175,9 +202,10 @@
 }
 
 // === main ===
-.main{
+.main {
   flex: 1 0 auto;
 }
+
 .top-slider {
 
   &__inner {
@@ -258,13 +286,14 @@
 
   &__images {
     // position: relative;
-    
+
 
   }
 
-  &__img{
+  &__img {
     object-fit: contain;
   }
+
   .slick-dots {
     position: absolute;
     display: flex;
@@ -320,7 +349,7 @@
     position: relative;
     padding-left: 80px;
     max-width: 315px;
-    background-position: 0 13px;
+    background-position: 0 8px;
     background-repeat: no-repeat;
 
     &::after {
@@ -330,15 +359,6 @@
       height: 20px;
       border-radius: 50%;
       background-color: #dfe3e294;
-    }
-  }
-
-  &__content--support {
-    background-image: url(../images/icon/time.svg);
-
-    &::after {
-      top: 40px;
-      left: 35px;
     }
   }
 
@@ -354,6 +374,15 @@
     font-size: 16px;
     line-height: 1.9;
     color: $slider-descr;
+  }
+
+  &__content--support {
+    background-image: url(../images/icon/time.svg);
+
+    &::after {
+      top: 40px;
+      left: 35px;
+    }
   }
 
   &__content--delivery {
@@ -446,6 +475,25 @@
       }
     }
 
+    &__icon {
+      fill: $icon-burger;
+
+      &--search {
+        width: 20px;
+        height: 20px;
+      }
+
+      &--basket {
+        width: 22px;
+        height: 20px;
+      }
+
+      &--like {
+        width: 22px;
+        height: 18px;
+      }
+    }
+
     &__link {
       position: absolute;
       top: 0;
@@ -453,9 +501,11 @@
       left: 0;
       right: 0;
     }
-    &__img{
+
+    &__img {
       object-fit: contain;
     }
+
     &__nav {
       position: absolute;
       top: 50%;
@@ -485,7 +535,7 @@
       &:hover {
         background-color: $icon-burger;
 
-        svg path {
+        svg  {
           fill: $white;
         }
       }
@@ -519,6 +569,7 @@
   @extend %rubik-400;
   font-size: 14px;
   color: $footer-text;
+
   &__logo {
     display: block;
     margin-bottom: 30px;
