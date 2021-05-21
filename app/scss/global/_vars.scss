@@ -16,6 +16,7 @@ $footer-text: #7b7b7b;
 $black: #000;
 $white: #fff;
 
+// по цветам пока не сделал норм градацию-сделаю
 
 %rubik-400 {
   font-family: 'Rubik', sans-serif;
@@ -32,6 +33,7 @@ $white: #fff;
   font-weight: 700;
 }
 
+// не подключается regular ошибка в консоли
 %dmsans-400 {
   font-family: 'DMSans', sans-serif;
   font-weight: 400;
@@ -51,6 +53,8 @@ $white: #fff;
   color: #fff;
   background-color: $icon-burger;
   transition: background-color 0.2s ease-in;
+  outline:2px solid transparent;
+
   &:hover {
     background-color: #7cb3d1;
   }
@@ -58,4 +62,8 @@ $white: #fff;
   &:active {
     background-color: #000;
   }
+
+    &:focus{
+      outline-color: $subtitle;
+    }
 }

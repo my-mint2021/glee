@@ -20,6 +20,7 @@
   }
 
   &__button {
+    // dmsans regular не подключается, перекачал его и перекодировал все равно какая то фигня
     @extend %dmsans-700;
     border: none;
     padding: 0;
@@ -28,10 +29,14 @@
     color: #8b8b8b;
     cursor: pointer;
     transition: color 0.2s ease-in;
+    outline:2px solid transparent;
 
     &--active,
     &:hover {
       color: $black;
+    }
+    &:focus{
+      outline-color: $icon-head;
     }
   }
 }

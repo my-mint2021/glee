@@ -32,18 +32,19 @@
   }
 
   &__name {
-    @include line-clamp(1);
+    @include line-clamp(2);
+    @extend %rubik-700;
     margin-bottom: 40px;
     max-width: 500px;
-    @extend %rubik-500;
     font-size: 72px;
     line-height: 1;
     text-transform: uppercase;
     color: $slider-title;
+    overflow: hidden;
   }
 
   &__text {
-    @include line-clamp(1);
+    @include line-clamp(3);
     margin-bottom: 40px;
     max-width: 385px;
     font-size: 18px;
@@ -97,6 +98,11 @@
         background-color: $slider-btn;
         cursor: pointer;
         transition: color 0.2s ease-in, background-color 0.2s ease-in;
+      
+ &:focus{
+      outline-color: $subtitle;
+    }
+
       }
 
       &.slick-active button {
@@ -104,5 +110,7 @@
         background-color: $white;
       }
     }
+
+   
   }
 }

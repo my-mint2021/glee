@@ -45,11 +45,15 @@
   }
 
   &__link {
+    outline:2px solid transparent;
     transition: color 0.2s;
 
     &:hover {
       color: $black;
     }
+    &:focus{
+      outline-color: $icon-head;
+  }
   }
 
   &__title {
@@ -78,11 +82,15 @@
     outline: transparent;
     background-color: $slider-descr-bg;
     transition: background-color 0.2s ease-in;
+    outline: 2px solid transparent;
 
     &:focus {
       background-color: $icon-head;
+      outline-color: $subtitle;
     }
-  }
+
+    }
+  
 
   &__btn {
     @extend %dmsans-400;
@@ -122,9 +130,12 @@
     padding-bottom: 5px;
     border-bottom: 1px solid transparent;
     transition: border-bottom-color 0.2s;
-
+    outline: 2px solid transparent;
     &:hover {
       border-bottom-color: $footer-text;
     }
+    &:focus{
+      outline-color: $icon-head;
+  }
   }
 }

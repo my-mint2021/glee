@@ -16,114 +16,136 @@
 @import 'blocks/services';
 @import 'blocks/products-week.scss';
 
-  .products-card {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 25px 15px 35px;
-    max-width: 270px;
-    min-height: 380px;
-    background-color: $white;
-    border-radius: 10px;
-    box-shadow: 0 0 20px 20px $tabs-bg;
 
-    &:hover {
-      .products-card__nav {
-        opacity: 1;
-      }
-    }
+// (index):1 Failed to decode downloaded font: http://localhost:3000/fonts/DMSans-Regular.woff2
 
-    &__icon {
-      fill: $icon-burger;
+@import 'global/products-card.scss';
 
-      &--search {
-        width: 20px;
-        height: 20px;
-      }
+// не понятно как правильно вынести отдельно products-card
+// сейчас нельзя переиспользовать в другом месте
+// еслик примеру нужно будет поменять фон карточки на серый
+// может можно как то частично выбрать только основные стили
+// потом тут написать import и снизу указать фон, шрифт и тд, 
+// чтобыможно было ее испольщовать в разных частях сайтаи только дописывать
+// нужные цвета, шрифты и тд
 
-      &--basket {
-        width: 22px;
-        height: 20px;
-      }
 
-      &--like {
-        width: 22px;
-        height: 18px;
-      }
-    }
+  // .products-card {
+  //   position: relative;
+  //   display: flex;
+  //   flex-direction: column;
+  //   justify-content: center;
+  //   align-items: center;
+  //   padding: 25px 15px 35px;
+  //   max-width: 270px;
+  //   min-height: 380px;
+  //   background-color: $white;
+  //   border-radius: 10px;
+  //   box-shadow: 0 0 20px 20px $tabs-bg;
+  //   outline:2px solid transparent;
 
-    &__link {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-    }
+  //   &:hover {
+  //     .products-card__nav {
+  //       opacity: 1;
+  //     }
+  //   }
 
-    &__images {
-      margin-top: auto;
-      margin-bottom: auto;
-    }
 
-    &__img {
-      object-fit: contain;
-      margin: 0 auto;
-    }
+  //   &__icon {
+  //     fill: $icon-burger;
 
-    &__nav {
-      position: absolute;
-      top: 50%;
-      display: flex;
-      justify-content: center;
-      opacity: 0;
-      transition: opacity 0.2s ease-in;
-    }
+  //     &--search {
+  //       width: 20px;
+  //       height: 20px;
+  //     }
 
-    &__btn {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 45px;
-      height: 45px;
-      border-radius: 50%;
-      border: 1px solid $icon-burger;
-      background-color: $white;
-      cursor: pointer;
-      box-shadow: 0 0 10px 5px $tabs-bg;
-      transition: background-color 0.2s ease-in, fill 0.2s ease-in;
+  //     &--basket {
+  //       width: 22px;
+  //       height: 20px;
+  //     }
 
-      &:not(:last-child) {
-        margin-right: 15px;
-      }
+  //     &--like {
+  //       width: 22px;
+  //       height: 18px;
+  //     }
+  //   }
 
-      &:hover {
-        background-color: $icon-burger;
+  //   &__link {
+  //     position: absolute;
+  //     top: 0;
+  //     bottom: 0;
+  //     left: 0;
+  //     right: 0;
+  //     &:focus{
+  //       outline-color: $icon-head;
+  //   }
+  //   }
 
-        svg {
-          fill: $white;
-        }
-      }
+  //   &__images {
+  //     margin-top: auto;
+  //     margin-bottom: auto;
+  //   }
 
-      &:active {
-        background-color: $black;
-      }
-    }
+  //   &__img {
+  //     object-fit: contain;
+  //     margin: 0 auto;
+  //   }
 
-    &__name {
-      @include line-clamp(1);
-      @extend %dmsans-500;
-      font-size: 16px;
-      line-height: 2;
-      color: $slider-title;
-    }
+  //   &__nav {
+  //     position: absolute;
+  //     top: 50%;
+  //     display: flex;
+  //     justify-content: center;
+  //     opacity: 0;
+  //     transition: opacity 0.2s ease-in;
+  //   }
 
-    &__cost {
-      @include line-clamp(1);
-      @extend %dmsans-700;
-      color: $icon-burger;
-    }
-  }
+  //   &__btn {
+  //     display: flex;
+  //     justify-content: center;
+  //     align-items: center;
+  //     width: 45px;
+  //     height: 45px;
+  //     border-radius: 50%;
+  //     border: 1px solid $icon-burger;
+  //     background-color: $white;
+  //     cursor: pointer;
+  //     box-shadow: 0 0 10px 5px $tabs-bg;
+  //     transition: background-color 0.2s ease-in, fill 0.2s ease-in;
+  //     outline:2px solid transparent;
+  //     &:not(:last-child) {
+  //       margin-right: 15px;
+  //     }
+
+  //     &:hover {
+  //       background-color: $icon-burger;
+
+  //       svg {
+  //         fill: $white;
+  //       }
+  //     }
+
+  //     &:active {
+  //       background-color: $black;
+  //     }
+  //     &:focus{
+  //       outline-color: $icon-head;
+  //   }
+  //   }
+
+  //   &__name {
+  //     @include line-clamp(1);
+  //     @extend %dmsans-500;
+  //     font-size: 16px;
+  //     line-height: 2;
+  //     color: $slider-title;
+  //   }
+
+  //   &__cost {
+  //     @include line-clamp(1);
+  //     @extend %dmsans-700;
+  //     color: $icon-burger;
+  //   }
+  // }
 
 @import 'blocks/footer';
