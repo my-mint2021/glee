@@ -1,4 +1,12 @@
+
+html,
+body {
+  height: 100%;
+}
+
 body{
+  display: flex;
+  flex-direction: column;
   @extend %rubik-400;
   font-size: 16px;
   line-height: 1.9;
