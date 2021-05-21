@@ -40,11 +40,6 @@
     line-height: 1;
     text-transform: uppercase;
     color: $slider-title;
-    // text-overflow: ellipsis;
-    // white-space: nowrap; /* Запрещаем перенос строк */
-    // overflow: hidden; /* Обрезаем все, что не помещается в область */
-    // background: #fc0; /* Цвет фона */
-    // padding: 5px; /* Поля вокруг текста */
   }
 
   &__text {
@@ -61,7 +56,6 @@
     display: inline-block;
     padding: 25px 100px 25px 25px;
     @extend %rubik-500;
-
     @extend %btn;
     font-size: 15px;
 
@@ -76,12 +70,6 @@
       background-repeat: no-repeat;
       transform: translateY(-50%);
     }
-  }
-
-  &__images {
-    // position: relative;
-
-
   }
 
   &__img {

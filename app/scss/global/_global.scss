@@ -22,7 +22,13 @@ body{
   }
 }
 
-
+.title {
+  @extend %dmsans-700;
+  margin-bottom: 35px;
+  text-align: center;
+  font-size: 36px;
+  color: $title;
+}
 
 .sr-only {
   position: absolute;
