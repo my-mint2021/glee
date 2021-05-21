@@ -31,12 +31,14 @@
       transform: translateY(-50%);
     }
   }
-  &__content{
+
+  &__content {
     display: flex;
     flex-direction: column;
     max-height: 400px;
     overflow: hidden;
   }
+
   &__name {
     @include line-clamp(2);
     @extend %rubik-700;
@@ -64,7 +66,7 @@
     align-self: flex-start;
     padding: 25px 100px 25px 25px;
     @extend %rubik-500;
-    @extend %btn;
+    @include btn;
     font-size: 15px;
 
     &::after {
@@ -79,20 +81,18 @@
       transform: translateY(-50%);
     }
   }
-  &__images{
+
+  &__images {
     position: relative;
     z-index: 5;
-  }
-  &__img {
-    // object-fit: contain;
   }
 
   .slick-dots {
     position: absolute;
     display: flex;
-    left: 50%;
+    justify-content: center;
     bottom: 40px;
-    transform: translateX(-50%);
+    width: 100%;
 
     li {
       &:not(:last-child) {
@@ -102,17 +102,17 @@
       button {
         width: 30px;
         height: 30px;
+        font-size: 11px;
         border: none;
         border-radius: 50%;
         color: #667983;
         background-color: $slider-btn;
         cursor: pointer;
         transition: color 0.2s ease-in, background-color 0.2s ease-in;
-      
- &:focus{
-      outline-color: $subtitle;
-    }
 
+        &:focus {
+          outline-color: $subtitle;
+        }
       }
 
       &.slick-active button {
@@ -120,7 +120,5 @@
         background-color: $white;
       }
     }
-
-   
   }
 }

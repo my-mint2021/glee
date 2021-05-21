@@ -49,21 +49,21 @@ $white: #fff;
   font-weight: 700;
 }
 
-%btn{
-  color: #fff;
-  background-color: $icon-burger;
-  transition: background-color 0.2s ease-in;
-  outline:2px solid transparent;
+// %btn{
+//   color: #fff;
+//   background-color: $icon-burger;
+//   transition: background-color 0.2s ease-in;
+//   outline:2px solid transparent;
 
-  &:hover {
-    background-color: #7cb3d1;
-  }
+//   &:hover {
+//     background-color: #7cb3d1;
+//   }
 
-  &:active {
-    background-color: #000;
-  }
+//   &:active {
+//     background-color: #000;
+//   }
 
-    &:focus{
-      outline-color: $subtitle;
-    }
-}
+//     &:focus{
+//       outline-color: $subtitle;
+//     }
+// }

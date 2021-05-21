@@ -21,12 +21,13 @@
 в варс градация цветов
 ссс сделать папку компонентс- папку с  названием страницы
 миксин бтн в файл миксин
-для всех имг обжект фит контейн
-нав бтн в глобал и вообще все что идет одним блоком
-если вложенность внутри ховер то & не нужен &:hover{svg{fill:#000}}
-доттс в слайдере не лефт50%
-with100%
-jccenter -->
+подключить шрифты
+!для всех имг обжект фит контейн
+?нав бтн в глобал и вообще все что идет одним блоком
+?если вложенность внутри ховер то & не нужен &:hover{svg{fill:#000}}
+?доттс в слайдере не лефт50%
+?with100%
+?jccenter -->
 
 <head>
   <meta charset="UTF-8">
@@ -38,13 +39,13 @@ jccenter -->
 </head>
 
 <body>
-@include('./components/header.html')
-<main class="main">
-  @include('./components/home-page/top-slider.html')
-  @include('./components/home-page/services.html')
-  @include('./components/home-page/products-week.html')
-</main>
-@include('./components/footer.html')
+  @include('./components/header.html')
+  <main class="main">
+    @include('./components/home-page/top-slider.html')
+    @include('./components/home-page/services.html')
+    @include('./components/home-page/products-week.html')
+  </main>
+  @include('./components/footer.html')
   <script src="js/main.min.js"></script>
 </body>
 

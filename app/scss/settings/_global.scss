@@ -26,6 +26,18 @@ body {
   }
 }
 
+.logo {
+  &__img {
+    object-fit: cover;
+  }
+
+  outline: 2px solid transparent;
+
+  &:focus {
+    outline-color: $icon-head;
+  }
+}
+
 .menu {
   display: flex;
 
@@ -125,14 +137,49 @@ body {
   cursor: pointer;
   transition: background-color 0.2s ease-in;
   outline: 2px solid transparent;
+
   &:hover {
     background-color: #436372;
 
-    & svg {
+    svg {
       fill: $icon-head;
     }
   }
-  &:focus{
+
+  &:focus {
     outline-color: $icon-head;
+  }
+}
+
+
+.form {
+  width: 270px;
+  display: flex;
+
+  &__input {
+    margin: 0;
+    padding: 12px;
+    width: 170px;
+    border: none;
+    color: #234969;
+    outline: transparent;
+    background-color: $slider-descr-bg;
+    transition: background-color 0.2s ease-in;
+    outline: 2px solid transparent;
+
+    &:focus {
+      background-color: $icon-head;
+      outline-color: $subtitle;
+    }
+  }
+
+  &__btn {
+    @include btn;
+    @extend %dmsans-400;
+    margin: 0;
+    padding: 12px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
   }
 }

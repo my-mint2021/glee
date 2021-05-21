@@ -8,70 +8,6 @@
   }
 }
 
-.logo {
-  &__img {
-    object-fit: cover;
-  }
-  outline: 2px solid transparent;
-  &:focus{
-    outline-color: $icon-head;
-  }
-}
-
-// .menu {
-//   display: flex;
-
-//   &__item {
-//     &:not(:last-child) {
-//       margin-right: 35px;
-//     }
-//   }
-
-//   &__link {
-//     @extend %rubik-500;
-//     font-size: 15px;
-//     color: $subtitle;
-//     padding-bottom: 5px;
-//     border-bottom: 1px solid transparent;
-//     transition: border-color 0.2s ease-in;
-//     outline: 2px solid transparent;
-//     &:hover {
-//       color: $black;
-//       border-color: $black;
-//     }
-//     &:active {
-//       font-weight: 700;
-//     }
-//     &:focus{
-//       outline-color: $icon-head;
-//     }
-//   }
-// }
-
-// .nav-btn {
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   width: 50px;
-//   height: 50px;
-//   border-radius: 50%;
-//   border: none;
-//   cursor: pointer;
-//   transition: background-color 0.2s ease-in;
-//   outline: 2px solid transparent;
-//   &:hover {
-//     background-color: #436372;
-
-//     & svg {
-//       fill: $icon-head;
-//     }
-//   }
-//   &:focus{
-    
-//     outline-color: $icon-head;
-//   }
-// }
-
 .user-nav {
   display: flex;
   align-items: center;
@@ -143,20 +79,21 @@
       color 0.3s ease-in,
       fill 0.3s ease-in;
     cursor: pointer;
-    
+
     &:hover {
       background-color: $subtitle;
 
-      & svg {
+      svg {
         fill: $white;
       }
 
-      & span {
+      span {
         color: $black;
         background-color: $icon-head;
       }
     }
-    &:focus{
+
+    &:focus {
       outline-color: green;
     }
   }
@@ -186,7 +123,8 @@
     align-items: center;
     transition: transform 0.1s ease-in;
     outline: 2px solid transparent;
-    &:focus{
+
+    &:focus {
       outline-color: $icon-head;
     }
   }
