@@ -27,6 +27,13 @@ $rubik400: 'rubik400', serif;
 $rubi500: 'rubik500', serif;
 
 
+
+@function max ($numbers...) {
+  @return m#{a}x(#{$numbers});
+}
+@function min ($numbers...) {
+  @return m#{i}n(#{$numbers});
+}
 // %rubik-400 {
 //   font-family: 'Rubik', sans-serif;
 //   font-weight: 400;

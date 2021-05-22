@@ -38,9 +38,11 @@ body {
     outline-color: $icon-head;
   }
 }
-.link-more{
+
+.link-more {
   @include link-more;
 }
+
 .menu {
   display: flex;
 
@@ -157,6 +159,54 @@ body {
   }
 }
 
+.video-popup {
+  position: relative;
+  height: 500px;
+  display: block;
+
+  &::before,
+  &::after,
+  &__icon
+  {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    border: none;
+    background-color: $icon-burger;
+  }
+
+  &::before {
+    width: 98px;
+    height: 98px;
+  }
+
+  &:after {
+    width: 127px;
+    height: 127px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+  }
+
+  &:hover{
+    &::after{
+      opacity: 0.4;
+    }
+    svg {
+      fill: $subtitle;
+    }
+  }
+
+  &__icon {
+    width: 22px;
+    height: 25px;
+    fill: $white;
+    border-radius: 0;
+    transition: fill 0.5s ease-in;
+  }
+}
 
 .form {
   width: 270px;
