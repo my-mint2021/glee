@@ -1,34 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
-
-
-<!-- 
-? !вытащить диван в слайдере layiv zindex
-? в лого ковер
-? ограничить высоту параграфа в слайдере
-? ограничить в сервисах параграфы
-? пробел между инпут и батон в форме дисплей флекс
-?футер не h4, дальше h3  не использовать. можно скрытый аш2 в футер и потом аш3
-? доступность в футер
-? переиспользвоать меню из хедера в футере
-
-?фильтр переделать класс списка в filter, filter__wrapper и тд
-? навигация по карточке подтянуть кружочки из хеадер бтн_нав
-? папка для эсссэс не глобал а сеттингс
-? ланхейт в глобал 1.5
-?в варс.ссс инклюд бтн вместо %
-в варс градация цветов
-?ссс сделать папку компонентс- папку с  названием страницы
-?миксин бтн в файл миксин
-подключить шрифты
-!для всех имг обжект фит контейн
-?нав бтн в глобал и вообще все что идет одним блоком
-?если вложенность внутри ховер то & не нужен &:hover{svg{fill:#000}}
-?доттс в слайдере не лефт50%
-?with100%
-?jccenter -->
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -40,14 +11,16 @@
 
 <body>
   @include('./components/header.html')
+
   <main class="main">
     @include('./components/home-page/top-slider.html')
     @include('./components/home-page/services.html')
     @include('./components/home-page/products-week.html')
     @include('./components/home-page/design.html')
     @include('./components/home-page/articles.html')
-
+    @include('./components/home-page/partners.html')
   </main>
+  
   @include('./components/footer.html')
   <script src="js/main.min.js"></script>
 </body>

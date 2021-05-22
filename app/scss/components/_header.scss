@@ -119,10 +119,10 @@
     bottom: 0;
     z-index: 3;
     display: flex;
-    justify-content: center;
     align-items: center;
-    transition: transform 0.1s ease-in;
+    justify-content: center;
     outline: 2px solid transparent;
+    transition: transform 0.1s ease-in;
 
     &:focus {
       outline-color: $icon-head;
@@ -141,10 +141,10 @@
     left: 50px;
     width: 15px;
     height: 15px;
-    text-align: center;
     font-size: 10px;
     line-height: 15px;
     border-radius: 50%;
+    text-align: center;
     color: $slider-title;
     background-color: $white;
   }

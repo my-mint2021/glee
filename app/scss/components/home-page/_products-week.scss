@@ -54,7 +54,8 @@
     &__name {
       @include line-clamp(2);
       margin-bottom: 32px;
-      font-family: $dmsans700;
+      font-family: $dmsans;
+      font-weight: 700;
       font-size: 26px;
       line-height: 1.2;
       color: $slider-title;
@@ -65,7 +66,8 @@
     &__descr {
       @include line-clamp(2);
       margin-bottom: 34px;
-      font-family: $rubik400;
+      font-family: $rubik;
+      font-weight: 400;
       font-size: 16px;
       line-height: 2;
     }

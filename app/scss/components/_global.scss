@@ -10,8 +10,8 @@ img {
 body {
   display: flex;
   flex-direction: column;
-  font-family: rubik400;
-  // @extend %rubik-400;
+  font-family: $rubik;
+  font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
   background-color: #fff;
@@ -53,8 +53,11 @@ body {
   }
 
   &__link {
-    font-family: rubik500;
+    font-family: $rubik;
+    font-weight: 50;
     // @extend %rubik-500;
+    font-family: $rubik;
+    font-weight: 500;
     font-size: 15px;
     color: $subtitle;
     padding-bottom: 5px;
@@ -78,7 +81,8 @@ body {
 }
 
 .title {
-  font-family: dmsans700;
+  font-family: $dmsans;
+  font-weight: 700;
   // @extend %dmsans-700;
   margin-bottom: 35px;
   text-align: center;
@@ -111,7 +115,8 @@ body {
   }
 
   &__button {
-    font-family: dmsans700;
+    font-family: $dmsans;
+    font-weight: 700;
     // @extend %dmsans-700;
     border: none;
     padding: 0;
@@ -231,7 +236,8 @@ body {
 
   &__btn {
     @include btn;
-    // @extend %dmsans-400;
+    font-family: $dmsans;
+    font-weight: 400;
     margin: 0;
     padding: 12px;
     font-size: 14px;

@@ -1,34 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
-
-
-<!-- 
-? !вытащить диван в слайдере layiv zindex
-? в лого ковер
-? ограничить высоту параграфа в слайдере
-? ограничить в сервисах параграфы
-? пробел между инпут и батон в форме дисплей флекс
-?футер не h4, дальше h3  не использовать. можно скрытый аш2 в футер и потом аш3
-? доступность в футер
-? переиспользвоать меню из хедера в футере
-
-?фильтр переделать класс списка в filter, filter__wrapper и тд
-? навигация по карточке подтянуть кружочки из хеадер бтн_нав
-? папка для эсссэс не глобал а сеттингс
-? ланхейт в глобал 1.5
-?в варс.ссс инклюд бтн вместо %
-в варс градация цветов
-?ссс сделать папку компонентс- папку с  названием страницы
-?миксин бтн в файл миксин
-подключить шрифты
-!для всех имг обжект фит контейн
-?нав бтн в глобал и вообще все что идет одним блоком
-?если вложенность внутри ховер то & не нужен &:hover{svg{fill:#000}}
-?доттс в слайдере не лефт50%
-?with100%
-?jccenter -->
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -114,6 +85,7 @@
     </nav>
   </div>
 </header>
+
   <main class="main">
     <section class="top-slider">
   <h2 class="sr-only">Top slider section</h2>
@@ -532,7 +504,7 @@
             <p>LEDCornBulb Lamp 5W 7W 10W 12W 15W E26 E27 LED CornLight</p>
           </div>
           <a class="link-more view-more__link" href="#">
-            Shop Now
+            View More
           </a>
           <span class="sr-only">click on the button to buy now</span>
         </div>
@@ -548,7 +520,7 @@
             <p>50W 8000lm Compact Size for HID Street Light Replacement LED Corn Light</p>
           </div>
           <a class="link-more view-more__link" href="#">
-            Shop Now
+            View More
           </a>
           <span class="sr-only">click on the button to buy now</span>
         </div>
@@ -632,7 +604,7 @@
         <p class="design__style">Classic</p>
       </li>
 
-      <li class="design__item">
+      <li class="design__item mix category-b">
         <div class="design__images">
           <img class="design__img" src="../images/newdesign/66.png" width="270" height="110" alt="product design">
         </div>
@@ -707,8 +679,76 @@
     </ul>
   </div>
 </section>
+    <div class="partners">
+  <div class="container">
+    <ul class="partners__list">
 
+      <li class="partners__item">
+        <div class="partners__img">
+          <img src="../images/partner/1.png" alt="partners">
+        </div>
+      </li>
+
+      <li class="partners__item">
+        <div class="partners__img">
+          <img src="../images/partner/2.png" alt="partners">
+        </div>
+  </li>
+
+  <li class="partners__item">
+    <div class="partners__img">
+      <img src="../images/partner/3.png" alt="partners">
+    </div>
+  </li>
+
+  <li class="partners__item">
+    <div class="partners__img">
+      <img src="../images/partner/4.png" alt="partners">
+    </div>
+  </li>
+
+  <li class="partners__item">
+    <div class="partners__img">
+      <img src="../images/partner/5.png" alt="partners">
+    </div>
+  </li>
+
+  <li class="partners__item">
+    <div class="partners__img">
+      <img src="../images/partner/1.png" alt="partners">
+    </div>
+  </li>
+
+  <!-- ! дубль партнеров для слайдера чтобы выводил сразу 5 на экран и листал по одному, можно и одного добавить всего но будет заметно что один повторяется чаще других-->
+
+  <li class="partners__item">
+    <div class="partners__img">
+      <img src="../images/partner/2.png" alt="partners">
+    </div>
+  </li>
+
+  <li class="partners__item">
+    <div class="partners__img">
+      <img src="../images/partner/3.png" alt="partners">
+    </div>
+  </li>
+
+  <li class="partners__item">
+    <div class="partners__img">
+      <img src="../images/partner/4.png" alt="partners">
+    </div>
+  </li>
+
+  <li class="partners__item">
+    <div class="partners__img">
+      <img src="../images/partner/5.png" alt="partners">
+    </div>
+  </li>
+  </ul>
+</div>
+</div>
   </main>
+  
   
   <footer class="footer">
     <h2 class="sr-only">footer</h2>
@@ -738,9 +778,9 @@
         </address>
         
         <div class="footer-top__item footer-top__services">
-          <h3 class="footer-top__title">
+          <p class="footer-top__name">
             Services
-          </h3>
+          </p>
           <ul class="footer-top__list">
             <li class="footer-top__wrapper">
               <a class="footer-top__link " href="#">About us</a>
@@ -761,9 +801,9 @@
         </div>
 
         <div class="footer-top__item footer-top__account">
-          <h3 class="footer-top__title">
+          <p class="footer-top__name">
             Account
-          </h3>
+          </p>
           <ul class="footer-top__list">
             <li class="footer-top__wrapper">
               <a class="footer-top__link " href="#">Your Account</a>
@@ -781,9 +821,9 @@
         </div>
 
         <div class="footer-top__item footer-top__form">
-          <h3 class="footer-top__title">
+          <p class="footer-top__name">
             Newsletter
-          </h3>
+          </p>
           <div class="footer-top__text">
             <p>Subscribe by our newsletter and get update protidin.</p>
           </div>
@@ -804,16 +844,16 @@
         
         <ul class="menu">
           <li class="menu__item footer-bottom__item">
-            <a class="menu__link" href="#">Home</a>
+            <a class="menu__link footer-bottom__link" href="#">Home</a>
           </li>
           <li class="menu__item footer-bottom__item">
-            <a class="menu__link" href="#">About</a>
+            <a class="menu__link footer-bottom__link" href="#">About</a>
           </li>
           <li class="menu__item footer-bottom__item">
-            <a class="menu__link" href="#">Blog</a>
+            <a class="menu__link footer-bottom__link" href="#">Blog</a>
           </li>
           <li class="menu__item footer-bottom__item">
-            <a class="menu__link" href="#">Contact</a>
+            <a class="menu__link footer-bottom__link" href="#">Contact</a>
           </li>
         </ul>
       </div>
