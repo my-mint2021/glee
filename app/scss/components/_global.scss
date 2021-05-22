@@ -54,9 +54,6 @@ body {
 
   &__link {
     font-family: $rubik;
-    font-weight: 50;
-    // @extend %rubik-500;
-    font-family: $rubik;
     font-weight: 500;
     font-size: 15px;
     color: $subtitle;
@@ -83,7 +80,6 @@ body {
 .title {
   font-family: $dmsans;
   font-weight: 700;
-  // @extend %dmsans-700;
   margin-bottom: 35px;
   text-align: center;
   font-size: 36px;
@@ -102,7 +98,6 @@ body {
   border: 0;
 }
 
-
 .filter {
   display: flex;
   justify-content: center;
@@ -115,11 +110,10 @@ body {
   }
 
   &__button {
+    padding: 0;
     font-family: $dmsans;
     font-weight: 700;
-    // @extend %dmsans-700;
     border: none;
-    padding: 0;
     background-color: transparent;
     font-size: 16px;
     color: #8b8b8b;
@@ -137,7 +131,6 @@ body {
     }
   }
 }
-
 
 .nav-btn {
   display: flex;
@@ -171,8 +164,7 @@ body {
 
   &::before,
   &::after,
-  &__icon
-  {
+  &__icon {
     position: absolute;
     content: '';
     top: 50%;
@@ -195,10 +187,11 @@ body {
     transition: opacity 0.5s ease-in;
   }
 
-  &:hover{
-    &::after{
+  &:hover {
+    &::after {
       opacity: 0.4;
     }
+
     svg {
       fill: $subtitle;
     }

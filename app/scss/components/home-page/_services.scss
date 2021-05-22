@@ -12,9 +12,7 @@
     width: 100%;
     padding: 48px;
     max-height: 200px;
-
     overflow: hidden;
-
 
     &:not(:last-child) {
       border-right: 1px solid rgba(36, 63, 77, .1);
@@ -42,7 +40,6 @@
     @include line-clamp(2);
     font-family: $dmsans;
     font-weight: 700;
-    // @extend %dmsans-700;
     font-size: 18px;
     line-height: 2.2;
     color: $slider-subtitle;

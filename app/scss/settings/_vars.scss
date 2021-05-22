@@ -1,5 +1,10 @@
 $title: #191919;
 $subtitle: #436372;
+$icon-head: #fcd7b6;
+$icon-burger: #a3bbc8;
+
+
+
 $slider-title:#243f4d;
 $slider-subtitle: #414141;
 $slider-descr-bg: #fef7f0;
@@ -7,8 +12,6 @@ $slider-descr: #585858;
 $slider-btn: #fde3cc;
 $tab-off: #585858;
 $icon: #edf1f4;
-$icon-head: #fcd7b6;
-$icon-burger: #a3bbc8;
 $more-bg: #feefe2;
 $tabs-bg: #f8f8f8;
 $footer-title: #1f2044;
@@ -16,22 +19,16 @@ $footer-text: #7b7b7b;
 $black: #000;
 $white: #fff;
 
-// по цветам пока не сделал норм градацию-сделаю
 
-// засунул в переменную но использую через font-family: rubik500;
+
+
+
+
+// по цветам пока не сделал норм градацию-сделаю
 
 $dmsans: 'DMSans', serif;
 $rubik  : 'Rubik', serif;
 $poppins: 'Poppins', serif;
-
-
-
-// $dmsans400: 'dmsans400', serif;
-// $dmsans500: 'dmsans500', serif;
-// $dmsans700: 'dmsans700', serif;
-// $rubik400: 'rubik400', serif;
-// $rubi500: 'rubik500', serif;
-
 
 
 @function max ($numbers...) {
@@ -40,52 +37,3 @@ $poppins: 'Poppins', serif;
 @function min ($numbers...) {
   @return m#{i}n(#{$numbers});
 }
-// %rubik-400 {
-//   font-family: 'Rubik', sans-serif;
-//   font-weight: 400;
-// }
-
-// %rubik-500 {
-//   font-family: 'Rubik', sans-serif;
-//   font-weight: 500;
-// }
-
-// %rubik-700 {
-//   font-family: 'Rubik', sans-serif;
-//   font-weight: 700;
-// }
-
-// // не подключается regular ошибка в консоли
-// %dmsans-400 {
-//   font-family: 'DMSans', sans-serif;
-//   font-weight: 400;
-// }
-
-// %dmsans-500 {
-//   font-family: 'DMSans', sans-serif;
-//   font-weight: 500;
-// }
-
-// %dmsans-700 {
-//   font-family: 'DMSans', sans-serif;
-//   font-weight: 700;
-// }
-
-// %btn{
-//   color: #fff;
-//   background-color: $icon-burger;
-//   transition: background-color 0.2s ease-in;
-//   outline:2px solid transparent;
-
-//   &:hover {
-//     background-color: #7cb3d1;
-//   }
-
-//   &:active {
-//     background-color: #000;
-//   }
-
-//     &:focus{
-//       outline-color: $subtitle;
-//     }
-// }

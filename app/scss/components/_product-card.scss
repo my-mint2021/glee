@@ -10,14 +10,13 @@
   background-color: $white;
   border-radius: 10px;
   box-shadow: 0 0 20px 20px $tabs-bg;
-  outline:2px solid transparent;
+  outline: 2px solid transparent;
 
   &:hover {
     .product-card__nav {
       opacity: 1;
     }
   }
-
 
   &__icon {
     fill: $icon-burger;
@@ -44,9 +43,10 @@
     bottom: 0;
     left: 0;
     right: 0;
-    &:focus{
+
+    &:focus {
       outline-color: $icon-head;
-  }
+    }
   }
 
   &__images {
@@ -55,7 +55,6 @@
   }
 
   &__img {
-    // object-fit: contain;
     margin: 0 auto;
   }
 
@@ -75,7 +74,8 @@
     background-color: $white;
     box-shadow: 0 0 10px 5px $tabs-bg;
     transition: fill 0.2s ease-in;
-    outline:2px solid transparent;
+    outline: 2px solid transparent;
+
     &:not(:last-child) {
       margin-right: 15px;
     }
@@ -97,7 +97,6 @@
     @include line-clamp(1);
     font-family: $dmsans;
     font-weight: 500;
-    // @extend %dmsans-500;
     font-size: 16px;
     line-height: 2;
     color: $slider-title;
@@ -107,7 +106,6 @@
     @include line-clamp(1);
     font-family: $dmsans;
     font-weight: 700;
-    // @extend %dmsans-700;
     color: $icon-burger;
   }
 }

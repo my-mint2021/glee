@@ -43,9 +43,6 @@
     @include line-clamp(2);
     font-family: $rubik;
     font-weight: 500;
-    // @include $rubik500;
-    // font-family: $rubik500;
-    // @extend %rubik-500;
     margin-bottom: 40px;
     max-width: 500px;
     font-size: 72px;
@@ -68,27 +65,8 @@
 
   &__link {
     @include btn;
-    // @include link-more;
     font-family: $rubik;
     font-weight: 500;
-    // @extend %rubik-500;
-    // position: relative;
-    // display: inline-block;
-    // align-self: flex-start;
-    // padding: 25px 100px 25px 25px;
-    // font-size: 15px;
-
-    // &::after {
-    //   content: '';
-    //   position: absolute;
-    //   right: 20px;
-    //   top: 50%;
-    //   width: 25px;
-    //   height: 10px;
-    //   background-image: url(../images/icon/bg-arrow.png);
-    //   background-repeat: no-repeat;
-    //   transform: translateY(-50%);
-    // }
   }
 
   &__images {
