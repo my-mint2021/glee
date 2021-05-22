@@ -38,7 +38,9 @@ body {
     outline-color: $icon-head;
   }
 }
-
+.link-more{
+  @include link-more;
+}
 .menu {
   display: flex;
 

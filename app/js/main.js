@@ -6,4 +6,5 @@ $(function(){
 
 
   var mixer = mixitup('.products-week__items');
+  var mixer = mixitup('.design__items');
 });

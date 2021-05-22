@@ -1,0 +1,34 @@
+.design {
+  padding: 75px 0;
+
+  &__items {
+    // display: grid;
+    // grid-template-columns: repeat(3, 1fr);
+    // grid-gap: 45px 30px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+    margin-bottom: 185px;
+  }
+  &__card{
+    // max-width: 370px;
+    // min-height: 246px;
+
+
+
+
+    position: relative;
+    margin: 0 15px 34px;
+    padding: 35px 0 0 35px;
+    width: calc(100% / 3 - 30px);
+    min-height: 245px;
+    background-color: #f8f8f8;
+  }
+  &__images{
+    position: absolute;
+    right: 0;
+    bottom: 35px;
+    max-width: 270px;
+  }
+}

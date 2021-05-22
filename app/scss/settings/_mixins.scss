@@ -25,3 +25,22 @@
     outline-color: $subtitle;
   }
 }
+@mixin link-more{
+  position: relative;
+  display: inline-block;
+  align-self: flex-start;
+  padding: 25px 100px 25px 25px;
+  font-size: 15px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    width: 25px;
+    height: 10px;
+    background-image: url(../images/icon/bg-arrow.png);
+    background-repeat: no-repeat;
+    transform: translateY(-50%);
+  }
+}
