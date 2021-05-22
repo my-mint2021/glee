@@ -40,7 +40,8 @@
 
   &__title {
     @include line-clamp(2);
-    @extend %dmsans-700;
+    font-family: dmsans700;
+    // @extend %dmsans-700;
     font-size: 18px;
     line-height: 2.2;
     color: $slider-subtitle;
@@ -48,7 +49,8 @@
 
   &__text {
     @include line-clamp(3);
-    @extend %dmsans-400;
+    font-family: dmsans400;
+    // @extend %dmsans-400;
     font-size: 16px;
     line-height: 1.9;
     color: $slider-descr;

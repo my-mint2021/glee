@@ -18,36 +18,45 @@ $white: #fff;
 
 // по цветам пока не сделал норм градацию-сделаю
 
-%rubik-400 {
-  font-family: 'Rubik', sans-serif;
-  font-weight: 400;
-}
+// засунул в переменную но использую через font-family: rubik500;
 
-%rubik-500 {
-  font-family: 'Rubik', sans-serif;
-  font-weight: 500;
-}
+$dmsans400: 'dmsans400', serif;
+$dmsans500: 'dmsans500', serif;
+$dmsans700: 'dmsans700', serif;
+$rubik400: 'rubik400', serif;
+$rubi500: 'rubik500', serif;
 
-%rubik-700 {
-  font-family: 'Rubik', sans-serif;
-  font-weight: 700;
-}
 
-// не подключается regular ошибка в консоли
-%dmsans-400 {
-  font-family: 'DMSans', sans-serif;
-  font-weight: 400;
-}
+// %rubik-400 {
+//   font-family: 'Rubik', sans-serif;
+//   font-weight: 400;
+// }
 
-%dmsans-500 {
-  font-family: 'DMSans', sans-serif;
-  font-weight: 500;
-}
+// %rubik-500 {
+//   font-family: 'Rubik', sans-serif;
+//   font-weight: 500;
+// }
 
-%dmsans-700 {
-  font-family: 'DMSans', sans-serif;
-  font-weight: 700;
-}
+// %rubik-700 {
+//   font-family: 'Rubik', sans-serif;
+//   font-weight: 700;
+// }
+
+// // не подключается regular ошибка в консоли
+// %dmsans-400 {
+//   font-family: 'DMSans', sans-serif;
+//   font-weight: 400;
+// }
+
+// %dmsans-500 {
+//   font-family: 'DMSans', sans-serif;
+//   font-weight: 500;
+// }
+
+// %dmsans-700 {
+//   font-family: 'DMSans', sans-serif;
+//   font-weight: 700;
+// }
 
 // %btn{
 //   color: #fff;

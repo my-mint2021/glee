@@ -95,7 +95,8 @@
 
   &__name {
     @include line-clamp(1);
-    @extend %dmsans-500;
+    font-family: dmsans500;
+    // @extend %dmsans-500;
     font-size: 16px;
     line-height: 2;
     color: $slider-title;
@@ -103,7 +104,8 @@
 
   &__cost {
     @include line-clamp(1);
-    @extend %dmsans-700;
+    font-family: dmsans700;
+    // @extend %dmsans-700;
     color: $icon-burger;
   }
 }

@@ -4,22 +4,22 @@
 @import 'settings/reset';
 @import 'settings/libs';
 @import 'settings/mixins';
-@import 'settings/global';
+@import 'components/global';
 
 //--- home-page---
-@import 'blocks/header';
+@import 'components/header';
 
 .main {
   flex: 1 0 auto;
 }
-@import 'blocks/top-slider';
-@import 'blocks/services';
-@import 'blocks/products-week.scss';
+@import 'components/home-page/top-slider';
+@import 'components/home-page/services';
+@import 'components/home-page/products-week.scss';
 
 
 // (index):1 Failed to decode downloaded font: http://localhost:3000/fonts/DMSans-Regular.woff2
 
-@import 'settings/product-card.scss';
+@import 'components/product-card.scss';
 
 
-@import 'blocks/footer';
+@import 'components/footer';

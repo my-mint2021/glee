@@ -41,7 +41,10 @@
 
   &__name {
     @include line-clamp(2);
-    @extend %rubik-700;
+    font-family: rubik500;
+    // @include $rubik500;
+    // font-family: $rubik500;
+    // @extend %rubik-500;
     margin-bottom: 40px;
     max-width: 500px;
     font-size: 72px;
@@ -61,12 +64,13 @@
   }
 
   &__link {
+    @include btn;
+    font-family: rubik500;
+    // @extend %rubik-500;
     position: relative;
     display: inline-block;
     align-self: flex-start;
     padding: 25px 100px 25px 25px;
-    @extend %rubik-500;
-    @include btn;
     font-size: 15px;
 
     &::after {
