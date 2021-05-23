@@ -98,6 +98,7 @@ body {
   border: 0;
 }
 
+// фильтр для секций с картинками
 .filter {
   display: flex;
   justify-content: center;
@@ -109,6 +110,7 @@ body {
     }
   }
 
+  // кнопка
   &__button {
     padding: 0;
     font-family: $dmsans;
@@ -132,6 +134,7 @@ body {
   }
 }
 
+// иконки на карточках
 .nav-btn {
   display: flex;
   justify-content: center;

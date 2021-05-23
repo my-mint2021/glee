@@ -25,7 +25,8 @@
     outline-color: $subtitle;
   }
 }
-@mixin link-more{
+
+@mixin link-more {
   position: relative;
   display: inline-block;
   align-self: flex-start;

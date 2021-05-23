@@ -10,9 +10,10 @@
 @import 'components/header';
 
 .main {
-  
+
   flex: 1 0 auto;
 }
+
 @import 'components/home-page/top-slider';
 @import 'components/home-page/services';
 @import 'components/home-page/products-week.scss';
