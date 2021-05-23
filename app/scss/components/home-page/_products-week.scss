@@ -1,6 +1,9 @@
 .products-week {
-  padding: 75px 0;
-
+  padding: 62px 0;
+  margin-bottom: 25px;
+  &__title{
+    margin-bottom: 20px;
+  }
   &__items {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -14,11 +17,13 @@
     // .view-more__item
 
     &__item {
-      display: flex;
-      flex: 1 1 50%;
-      padding: 97px 100px 67px 130px;
+      // !display: flex;
+      // flex: 1 1 50%;
+      padding: 97px 100px 20px 130px;
       color: #243f4d;
       background-color: rgba(252,215,182,.4);
+
+      width: 100%;
 
       &:not(:last-child) {
         margin-right: 30px;
@@ -33,8 +38,8 @@
 
     &__img {
       position: absolute;
-      left: 0;
-      bottom: 0;
+      left: 10px;
+      bottom: 20px;
       height: 405px;
       max-width: 235px;
       object-fit: cover;
@@ -61,6 +66,7 @@
       font-size: 26px;
       line-height: 1.2;
       color: $slider-title;
+      max-width: 350px;
     }
 
     // .view-more__descr

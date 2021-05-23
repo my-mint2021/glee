@@ -164,6 +164,7 @@ body {
   position: relative;
   height: 500px;
   display: block;
+  margin-bottom: 107px;
 
   &::before,
   &::after,
@@ -215,9 +216,10 @@ body {
 
   &__input {
     margin: 0;
-    padding: 12px;
-    width: 170px;
+    padding: 10px 20px;
+    width: 175px;
     border: none;
+    font-size: 12px;
     color: #234969;
     outline: transparent;
     background-color: $slider-descr-bg;
@@ -235,7 +237,7 @@ body {
     font-family: $dmsans;
     font-weight: 400;
     margin: 0;
-    padding: 12px;
+    padding: 9px 17px;
     font-size: 14px;
     border: none;
     cursor: pointer;

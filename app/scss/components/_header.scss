@@ -38,7 +38,7 @@
   }
 
   &__search {
-    margin-right: 20px;
+    margin-right: 21px;
     background-color: #edf1f4;
   }
 
@@ -47,10 +47,10 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    margin: 45px 20px 45px 0;
+    margin: 45px 16px 45px 0;
     padding-top: 10px;
-    width: 180px;
-    height: 50px;
+    width: 178px;
+    height: 51px;
     border: none;
     border-radius: 50px;
     background-color: $icon-head;
@@ -114,7 +114,7 @@
   &__favorites,
   &__basket {
     position: absolute;
-    top: 0;
+    top: 3PX;
     left: 0;
     right: 0;
     bottom: 0;
@@ -129,6 +129,8 @@
       outline-color: $icon-head;
     }
   }
+
+
 
   &__basket:hover {
     &::after {

@@ -13,7 +13,7 @@
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    // justify-content: space-between;
     margin: 0 auto;
     padding: 0 15px;
     min-width: 320px;
@@ -22,8 +22,8 @@
     &::before {
       content: "";
       position: absolute;
-      right: -55px;
-      top: 50%;
+      right: -102px;
+      top: 51%;
       width: 634px;
       height: 634px;
       border-radius: 50%;
@@ -37,6 +37,8 @@
     flex-direction: column;
     max-height: 400px;
     overflow: hidden;
+
+    margin-right: 40px;
   }
 
   &__name {

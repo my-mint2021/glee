@@ -3,12 +3,16 @@
   margin-bottom: 85px;
   // .design__items
 
+  &__title {
+    margin-bottom: 17px;
+  }
   &__items {
     display: flex;
     flex-wrap: wrap;
     margin: 0 -15px;
     font-family: $dmsans;
     font-weight: 700;
+    margin-bottom: 83px;
   }
 
   // .design__item
@@ -39,12 +43,17 @@
 
   &__name {
     position: relative;
+    display: inline-block;
     z-index: 2;
     line-height: 1.2;
     font-size: 20px;
     color: #1a1a1a;
     max-width: 170px;
     margin-bottom: 15px;
+    transition: color 0.2s ease-in;
+    &:hover{
+      color: $icon-burger;
+    }
   }
 
   // .design__style
