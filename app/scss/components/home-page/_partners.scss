@@ -4,6 +4,10 @@
   background-color: $icon-head;
   padding: 264px 0 86px;
   // .partners__list
+  
+  &--page{
+    padding: 80px 0 90px;
+  }
 
   &__list {
     display: flex;
