@@ -52,6 +52,8 @@
     text-transform: uppercase;
     color: $slider-title;
     overflow: hidden;
+
+    margin-top: auto;
   }
 
   &__text {
@@ -69,11 +71,16 @@
     @include btn;
     font-family: $rubik;
     font-weight: 500;
+
+    margin-bottom: 70px;
   }
 
   &__images {
     position: relative;
     z-index: 5;
+  }
+  &__img{
+    object-fit: contain;
   }
 
   .slick-dots {

@@ -52,10 +52,12 @@
   &__images {
     // margin-top: auto;
     margin-bottom: auto;
+    padding-top: 25px;
   }
 
   &__img {
     margin: 0 auto;
+    object-fit: contain;
   }
 
   &__nav {

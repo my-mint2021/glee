@@ -4,7 +4,7 @@ body {
 }
 
 img {
-  object-fit: contain;
+  object-fit: cover;
 }
 
 body {
@@ -390,6 +390,9 @@ body {
   height: 500px;
   display: block;
   margin-bottom: 107px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 
   &::before,
   &::after,

@@ -50,6 +50,14 @@
   &__item {
     position: relative;
     background-color: $white;
+    border-radius: 5px;
+    max-width: 370px;
+    overflow: hidden;
+
+    &:hover {
+      box-shadow: 0 0 20px $icon-burger;
+    }
+
 
     &:not(:last-child) {
       margin-right: 30px;
@@ -58,16 +66,21 @@
 
   &__link {
     position: absolute;
-    z-index: 10;
+    z-index: 1;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     transition: opacity 0.2s ease-in, background-color 0.2s ease-in;
 
+    &:hover+.articles__img {
+      transform: scale(1.05);
+    }
+
     &:hover {
       background-color: $icon-burger;
       opacity: 0.5;
+
     }
   }
 
@@ -75,16 +88,23 @@
 
   &__images {
     position: relative;
+    overflow: hidden;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+
+  &__img {
+    transition: transform 0.5s;
   }
 
   // .articles__span
 
   &__news {
     position: absolute;
-    z-index: 5;
+    z-index: 6;
     left: 30px;
     top: 232px;
-    font-family: "Poppins",serif;
+    font-family: "Poppins", serif;
     font-size: 14px;
     font-weight: 700;
     line-height: 1.4;
@@ -95,7 +115,8 @@
     color: $white;
     border: 1px solid transparent;
     transition: background-color 0.2s ease-in, color 0.2s ease-in, border-color 0.2s ease-in;
-    &:hover{
+
+    &:hover {
       background-color: $white;
       color: $icon-burger;
       border-color: $icon-burger;
@@ -109,12 +130,12 @@
     flex-direction: column;
     justify-content: space-between;
     padding: 30px 30px 19px;
+
   }
 
   // .articles__text
 
   &__text {
-    @include line-clamp(1);
     font-family: $dmsans;
     font-weight: 500;
     font-size: 18px;
@@ -122,11 +143,15 @@
     max-width: 285px;
     max-height: 100px;
     overflow: hidden;
-    padding-bottom: 57px;
+    padding-bottom: 5px;
     border-bottom: 1px solid #e0e0e0;
+
     a {
+      @include line-clamp(4);
+      overflow-wrap: break-word;
       transition: color 0.2s ease-in;
-      &:hover{
+
+      &:hover {
         color: $icon-burger;
       }
     }
@@ -140,14 +165,19 @@
     font-family: $rubik;
     font-size: 12px;
     text-transform: uppercase;
+
+
   }
 
   // .articles__date
   &__date,
   &__user {
+    @include line-clamp(1);
     position: relative;
     padding-left: 25px;
     margin-right: 8px;
+    overflow-wrap: break-word;
+
 
     &::before {
       content: '';
@@ -161,6 +191,8 @@
   }
 
   &__date {
+    flex: 0 0 auto;
+
     &::before {
       background-image: url('../images/icon/calendar.svg');
     }
@@ -168,9 +200,11 @@
 
   &__user {
     transition: color 0.2s ease-in;
-    &:hover{
+
+    &:hover {
       color: $icon-burger;
     }
+
     &::before {
       background-image: url('../images/icon/user.svg');
     }

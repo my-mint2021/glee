@@ -85,6 +85,9 @@
       font-size: 26px;
       line-height: 1.2;
       color: $slider-title;
+      &--right{
+        padding-bottom: 25px;
+      }
     }
 
     // .view-more__descr
@@ -110,10 +113,7 @@
       border: 1px solid $subtitle;
       border-radius: 5px;
       margin-bottom: 85px;
-
-      &::after {
-        background-image: url(../images/icon/bg-arrow2.png);
-      }
+    padding: 20px 90px 20px 25px;
 
       &:hover {
         background-color: $slider-btn;
