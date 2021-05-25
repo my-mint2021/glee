@@ -5,76 +5,67 @@
       <a class="articles__more" href="#">View All</a>
     </div>
     <span class="sr-only">Follow the links to find out new ideas and read articles about the interior</span>
+   
     <ul class="articles__items">
-
-
       <li class="articles__item">
-        <div class="articles__images">
-          <a href="" class="articles__link"></a>
-          <img class="articles__img" src="../images/our/1.png" width="370" height="250" alt="idea photo">
-        </div>
-        <a class="articles__news" href="#">News</a>
-          <div class="articles__info">
-            <div class="articles__text">
-              <a href="#">1111Diusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</a>
-            </div>
-            <div class="articles__bottom">
-              <p class="articles__date">28 january, 2020</p>
-              <a class="articles__user" href="#">by aDmin</a>
+        <article class="news-card">
+          <div class="news-card__images">
+            <a href="" class="news-card__link"></a>
+            <img class="news-card__img" src="../images/our/1.png" width="370" height="250" alt="idea photo">
+          </div>
+          <a class="news-card__news" href="#">News</a>
+          <div class="news-card__info">
+            <h3 class="news-card__text">
+              Diusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+            </h3>
+            <div class="news-card__bottom">
+              <time class="news-card__date" datetime="2020-01-28">28 january, 2020</time>
+              <a class="news-card__user" href="#">bY AdMiN</a>
             </div>
           </div>
-      </li>
-
-      
-<!-- 
-      <li class="articles__item">
-        <div class="articles__images">
-          <img class="articles__img" src="../images/our/1.png" width="370" height="250" alt="idea photo">
-          <a class="articles__news" href="#">News</a>
-          <div class="articles__info">
-            <div class="articles__text">
-              <a href="#">Diusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</a>
-            </div>
-            <div class="articles__bottom">
-              <p class="articles__date">28 january, 2020</p>
-              <a class="articles__user" href="#">BY ADMIN</a>
-            </div>
-          </div>
-        </div>
-      </li> -->
-
-      <li class="articles__item">
-        <div class="articles__images">
-          <img class="articles__img" src="../images/our/2.png" width="370" height="250" alt="idea photo">
-          <a class="articles__news" href="#">News</a>
-          <div class="articles__info">
-            <div class="articles__text">
-              <a href="#">Diusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</a>
-            </div>
-            <div class="articles__bottom">
-              <p class="articles__date">28 january, 2020</p>
-              <a class="articles__user" href="#">BY ADMIN</a>
-            </div>
-          </div>
-        </div>
+        </article>
       </li>
 
       <li class="articles__item">
-  
-        <div class="articles__images">
-          <img class="articles__img" src="../images/our/3.png" width="370" height="250" alt="idea photo">
-          <a class="articles__news" href="#">News</a>
-          <div class="articles__info">
-            <div class="articles__text">
-              <a href="#">Diusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</a>
-            </div>
-            <div class="articles__bottom">
-              <p class="articles__date">28 january, 2020</p>
-              <a class="articles__user" href="#">BY ADMIN</a>
+        <article class="news-card">
+          <div class="news-card__images">
+            <a href="" class="news-card__link"></a>
+            <img class="news-card__img" src="../images/our/2.png" width="370" height="250" alt="idea photo">
+          </div>
+          <a class="news-card__news" href="#">News</a>
+          <div class="news-card__info">
+            <h3 class="news-card__text">
+              Aonsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            </h3>
+            <div class="news-card__bottom">
+              <time class="news-card__date" datetime="2020-01-28">28 january, 2020</time>
+              <a class="news-card__user" href="#">bY AdMiN</a>
             </div>
           </div>
-        </div>
+        </article>
+      </li>
+
+      <li class="articles__item">
+        <article class="news-card">
+          <div class="news-card__images">
+            <a href="" class="news-card__link"></a>
+            <img class="news-card__img" src="../images/our/3.png" width="370" height="250" alt="idea photo">
+          </div>
+          <a class="news-card__news" href="#">News</a>
+          <div class="news-card__info">
+            <h3 class="news-card__text">
+              Rncididunt ut labore et dolore magna aliqua. Ut enim
+            </h3>
+            <div class="news-card__bottom">
+              <time class="news-card__date" datetime="2020-01-28">28 january, 2020</time>
+              <a class="news-card__user" href="#">bY AdMiN</a>
+            </div>
+          </div>
+        </article>
       </li>
     </ul>
   </div>
+  
+  @include('partners.html')
+  <div class="articles__background"></div>
 </section>
