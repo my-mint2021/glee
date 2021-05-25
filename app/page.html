@@ -47,7 +47,8 @@
 
       <div class="user-nav">
         <button class="user-nav__search nav-btn" type="button">
-          <svg class="user-nav__icon-search">
+          <!-- !альтернативный класс для svg поиска -->
+          <svg class="user-nav__scan">
             <use xlink:href="images/sprite.svg#search-icon"></use>
           </svg>
         </button>
@@ -57,7 +58,7 @@
           <div class="user-nav__left">
             <!-- !доп обертки для hover -->
             <a class="user-nav__favorites" href="#">
-              <svg class="user-nav__icon-like">
+              <svg class="user-nav__like">
                 <use xlink:href="images/sprite.svg#like-icon"></use>
               </svg>
               <span class="user-nav__num">0</span>
@@ -67,7 +68,7 @@
           <div class="user-nav__right">
             <!-- !доп обертки для hover -->
             <a class="user-nav__basket" href="#">
-              <svg class="user-nav__icon-basket">
+              <svg class="user-nav__card">
                 <use xlink:href="images/sprite.svg#basket-icon"></use>
               </svg>
               <span class="user-nav__num">0</span>
@@ -77,7 +78,7 @@
         </div>
 
         <button class="user-nav__menu nav-btn">
-          <svg class="user-nav__icon-menu">
+          <svg class="user-nav__profile">
             <use xlink:href="images/sprite.svg#menu-icon"></use>
           </svg>
           <span class="sr-only">Clicking on the button will open your profile</span>
@@ -177,32 +178,33 @@
   <footer class="footer">
   <h2 class="sr-only">footer</h2>
   <div class="container">
-    <div class="footer-top">
+    <ul class="footer-top">
+      <li class="footer-top__item footer-top__address">
+        <address class="footer-top__addr">
+          <a class="logo footer__logo" href="#">
+            <img class="logo__img" src="images/logo.png" alt="logo">
+          </a>
+          <ul class="footer-top__list">
+            <li class="footer-top__wrapper">
+              <a class="footer-top__link" href="#">
+                ADDRESS: 4772 Wines Lane Houston, TX 77032
+              </a>
+            </li>
+            <li class="footer-top__wrapper">
+              <a class="footer-top__link" href="tel:+8323475843">
+                TELEPHONE: +832-347-5843
+              </a>
+            </li>
+            <li class="footer-top__wrapper">
+              <a class="footer-top__link" href="mailto:contact@Glee.com">
+                EMAIL: contact@Glee.com
+              </a>
+            </li>
+          </ul>
+        </address>
+      </li>
 
-      <address class="footer-top__item footer-top__address">
-        <a class="logo footer__logo" href="#">
-          <img class="logo__img" src="images/logo.png" alt="logo">
-        </a>
-        <ul class="footer-top__list">
-          <li class="footer-top__wrapper">
-            <a class="footer-top__link" href="#">
-              ADDRESS: 4772 Wines Lane Houston, TX 77032
-            </a>
-          </li>
-          <li class="footer-top__wrapper">
-            <a class="footer-top__link" href="tel:+8323475843">
-              TELEPHONE: +832-347-5843
-            </a>
-          </li>
-          <li class="footer-top__wrapper">
-            <a class="footer-top__link" href="mailto:contact@Glee.com">
-              EMAIL: contact@Glee.com
-            </a>
-          </li>
-        </ul>
-      </address>
-
-      <div class="footer-top__item footer-top__services">
+      <li class="footer-top__item footer-top__services">
         <p class="footer-top__name">
           Services
         </p>
@@ -223,9 +225,9 @@
             <a class="footer-top__link " href="#">Terms & Condition</a>
           </li>
         </ul>
-      </div>
+      </li>
 
-      <div class="footer-top__item footer-top__account">
+      <li class="footer-top__item footer-top__account">
         <p class="footer-top__name">
           Account
         </p>
@@ -243,9 +245,9 @@
             <a class="footer-top__link " href="#">Register</a>
           </li>
         </ul>
-      </div>
+      </li>
 
-      <div class="footer-top__item footer-top__form">
+      <li class="footer-top__item footer-top__form">
         <p class="footer-top__name">
           Newsletter
         </p>
@@ -260,9 +262,8 @@
           <button class="form__btn" type="submit" name="button">Subscribe</button>
           <span class="sr-only">click the button to confirm your subscription by email</span>
         </form>
-      </div>
-    </div>
-
+      </li>
+    </ul>
 
     <div class="footer-bottom">
       <p class="footer__copy">©2020 CopyRight Example. All rights reserved. </p>

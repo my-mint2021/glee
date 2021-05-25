@@ -13,25 +13,25 @@
   align-items: center;
   justify-content: space-between;
 
-  &__icon-search {
+  &__scan {
     width: 17px;
     height: 17px;
     fill: $slider-title;
   }
 
-  &__icon-like {
+  &__like {
     width: 19px;
     height: 18px;
     fill: $slider-title;
   }
 
-  &__icon-basket {
+  &__card {
     width: 20px;
     height: 18px;
     fill: $slider-title;
   }
 
-  &__icon-menu {
+  &__profile {
     width: 21px;
     height: 22px;
     fill: $white;

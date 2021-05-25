@@ -86,7 +86,7 @@
       line-height: 1.2;
       color: $slider-title;
       &--right{
-        padding-bottom: 25px;
+        padding-bottom: 10px;
       }
     }
 
@@ -103,6 +103,8 @@
 
       &--right {
         max-width: 305px;
+        margin-bottom: 20px;
+
       }
     }
 
@@ -113,7 +115,10 @@
       border: 1px solid $subtitle;
       border-radius: 5px;
       margin-bottom: 85px;
-    padding: 20px 90px 20px 25px;
+      padding: 20px 90px 20px 25px;
+      &:after{
+      background-image: url(../images/icon/bg-arrow2-svg.svg);
+      }
 
       &:hover {
         background-color: $slider-btn;
