@@ -93,10 +93,6 @@
         background-color: $icon-head;
       }
     }
-
-    &:focus {
-      outline-color: green;
-    }
   }
 
   &__left {
@@ -114,7 +110,7 @@
   &__favorites,
   &__basket {
     position: absolute;
-    top: 3PX;
+    top: 3px;
     left: 0;
     right: 0;
     bottom: 0;

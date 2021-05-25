@@ -6,7 +6,6 @@
   align-items: center;
   padding: 25px 15px 35px;
   max-width: 270px;
-  min-height: 380px;
   background-color: $white;
   border-radius: 10px;
   box-shadow: 0 0 20px 20px $tabs-bg;
@@ -50,9 +49,8 @@
   }
 
   &__images {
-    // margin-top: auto;
     margin-bottom: auto;
-    padding-top: 25px;
+    padding: 25px 0 65px;
   }
 
   &__img {
