@@ -1,48 +1,60 @@
 .products-week {
   padding: 62px 0;
   margin-bottom: 25px;
-  &__title{
+
+  &__title {
     margin-bottom: 20px;
   }
+
   &__items {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 45px 30px;
-    margin-bottom: 185px;
+    margin-bottom: 177px;
   }
 
+  // --------блок с лампами --------
 
   .view-more {
+
     display: flex;
+    justify-content: center;
     // .view-more__item
 
     &__item {
-      // !display: flex;
-      // flex: 1 1 50%;
-      padding: 97px 100px 20px 130px;
-      color: #243f4d;
-      background-color: rgba(252,215,182,.4);
-
+      display: flex;
+      max-width: 870px;
       width: 100%;
+      height: 390px;
+      background-color: #feefe2;
 
       &:not(:last-child) {
         margin-right: 30px;
       }
     }
 
-    &__wrap{
+    // .view-more__wrap
+
+    &__wrap {
       position: relative;
-      padding-left: 255px;
+      padding-left: 140px;
+      padding-bottom: 80px;
+      max-width: 370px;
+      width: 100%;
     }
+
     // .view-more__img
 
     &__img {
       position: absolute;
-      left: 10px;
-      bottom: 20px;
+      bottom: 85px;
       height: 405px;
       max-width: 235px;
       object-fit: cover;
+
+      &--right {
+        right: -3px;
+      }
     }
 
     // .view-more__info
@@ -51,33 +63,44 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      height: 100%;
-      max-height: 270px;
-      overflow: hidden;
+      padding-left: 20px;
+      padding-top: 80px;
+      max-width: 500px;
+      width: 100%;
+
+      &--right {
+        padding-left: 60px;
+      }
     }
 
     // .view-more__name
 
     &__name {
       @include line-clamp(2);
-      margin-bottom: 32px;
+      margin-top: auto;
+      margin-bottom: auto;
+      max-width: 350px;
       font-family: $dmsans;
       font-weight: 700;
       font-size: 26px;
       line-height: 1.2;
       color: $slider-title;
-      max-width: 350px;
     }
 
     // .view-more__descr
 
     &__descr {
       @include line-clamp(2);
-      margin-bottom: 34px;
+      margin-bottom: 35px;
+      max-width: 350px;
       font-family: $rubik;
       font-weight: 400;
       font-size: 16px;
       line-height: 2;
+
+      &--right {
+        max-width: 305px;
+      }
     }
 
     // .view-more__link
@@ -86,7 +109,7 @@
       background-color: transparent;
       border: 1px solid $subtitle;
       border-radius: 5px;
-      margin-top: auto;
+      margin-bottom: 85px;
 
       &::after {
         background-image: url(../images/icon/bg-arrow2.png);
@@ -95,12 +118,12 @@
       &:hover {
         background-color: $slider-btn;
       }
-    
+
       &:active {
         background-color: $icon-head;
         border-color: transparent;
       }
-    
+
       &:focus {
         outline-color: $subtitle;
       }
