@@ -1,11 +1,20 @@
 .design-card {
-  // background-color: #000;
-  max-width: 370px;
-  min-height: 250px;
-   background-color: #f8f8f8;
+  padding: 35px 0 0 35px;
   align-items: flex-start;
   justify-content: start;
-  padding: 35px 0 0 35px;
+  max-width: 370px;
+  min-height: 250px;
+  background-color: #f8f8f8;
+  transition: transform 0.3s;
+
+  &:hover {
+    transform: translateY(-3px);
+  }
+
+  &:hover>.design-card__link {
+    opacity: 0.4;
+    box-shadow: 0 0 10px $icon-burger;
+  }
 
   &__link {
     position: absolute;
@@ -16,15 +25,8 @@
     z-index: 5;
     background-color: $icon-head;
     opacity: 0;
-    transition: opacity 0.3s;
-
-    &:hover {
-      opacity: 0.4;
-      box-shadow: 0 0 10px $icon-burger;
-    }
+    transition: opacity 0.7s, box-shadow 0.2s;
   }
-
-  // .design__images
 
   &__images {
     position: absolute;
@@ -45,24 +47,18 @@
     }
   }
 
-  // .design__name
-
   &__title {
     position: relative;
     display: inline-block;
+    max-width: 180px;
+    margin-bottom: 10px;
     z-index: 6;
     line-height: 1.2;
     font-size: 20px;
     color: #1a1a1a;
-    max-width: 180px;
-    margin-bottom: 10px;
     transition: color 0.2s ease-in;
-
-    &:hover {
-      color: $icon-head;
-    }
   }
-  // .design__style
+
   &__style {
     display: block;
     position: relative;
@@ -71,9 +67,5 @@
     font-size: 16px;
     color: $icon-burger;
     transition: color 0.2s ease-in;
-
-    &:hover {
-      color: $icon-head;
-    }
   }
 }

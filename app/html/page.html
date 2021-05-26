@@ -1,30 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>default page</title>
-  <link rel="shortcut icon" href="images/icon/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="css/style.min.css">
-</head>
+@include('./components/head.html')
 
 <body>
   @include('./components/header.html')
 
   <main class="main">
-    
+    <!-- @include('./components/breadcrumbs.html') -->
+    <!-- Ром, breadcrumbs это блок в котором могут меняться и добавляться ссылки, как такое инклюдить?или то что динамически меняется инклюдить не нужно? -->
     <div class="breadcrumbs">
       <div class="breadcrumbs__inner">
         <h2 class="breadcrumbs__title">Default page</h2>
-      <ul class="breadcrumbs__list">
-        <li class="breadcrumbs__item">
-          <a class="breadcrumbs__link" href="#">Home</a>
-        </li> <li class="breadcrumbs__item">
-          <span class="breadcrumbs__link" href="#">Default page</span>
-        </li>
-      </ul>
+        <ul class="breadcrumbs__list">
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link" href="#">Home</a>
+          </li>
+          <li class="breadcrumbs__item">
+            <span class="breadcrumbs__link" href="#">Default page</span>
+          </li>
+        </ul>
       </div>
     </div>
 

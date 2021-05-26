@@ -1,5 +1,6 @@
 .product-card {
   position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -10,10 +11,18 @@
   border-radius: 10px;
   box-shadow: 0 0 20px 20px $tabs-bg;
   outline: 2px solid transparent;
+  border: 1px solid transparent;
+  transition: border-color 0.2s, box-shadow 0.2s;
+
+  &:hover {
+    border-color: $icon-burger;
+    box-shadow: 0 0 10px $slider-title;
+  }
 
   &:hover {
     .product-card__nav {
       opacity: 1;
+      transform: translatey(0);
     }
   }
 
@@ -64,7 +73,8 @@
     display: flex;
     justify-content: center;
     opacity: 0;
-    transition: opacity 0.2s ease-in;
+    transform: translatey(350%);
+    transition: opacity 0.5s ease-in, transform 0.3s;
   }
 
   &__btn {

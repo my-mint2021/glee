@@ -15,10 +15,6 @@ $(function () {
     infinite: true,
   });
 
-  // var mixer = mixitup('.products-week__items');
-  // var mixer = mixitup('.design');
-
-
   var mixEl1 = document.querySelector('[data-ref="mix-1"]');
   var mixEl2 = document.querySelector('[data-ref="mix-2"]');
  
@@ -30,7 +26,5 @@ $(function () {
  
   var mixer1 = mixitup(mixEl1, config);
   var mixer2 = mixitup(mixEl2, config);
-
-
 
 });

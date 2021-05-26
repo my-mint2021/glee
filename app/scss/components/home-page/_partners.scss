@@ -1,10 +1,9 @@
 
 .partners {
   position: relative;
-  // z-index: -1;
+  padding: 90px 0 85px;
   z-index: 100;
   background-color: #fef7f0;
-  padding: 90px 0 85px;
 
   &__list {
     display: flex;

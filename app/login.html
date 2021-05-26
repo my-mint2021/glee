@@ -5,10 +5,11 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Log In</title>
+  <title>Glee market</title>
   <link rel="shortcut icon" href="images/icon/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
+
 
 <body>
   <header class="header">
@@ -47,7 +48,7 @@
 
       <div class="user-nav">
         <button class="user-nav__search nav-btn" type="button">
-          <!-- !альтернативный класс для svg поиска -->
+          <!-- !альтернативный класс для картинок svg поиск -->
           <svg class="user-nav__scan">
             <use xlink:href="images/sprite.svg#search-icon"></use>
           </svg>
@@ -88,7 +89,8 @@
   </div>
 </header>
   <main class="main">
-    <div class="breadcrumbs">
+    <!-- смысла нет наверно делать в html такой компонент потому что на каждой странице он будет разный ?? не понял я короче -->
+<div class="breadcrumbs">
   <div class="breadcrumbs__inner">
     <h2 class="breadcrumbs__title">Log in</h2>
   <ul class="breadcrumbs__list">
@@ -111,19 +113,14 @@
         Password *
         <input class="modal__input" type="password">
       </label>
-
       <button class="modal__btn" type="submit">Login</button>
-
       <div class="modal__wrap">
-
         <input class="modal__checkbox" type="checkbox" name="checkbox" id="checkbox">
         <label class="modal__check-label" name="modal__label" for="checkbox">
           Remember me
         </label>
-
         <a class="modal__link" href="#">Lost your password?</a>
       </div>
-
       <span class="modal__text">Not registered? No problem</span>
       <a class="modal__link-create" href="#">Create an account</a>
     </form>
@@ -162,7 +159,7 @@
         </a>
       </li>
 
-<!-- !---------------------дубль лого---------------------- -->
+      <!-- !---------------------дубль лого---------------------- -->
       <li class="partners__item">
         <a class="partners__img" href="#">
           <img src="../images/partner/1.png" alt="partners">
@@ -192,7 +189,7 @@
           <img src="../images/partner/5.png" alt="partners">
         </a>
       </li>
-      
+
     </ul>
   </div>
 </div>
@@ -201,6 +198,7 @@
   <h2 class="sr-only">footer</h2>
   <div class="container">
     <ul class="footer-top">
+
       <li class="footer-top__item footer-top__address">
         <address class="footer-top__addr">
           <a class="logo footer__logo" href="#">
