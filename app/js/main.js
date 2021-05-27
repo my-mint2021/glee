@@ -5,14 +5,14 @@ $(function () {
     $('.burger-btn').click(function (event) {
       $('.burger-btn').toggleClass('burger-btn--active');
       $('.menu').toggleClass('menu--active');
-      // $('body').toggleClass('body--lock');
+      $('body').toggleClass('body--lock');
     });
   });
 
   $('.menu').on("click", function () {
     $('.burger-btn').removeClass('burger-btn--active');
     $('.menu').removeClass('menu--active');
-    // $('body').removeClass('body--lock');
+    $('body').removeClass('body--lock');
   });
 
 

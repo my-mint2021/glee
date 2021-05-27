@@ -6,8 +6,8 @@
     justify-content: space-between;
     align-items: center;
 
-    @include bp($xl) {
-
+    @include bp($sm) {
+      flex-wrap: wrap;
     }
   }
 }
@@ -16,6 +16,14 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @include bp($sm) {
+    order: 1;
+    margin: 0 auto;
+    width: 100%;
+    justify-content: center;
+  }
+
 
   &__scan {
     width: 17px;
@@ -58,6 +66,12 @@
     border: none;
     border-radius: 50px;
     background-color: $icon-head;
+
+    @include bp($sm) {
+      width: 150px;
+      height: 40px;
+      margin-bottom: 15px;
+    }
 
     &::before {
       content: '';
@@ -150,6 +164,11 @@
     text-align: center;
     color: $slider-title;
     background-color: $white;
+
+    @include bp($sm) {
+      top: 5px;
+      left: 41px;
+    }
   }
 
   &__menu {
