@@ -40,33 +40,36 @@ body {
 }
 
 .burger-btn {
-  position: relative;
   display: block;
+  position: relative;
   width: 30px;
   height: 20px;
+  position: relative;
   border: none;
-  background-color: transparent;
+  z-index: 3;
+  background-color: yellow;
 
 
   span {
-    position: absolute;
-    left: 0;
-    top: 9px;
-    width: 100%;
-    height: 2px;
-    background-color: red;
-    transition: transform 0.4s;
+  	position: absolute;
+		background-color: red;
+		position: absolute;
+		left: 0;
+		width: 100%;
+		height: 2px;
+		top: 9px;
+		transition: all 0.3s ease 0s;
   }
 
   &::before,
   &::after {
     content: '';
-    position: absolute;
-    left: 0;
-    width: 105%;
-    height: 2px;
-    background-color: red;
-    transition: transform 0.4s;
+		background-color: red;
+		position: absolute;
+		width: 100%;
+		height: 2px;
+		left: 0;
+		transition: all 0.3s ease 0s;
   }
 
   &::before {
@@ -91,8 +94,6 @@ body {
       transform:rotate(-45deg);
       bottom: 9px;
     }
-
-
   }
 }
 
