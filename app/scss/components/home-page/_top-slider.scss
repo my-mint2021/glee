@@ -7,6 +7,22 @@
   &__item {
     height: 820px;
     display: flex !important;
+
+    @include bp($xl) {
+      height: 550px;
+    }
+
+    @include bp($lg) {
+      height: 375px;
+    }
+
+    @include bp($md) {
+      height: 250px;
+    }
+
+    @include bp($sm){
+      flex-direction: row;
+    }
   }
 
   &__wrap {
@@ -15,9 +31,13 @@
     align-items: center;
     margin: 0 auto;
     padding: 0 15px;
-    min-width: 320px;
+    // min-width: 320px;
     max-width: 1200px;
 
+    @include bp($sm) {
+      flex-direction:column;
+      padding: 10px 15px;
+    }
     &::before {
       content: "";
       position: absolute;
@@ -28,15 +48,31 @@
       border-radius: 50%;
       background-image: linear-gradient(to left, $white 0%, rgba($white, 0) 100%);
       transform: translateY(-50%);
+
+      @include bp($xxl) {
+        right: 5px;
+        width: 450px;
+        height: 450px;
+      }
+
+      @include bp($xl) {
+        display: none;
+      }
+
+    
     }
   }
 
   &__content {
     display: flex;
     flex-direction: column;
-    max-height: 400px;
+    max-height: 450px;
     overflow: hidden;
     margin-right: 40px;
+    @include bp($sm) {
+      flex-direction:column;
+      margin: 0 auto;
+    }
   }
 
   &__name {
@@ -51,6 +87,23 @@
     text-transform: uppercase;
     color: $slider-title;
     overflow: hidden;
+
+    @include bp($xl) {
+      font-size: 60px;
+    }
+
+    @include bp($lg) {
+      font-size: 45px;
+      margin-bottom: 10px;
+    }
+
+    @include bp($md) {
+      font-size: 30px;
+      @include line-clamp(3);
+    }
+    @include bp($sm){
+      font-size: 25px;
+    }
   }
 
   &__text {
@@ -62,6 +115,10 @@
     font-size: 18px;
     line-height: 1.7;
     color: $slider-subtitle;
+
+    @include bp($md) {
+      display: none;
+    }
   }
 
   &__link {
@@ -69,6 +126,19 @@
     @include btn;
     font-family: $rubik;
     font-weight: 500;
+
+    @include bp($xl) {
+      margin-bottom: 0;
+    }
+
+    @include bp($md) {
+         padding: 10px 50px 10px 10px;
+    }
+
+    @include bp($sm) {
+      margin: 0 auto;
+      margin-bottom: 20px;
+ }
   }
 
   &__images {
@@ -78,6 +148,10 @@
 
   &__img {
     object-fit: contain;
+    @include bp($sm){
+      width: 260px;
+      height: auto;
+    }
   }
 
   .slick-dots {
@@ -86,6 +160,10 @@
     justify-content: center;
     bottom: 40px;
     width: 100%;
+
+    @include bp($md){
+      bottom: 10px;
+    }
 
     li {
       &:not(:last-child) {
@@ -106,6 +184,10 @@
         &:focus {
           outline-color: $subtitle;
         }
+        @include bp($sm) {
+         width: 20px;
+         height: 20px;
+     }
       }
 
       &.slick-active button {

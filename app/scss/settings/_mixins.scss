@@ -45,3 +45,10 @@
     transform: translateY(-50%);
   }
 }
+
+
+@mixin bp($width) {
+  @media only screen and (max-width: $width + 'px') {
+      @content;
+  }
+}

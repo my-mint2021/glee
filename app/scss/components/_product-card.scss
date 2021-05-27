@@ -14,6 +14,9 @@
   border: 1px solid transparent;
   transition: border-color 0.2s, box-shadow 0.2s;
 
+  @include bp($xl){
+    max-width: 100%;
+  }
   &:hover {
     border-color: $icon-burger;
     box-shadow: 0 0 10px $slider-title;

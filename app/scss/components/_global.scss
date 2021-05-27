@@ -39,12 +39,73 @@ body {
   @include link-more;
 }
 
+.burger-btn {
+  position: relative;
+  display: block;
+  width: 30px;
+  height: 20px;
+  border: none;
+  background-color: transparent;
+
+
+  span {
+    position: absolute;
+    left: 0;
+    top: 9px;
+    width: 100%;
+    height: 2px;
+    background-color: red;
+    transition: transform 0.4s;
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 105%;
+    height: 2px;
+    background-color: red;
+    transition: transform 0.4s;
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    bottom: 0;
+  }
+
+  &--active {
+    span {
+      transform: scale(0);
+    }
+
+    &::before {
+      transform:rotate(45deg);
+      top: 9px;
+    }
+
+    &::after {
+      transform:rotate(-45deg);
+      bottom: 9px;
+    }
+
+
+  }
+}
+
 .menu {
   display: flex;
 
   &__item {
     &:not(:last-child) {
       margin-right: 35px;
+
+      @include bp($xl) {
+        margin-right: 10px;
+      }
     }
   }
 
@@ -80,6 +141,10 @@ body {
   text-align: center;
   font-size: 36px;
   color: $title;
+
+  @include bp($sm) {
+    font-size: 28px;
+  }
 }
 
 .sr-only {

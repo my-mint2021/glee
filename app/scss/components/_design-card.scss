@@ -8,6 +8,10 @@
   transition: transform 0.3s;
   box-shadow: none;
 
+  @include bp($lg) {
+    max-width: 100%;
+  }
+
   &:hover {
     transform: translateY(-3px);
   }
@@ -36,6 +40,10 @@
     max-width: 270px;
     max-height: 200px;
     overflow: hidden;
+
+    @include bp($xl) {
+      bottom: 0;
+    }
 
     &--right {
       right: 35px;

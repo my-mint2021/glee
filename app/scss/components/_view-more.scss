@@ -1,7 +1,11 @@
 .view-more {
   display: flex;
   justify-content: center;
+
   // .view-more__item
+  @include bp($xl) {
+    flex-direction: column;
+  }
 
   &__item {
     display: flex;
@@ -9,8 +13,26 @@
     width: 100%;
     background-color: #feefe2;
 
+    @include bp($xl) {
+      align-self: center;
+    }
+
+    @include bp($sm) {
+      flex-direction: column;
+
+    }
+
+
     &:not(:last-child) {
       margin-right: 30px;
+
+      @include bp($xl) {
+        margin-right: 0;
+        margin-bottom: 150px;
+      }
+      @include bp($sm){
+        margin-bottom: 35px;
+      }
     }
   }
 
@@ -32,6 +54,17 @@
     max-width: 235px;
     object-fit: cover;
 
+    @include bp($md) {
+      left: 0;
+    }
+
+    @include bp($sm) {
+      position: relative;
+      top: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
     &--right {
       right: -3px;
     }
@@ -51,6 +84,17 @@
 
     &--right {
       padding-left: 60px;
+
+      @include bp($sm) {
+        padding-left: 0;
+      }
+    }
+
+    @include bp($sm) {
+      width: auto;
+      margin: 0 auto;
+      text-align: center;
+      padding: 80px 5px 5px 5px;
     }
   }
 
@@ -97,6 +141,11 @@
     border-radius: 5px;
     margin-bottom: 85px;
     padding: 20px 90px 20px 25px;
+
+    @include bp($sm) {
+      margin: 0 auto;
+      margin-bottom: 50px;
+    }
 
     &:after {
       background-image: url(../images/icon/bg-arrow2-svg.svg);

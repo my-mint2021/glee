@@ -1,7 +1,9 @@
 .design {
   margin-bottom: 85px;
   // .design__items
-
+  @include bp($md){
+    margin-bottom: 30px;
+  }
   &__title {
     margin-bottom: 17px;
   }
@@ -11,5 +13,14 @@
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 35px 30px;
     margin-bottom: 106px;
+
+    @include bp($lg) {
+      grid-template-columns: repeat(2, 1fr);
+      margin-bottom: 30px;
+    }
+
+    @include bp($sm) {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 }
