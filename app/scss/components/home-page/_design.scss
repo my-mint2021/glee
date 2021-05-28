@@ -1,9 +1,10 @@
 .design {
   margin-bottom: 85px;
-  // .design__items
-  @include bp($md){
+
+  @include bp($md) {
     margin-bottom: 30px;
   }
+
   &__title {
     margin-bottom: 17px;
   }

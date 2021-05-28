@@ -1,9 +1,9 @@
 .services {
 
-
-  @include bp($sm){
+  @include bp($sm) {
     display: none;
   }
+
   &__inner {
     display: flex;
     justify-content: space-between;
@@ -18,7 +18,7 @@
     padding: 35px;
     overflow: hidden;
 
-    @include bp($lg){
+    @include bp($lg) {
       padding: 10px;
     }
 
@@ -42,13 +42,13 @@
       border-radius: 50%;
       background-color: #dfe3e294;
 
-      @include bp($md){
+      @include bp($md) {
         width: 0;
         height: 0;
       }
     }
 
-    @include bp($md){
+    @include bp($md) {
       padding-left: 10px;
     }
   }
@@ -69,14 +69,15 @@
     font-size: 16px;
     line-height: 1.9;
     color: $slider-descr;
-    @include bp($lg){
+
+    @include bp($lg) {
       display: none;
     }
   }
 
   &__content--support {
     background-image: url(../images/icon/time.svg);
-  
+
     &::after {
       top: 40px;
       left: 35px;
@@ -100,12 +101,12 @@
       left: 35px;
     }
   }
+
   &__content--support,
   &__content--delivery,
-  &__content--card{
-    @include bp($md){
+  &__content--card {
+    @include bp($md) {
       background-image: none;
     }
   }
-
 }

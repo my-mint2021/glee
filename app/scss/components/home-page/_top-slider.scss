@@ -20,7 +20,7 @@
       height: 250px;
     }
 
-    @include bp($sm){
+    @include bp($sm) {
       flex-direction: row;
     }
   }
@@ -31,13 +31,13 @@
     align-items: center;
     margin: 0 auto;
     padding: 0 15px;
-    // min-width: 320px;
     max-width: 1200px;
 
     @include bp($sm) {
-      flex-direction:column;
+      flex-direction: column;
       padding: 10px 15px;
     }
+
     &::before {
       content: "";
       position: absolute;
@@ -58,8 +58,6 @@
       @include bp($xl) {
         display: none;
       }
-
-    
     }
   }
 
@@ -69,8 +67,9 @@
     max-height: 450px;
     overflow: hidden;
     margin-right: 40px;
+
     @include bp($sm) {
-      flex-direction:column;
+      flex-direction: column;
       margin: 0 auto;
     }
   }
@@ -101,7 +100,8 @@
       font-size: 30px;
       @include line-clamp(3);
     }
-    @include bp($sm){
+
+    @include bp($sm) {
       font-size: 25px;
     }
   }
@@ -132,13 +132,13 @@
     }
 
     @include bp($md) {
-         padding: 10px 50px 10px 10px;
+      padding: 10px 50px 10px 10px;
     }
 
     @include bp($sm) {
       margin: 0 auto;
       margin-bottom: 20px;
- }
+    }
   }
 
   &__images {
@@ -148,7 +148,8 @@
 
   &__img {
     object-fit: contain;
-    @include bp($sm){
+
+    @include bp($sm) {
       width: 260px;
       height: auto;
     }
@@ -161,7 +162,7 @@
     bottom: 40px;
     width: 100%;
 
-    @include bp($md){
+    @include bp($md) {
       bottom: 10px;
     }
 
@@ -184,10 +185,11 @@
         &:focus {
           outline-color: $subtitle;
         }
+
         @include bp($sm) {
-         width: 20px;
-         height: 20px;
-     }
+          width: 20px;
+          height: 20px;
+        }
       }
 
       &.slick-active button {

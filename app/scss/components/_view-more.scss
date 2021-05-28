@@ -19,7 +19,6 @@
 
     @include bp($sm) {
       flex-direction: column;
-
     }
 
 
@@ -30,7 +29,8 @@
         margin-right: 0;
         margin-bottom: 150px;
       }
-      @include bp($sm){
+
+      @include bp($sm) {
         margin-bottom: 35px;
       }
     }
