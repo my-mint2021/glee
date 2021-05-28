@@ -6,6 +6,9 @@
   @include bp($lg) {
     margin-bottom: 30px;
   }
+  @include bp($md){
+    margin-bottom: 10px;
+  }
 
   &__wrapper {
     &:not(:last-child) {

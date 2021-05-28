@@ -15,7 +15,7 @@
   transition: border-color 0.2s, box-shadow 0.2s;
 
   @include bp($xl) {
-    max-width: 100%;
+    margin: 0 auto;
   }
 
   &:hover {
@@ -79,6 +79,11 @@
     opacity: 0;
     transform: translatey(350%);
     transition: opacity 0.5s ease-in, transform 0.3s;
+
+    @include bp($lg){
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
   &__btn {
@@ -107,9 +112,12 @@
     }
   }
 
-  &__name {
+  &__name, &__cost{
     @include line-clamp(1);
     font-family: $dmsans;
+
+  }
+  &__name {
     font-weight: 500;
     font-size: 16px;
     line-height: 2;
@@ -117,8 +125,6 @@
   }
 
   &__cost {
-    @include line-clamp(1);
-    font-family: $dmsans;
     font-weight: 700;
     color: $icon-burger;
   }

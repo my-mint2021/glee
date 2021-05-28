@@ -4,13 +4,10 @@
 @import 'settings/reset';
 @import 'settings/libs';
 @import 'settings/mixins';
-@import 'components/global';
+@import 'settings/global';
 
 //------------project---------------
 @import 'components/header';
-.main {
-  flex: 1 0 auto;
-}
 
 //-------------home-page------------------
 @import 'components/home-page/top-slider';

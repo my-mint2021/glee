@@ -29,7 +29,14 @@ $(function () {
     autoplay: true,
     autoplaySpeed: 2000,
     infinite: true,
-    responsive: [{
+    responsive: [
+      {
+        breakpoint: 1220,
+        settings: {
+          slidesToShow: 4,
+        }
+      },
+      {
         breakpoint: 768,
         settings: {
           slidesToShow: 3,

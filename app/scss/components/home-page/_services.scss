@@ -1,13 +1,16 @@
 .services {
 
-  @include bp($sm) {
-    display: none;
+  @include bp($md) {
+margin-bottom: 10px;
   }
 
   &__inner {
     display: flex;
     justify-content: space-between;
     background-color: $slider-descr-bg;
+    @include bp($sm){
+      flex-wrap: wrap;
+    }
   }
 
   &__item {
@@ -20,6 +23,11 @@
 
     @include bp($lg) {
       padding: 10px;
+      max-height: none;
+    }
+
+    @include bp($md){
+      padding: 10px 10px 0 10px;
     }
 
     &:not(:last-child) {
@@ -33,7 +41,16 @@
     max-width: 315px;
     background-position: 0 8px;
     background-repeat: no-repeat;
+    
 
+    @include bp($lg){
+      padding: 10px 10px 10px 80px;
+    }
+    @include bp($sm){
+      max-width: 100%;
+      text-align: center;
+      padding: 0;
+    }
     &::after {
       content: '';
       position: absolute;
@@ -60,6 +77,11 @@
     font-size: 18px;
     line-height: 2.2;
     color: $slider-subtitle;
+    @include bp($md){
+      line-height: 1.2;
+    margin-bottom: 10px;
+    text-align: center; 
+    }
   }
 
   &__text {
@@ -70,8 +92,9 @@
     line-height: 1.9;
     color: $slider-descr;
 
-    @include bp($lg) {
-      display: none;
+    @include bp($md) {
+      line-height: 1.2;
+      margin-bottom: 10px;
     }
   }
 

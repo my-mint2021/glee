@@ -33,13 +33,13 @@
   @include bp($lg) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px 20px;
+    grid-gap: 20px;
   }
 
   @include bp($sm) {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    grid-gap: 20px 20px;
+    grid-gap: 20px;
     justify-items: center;
     text-align: center;
   }

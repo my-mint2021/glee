@@ -43,6 +43,9 @@
     background-image: url(../images/icon/bg-arrow-svg.svg);
     background-repeat: no-repeat;
     transform: translateY(-50%);
+    @include bp($md){
+      right: 10px;
+    }
   }
 }
 

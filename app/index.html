@@ -9,6 +9,30 @@
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
+<!-- в хедер лго добавить модификатор вместо класса
+?футер топ убрать лейбл сделать сронли
+?убрать сронли с баттон в футер
+?в артиклс бай админ написать нормально
+
+?виев море кнопка транзишн добавить
+?область клика в меню бургер не на всю ширину
+?в сладере не убирать описании картинки после титла
+  ?сервисы вернуть иконки и описание
+?лампы не больше высоты страницы в ландшафтном мобилке
+?майн в глобал из стайл вынести
+?глобал убраьт в сеттингс
+дезигнкард убрать высоту
+ньюскард убрать высоту
+?продукт кард через запятую инклюд внизу
+?удалить все лишнее в лампах снизу
+?lЕЗИГНКАРД ХОВЕР УБРАТЬ > ОКОЛО ДЕЗИГН КАРД ЛИНК
+в топ слайдер 14.51 разобраться с шириной и высотой 
+?гридгап просто 20пх если повтор значений
+?на сенсорах сразу достать кнопки в карточках товара
+?на айпаде лого партнерс сделать 4 шт
+?не расширять карточки товаров в мобилке
+отступы в мобилке меньше -->
+
 <body class="body">
   <header class="header">
   <h1 class="sr-only">The best furniture store</h1>
@@ -670,7 +694,7 @@
             </div>
             <div class="news-card__bottom">
               <time class="news-card__date" datetime="2020-01-28">28 january, 2020</time>
-              <a class="news-card__user" href="#">bY AdMiN</a>
+              <a class="news-card__user" href="#">by admin</a>
             </div>
           </div>
         </article>
@@ -691,7 +715,7 @@
             </div>
             <div class="news-card__bottom">
               <time class="news-card__date" datetime="2020-01-28">28 january, 2020</time>
-              <a class="news-card__user" href="#">bY AdMiN</a>
+              <a class="news-card__user" href="#">by admin</a>
             </div>
           </div>
         </article>
@@ -712,7 +736,7 @@
             </div>
             <div class="news-card__bottom">
               <time class="news-card__date" datetime="2020-01-28">28 january, 2020</time>
-              <a class="news-card__user" href="#">bY AdMiN</a>
+              <a class="news-card__user" href="#">by admin</a>
             </div>
           </div>
         </article>
@@ -872,12 +896,9 @@
           <p>Subscribe by our newsletter and get update protidin.</p>
         </div>
         <form class="form">
-          <label class="form__label">
+          <label class="form__label sr-only" for="form__input">Enter your email input field to subscribe </label>
             <input class="form__input" type="email" name="email" placeholder="Email address">
-            <span class="sr-only">Enter your email input field to subscribe</span>
-          </label>
           <button class="form__btn" type="submit" name="button">Subscribe</button>
-          <span class="sr-only">click the button to confirm your subscription by email</span>
         </form>
       </li>
     </ul>

@@ -3,10 +3,14 @@
 
   @include bp($md) {
     margin-bottom: 30px;
+  padding: 15px 0;
   }
 
   &__title {
     margin-bottom: 17px;
+    @include bp($md){
+      margin-bottom: 0;
+    }
   }
 
   &__items {

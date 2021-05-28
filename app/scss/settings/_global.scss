@@ -20,6 +20,9 @@ img {
     overflow: hidden;
   }
 }
+.main {
+  flex: 1 0 auto;
+}
 
 .container {
   max-width: 1200px;
@@ -84,7 +87,8 @@ img {
     transition: all 0.3s ease 0s;
 
     @include bp($sm) {
-      top: 10px;
+      top: 11px;
+      height: 3px;
     }
   }
 
@@ -97,6 +101,9 @@ img {
     height: 5px;
     left: 0;
     transition: all 0.3s ease 0s;
+    @include bp($sm){
+      height: 3px;
+    }
   }
 
   &::before {
@@ -118,7 +125,7 @@ img {
       top: 13px;
 
       @include bp($sm) {
-        top: 10px;
+        top: 11px;
       }
     }
 
@@ -128,7 +135,7 @@ img {
       bottom: 13px;
 
       @include bp($sm) {
-        bottom: 10px;
+        bottom: 11px;
       }
     }
   }
@@ -167,6 +174,9 @@ img {
       transform: translateY(-200%);
       transition: transform 0.3s;
     }
+    @include bp($sm){
+      padding: 70px 0 30px;
+    }
   }
 
   &__item--header {
@@ -180,7 +190,7 @@ img {
 
       @include bp($lg) {
         margin-right: 0;
-        margin-bottom: 50px;
+        width: 100%;
       }
     }
   }
@@ -199,6 +209,14 @@ img {
       @include bp($lg) {
         color: $white;
         font-size: 1.5em;
+        display: block;
+        padding: 35px 0;
+        text-align: center;
+      }
+
+      @include bp($sm){
+        padding: 13px 0;
+        font-size: 1.2em;
       }
     }
 
