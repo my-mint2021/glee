@@ -23,6 +23,10 @@
 //--------------------login-----------------
 @import 'components/registration/modal.scss';
 
+
+//--------------shop-------------------------
+@import 'components/shop.scss';
+
 //--------------components-------------------
 @import 'components/product-card.scss';
 @import 'components/design-card.scss';
@@ -32,5 +36,6 @@
 @import 'components/news-card.scss';
 @import 'components/nav-btn.scss';
 @import 'components/filter.scss';
+
 
 @import 'components/footer';

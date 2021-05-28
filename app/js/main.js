@@ -53,6 +53,29 @@ $(function () {
     }
   };
 
+  // фильтр цен
+  $(".filter-price__input").ionRangeSlider({
+    type: "double",
+   prefix: "$",
+
+   onStart: function (data) {
+    $('.filters-price__from').text(data.from);
+    $('.filters-price__to').text(data.to);
+   }, 
+   onChange: function (data) {
+    $('.filters-price__from').text(data.from);
+    $('.filters-price__to').text(data.to);
+   }
+
+  });
+
+  $(".star").rateYo({
+    starWidth: "11px",
+    normalFill: "#d6d6d6",
+    ratedFill: "#ffcc00",
+    readOnly: true,
+  });
+
   var mixer1 = mixitup(mixEl1, config);
   var mixer2 = mixitup(mixEl2, config);
 
