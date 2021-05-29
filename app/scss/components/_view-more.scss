@@ -29,6 +29,9 @@
         margin-right: 0;
         margin-bottom: 95px;
       }
+      @include bp($lg){
+        margin-bottom: 50px;
+      }
 
       @include bp($sm) {
         margin-bottom: 60px;

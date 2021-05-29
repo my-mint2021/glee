@@ -1,14 +1,15 @@
 .services {
 
   @include bp($md) {
-margin-bottom: 10px;
+    margin-bottom: 10px;
   }
 
   &__inner {
     display: flex;
     justify-content: space-between;
     background-color: $slider-descr-bg;
-    @include bp($sm){
+
+    @include bp($sm) {
       flex-wrap: wrap;
     }
   }
@@ -21,12 +22,16 @@ margin-bottom: 10px;
     padding: 35px;
     overflow: hidden;
 
+    @include bp($xl) {
+      max-height: 180px;
+    }
+
     @include bp($lg) {
       padding: 10px;
       max-height: none;
     }
 
-    @include bp($md){
+    @include bp($md) {
       padding: 10px 10px 0 10px;
     }
 
@@ -41,16 +46,17 @@ margin-bottom: 10px;
     max-width: 315px;
     background-position: 0 8px;
     background-repeat: no-repeat;
-    
 
-    @include bp($lg){
+    @include bp($lg) {
       padding: 10px 10px 10px 80px;
     }
-    @include bp($sm){
+
+    @include bp($sm) {
       max-width: 100%;
       text-align: center;
       padding: 0;
     }
+
     &::after {
       content: '';
       position: absolute;
@@ -77,10 +83,11 @@ margin-bottom: 10px;
     font-size: 18px;
     line-height: 2.2;
     color: $slider-subtitle;
-    @include bp($md){
+
+    @include bp($md) {
       line-height: 1.2;
-    margin-bottom: 10px;
-    text-align: center; 
+      margin-bottom: 10px;
+      text-align: center;
     }
   }
 

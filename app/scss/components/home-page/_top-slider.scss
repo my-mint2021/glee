@@ -1,7 +1,5 @@
 .top-slider {
-  @include bp($md){
-    margin-bottom: 10px;
-  }
+
   &__inner {
     background-color: $icon-head;
   }
@@ -44,21 +42,18 @@
     &::before {
       content: "";
       position: absolute;
-      right: -102px;
+      left: calc(100vw + 43%);
+      // попробовал через относительные единицы, при уменьшении экрана круг встает по центру картинки, можно вообще удалить на сенсорах, оставил на всякий случай,может есть лучший вариант удерживать круг правее дивана не знаю
       top: 51%;
-      width: 634px;
-      height: 634px;
+      max-width: 634px;
+      max-height: 634px;
+      width: 50vw;
+      height: 50vw;
       border-radius: 50%;
       background-image: linear-gradient(to left, $white 0%, rgba($white, 0) 100%);
       transform: translateY(-50%);
 
-      @include bp($xxl) {
-        right: 5px;
-        width: 450px;
-        height: 450px;
-      }
-
-      @include bp($xl) {
+      @include bp($sm) {
         display: none;
       }
     }
@@ -142,7 +137,6 @@
     }
 
     @include bp($sm) {
-     
       margin-bottom: 20px;
     }
   }

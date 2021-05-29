@@ -1,5 +1,4 @@
 .news-card {
-  min-height: 420px;
 
   &__link {
     position: absolute;
@@ -10,7 +9,7 @@
     bottom: 0;
     transition: opacity 0.2s ease-in, background-color 0.2s ease-in;
 
-    &:hover+.news-card__img {
+    &:hover + .news-card__img {
       transform: scale(1.04);
     }
 

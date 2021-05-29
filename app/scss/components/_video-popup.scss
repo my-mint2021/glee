@@ -7,9 +7,12 @@
   background-size: cover;
   background-position: center;
 
+  @include bp($xl) {
+    margin-bottom: 0;
+  }
+
   @include bp($lg) {
     height: 350px;
-    margin-bottom: 30px;
   }
 
   @include bp($sm) {

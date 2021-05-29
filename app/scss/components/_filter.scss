@@ -3,12 +3,18 @@
   justify-content: center;
   margin-bottom: 80px;
 
+  @include bp($xl) {
+    margin-bottom: 40px;
+  }
+
   @include bp($lg) {
     margin-bottom: 30px;
   }
-  @include bp($md){
-    margin-bottom: 10px;
+
+  @include bp($md) {
+    margin-bottom: 20px;
   }
+
 
   &__wrapper {
     &:not(:last-child) {

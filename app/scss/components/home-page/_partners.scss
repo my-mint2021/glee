@@ -4,8 +4,12 @@
   z-index: 100;
   background-color: #fef7f0;
 
-  @include bp($lg) {
-    padding: 40px 0 40px;
+  @include bp($xl) {
+    padding: 40px 0;
+  }
+
+  @include bp($sm) {
+    padding: 10px 0;
   }
 
   &__list {

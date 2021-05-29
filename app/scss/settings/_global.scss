@@ -14,12 +14,13 @@ img {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
-  background-color: #fff;
+  background-color: $white;
 
   &--lock {
     overflow: hidden;
   }
 }
+
 .main {
   flex: 1 0 auto;
 }
@@ -37,27 +38,29 @@ img {
 .logo {
   outline: 2px solid transparent;
 
+  &__img {
+    @include bp($sm) {
+      width: 70px;
+      height: 20px;
+    }
+
+    // это уже большая вложенность?или читаемо?
+    &--header {
+      @include bp($sm) {
+        position: absolute;
+        top: 10px;
+      }
+    }
+
+    &--footer {
+      @include bp($sm) {
+        margin: 0 auto;
+      }
+    }
+  }
+
   &:focus {
     outline-color: $icon-head;
-  }
-}
-
-.header__logo-img {
-
-  @include bp($sm) {
-    position: absolute;
-    top: 10px;
-    width: 70px;
-    height: 20px;
-  }
-}
-
-.footer__logo-img {
-
-  @include bp($sm) {
-    width: 70px;
-    height: 20px;
-    margin: 0 auto;
   }
 }
 
@@ -101,7 +104,8 @@ img {
     height: 5px;
     left: 0;
     transition: all 0.3s ease 0s;
-    @include bp($sm){
+
+    @include bp($sm) {
       height: 3px;
     }
   }
@@ -174,7 +178,8 @@ img {
       transform: translateY(-200%);
       transition: transform 0.3s;
     }
-    @include bp($sm){
+
+    @include bp($sm) {
       padding: 70px 0 30px;
     }
   }
@@ -214,7 +219,7 @@ img {
         text-align: center;
       }
 
-      @include bp($sm){
+      @include bp($sm) {
         padding: 13px 0;
         font-size: 1.2em;
       }

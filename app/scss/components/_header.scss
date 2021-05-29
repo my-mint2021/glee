@@ -24,7 +24,6 @@
     justify-content: center;
   }
 
-
   &__scan {
     width: 17px;
     height: 17px;
@@ -143,8 +142,6 @@
       outline-color: $icon-head;
     }
   }
-
-
 
   &__basket:hover {
     &::after {

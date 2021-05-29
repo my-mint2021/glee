@@ -3,13 +3,10 @@
   align-items: flex-start;
   justify-content: start;
   max-width: 370px;
-  // !поменял только две нижние строчки
-  min-height: 250px;
-  // padding: 40px 0 40px 40px;
+  padding: 30px 0 40px 40px;
   background-color: #f8f8f8;
   transition: transform 0.3s;
   box-shadow: none;
-
 
   &:hover {
     transform: translateY(-3px);
@@ -68,6 +65,7 @@
   }
 
   &__style {
+    padding-bottom: 95px;
     display: block;
     position: relative;
     max-width: 100px;

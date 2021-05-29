@@ -18,6 +18,10 @@
     margin: 0 auto;
   }
 
+  @include bp($sm){
+    padding: 10px 15px 10px;
+  }
+
   &:hover {
     border-color: $icon-burger;
     box-shadow: 0 0 10px $slider-title;

@@ -1,14 +1,19 @@
 .design {
   margin-bottom: 85px;
 
-  @include bp($md) {
+  @include bp($xl) {
+    margin-bottom: 50px;
+  }
+
+  @include bp($lg) {
     margin-bottom: 30px;
-  padding: 15px 0;
+    padding: 15px 0;
   }
 
   &__title {
     margin-bottom: 17px;
-    @include bp($md){
+
+    @include bp($md) {
       margin-bottom: 0;
     }
   }
@@ -19,13 +24,17 @@
     grid-gap: 35px 30px;
     margin-bottom: 106px;
 
+    @include bp($xl) {
+      margin-bottom: 50px;
+    }
+
     @include bp($lg) {
       grid-template-columns: repeat(2, 1fr);
       margin-bottom: 30px;
     }
 
     @include bp($sm) {
-      grid-template-columns: repeat(1, 1fr);
+      grid-template-columns: 1fr;
     }
   }
 }
