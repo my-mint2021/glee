@@ -14,7 +14,7 @@
 
     @include bp($xl) {
       align-self: center;
-      max-width: 700px;
+      max-width: 90%;
     }
 
     @include bp($lg) {
@@ -108,14 +108,24 @@
 
     @include bp($xl) {
       padding-top: 40px;
+      padding-left: 70px;
     }
 
     @include bp($lg) {
       padding-top: 20px;
+      padding-left: 40px;
+
     }
 
     &--right {
       padding-left: 60px;
+      @include bp($lg){
+        padding-left: 40px;
+      }
+
+      @include bp($sm){
+        padding-left: 0;
+      }
     }
 
     @include bp($sm) {
@@ -173,7 +183,7 @@
     }
 
     @include bp($sm) {
-      line-height: 1.2;
+      line-height: 1.5;
       text-align: left;
       @include line-clamp(4)
     }
@@ -205,6 +215,7 @@
 
     @include bp($sm) {
       margin-bottom: 15px;
+      padding: 10px 45px 10px 10px;
     }
 
     &:after {

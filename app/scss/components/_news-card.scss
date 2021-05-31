@@ -9,7 +9,7 @@
     bottom: 0;
     transition: opacity 0.2s ease-in, background-color 0.2s ease-in;
 
-    &:hover + .news-card__img {
+    &:hover+.news-card__img {
       transform: scale(1.04);
     }
 
@@ -62,15 +62,11 @@
     padding: 35px 30px 30px;
   }
 
-  &__text {
+  &__title {
     max-width: 285px;
     max-height: 100px;
     min-height: 84px;
     overflow-wrap: break-word;
-    overflow: hidden;
-  }
-
-  &__title {
     font-family: $dmsans;
     font-weight: 500;
     font-size: 18px;

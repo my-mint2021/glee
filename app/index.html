@@ -17,7 +17,8 @@
       <a class="logo header__logo" href="#">
         <img class="logo__img logo__img--header" src="images/logo.png" width="150" height="40" alt="logo">
       </a>
-      <ul class="menu menu--header">
+      
+      <ul class="menu header__menu">
         <li class="menu__item menu__item--header ">
           <a class="menu__link menu__link--header" href="#">Home <span>+</span></a>
         </li>
@@ -42,7 +43,31 @@
           <a class="menu__link menu__link--header" href="#">Contact</a>
         </li>
       </ul>
+      <!-- <ul class="menu menu--header">
+        <li class="menu__item menu__item--header ">
+          <a class="menu__link menu__link--header" href="#">Home <span>+</span></a>
+        </li>
 
+        <li class="menu__item menu__item--header">
+          <a class="menu__link menu__link--header" href="#">About</a>
+        </li>
+
+        <li class="menu__item menu__item--header">
+          <a class="menu__link menu__link--header" href="#">Services</a>
+        </li>
+
+        <li class="menu__item menu__item--header">
+          <a class="menu__link menu__link--header" href="#">Pages <span>+</span></a>
+        </li>
+
+        <li class="menu__item menu__item--header">
+          <a class="menu__link menu__link--header" href="#">News</a>
+        </li>
+
+        <li class="menu__item menu__item--header">
+          <a class="menu__link menu__link--header" href="#">Contact</a>
+        </li>
+      </ul> -->
       <div class="user-nav">
         <button class="user-nav__search nav-btn" type="button">
           <!-- !альтернативный класс для картинок svg поиск -->
@@ -82,7 +107,7 @@
           <span class="sr-only">Clicking on the button will open your profile</span>
         </button>
       </div>
-
+      <span class="sr-only">Clicking on the button will open main menu</span>
       <button class="burger-btn" type="button">
         <span></span>
       </button>
@@ -207,27 +232,27 @@
       Products of the week
     </h2>
     <!-- !---------------------------фильтр------------------------------- -->
-    <ul class="filter">
+    <ul class="products-filter">
       <span class="sr-only">Products of the week filter</span>
-      <li class="filter__wrapper">
+      <li class="products-filter__wrapper">
         <span class="sr-only">Products of the week all</span>
-        <button class="filter__button filter__button--active" data-filter="all" type="button">All</button>
+        <button class="products-filter__button products-filter__button--active" data-filter="all" type="button">All</button>
       </li>
-      <li class="filter__wrapper">
+      <li class="products-filter__wrapper">
         <span class="sr-only">Products of the week Furnitures</span>
-        <button class="filter__button" data-filter=".category-a" type="button">Furnitures</button>
+        <button class="products-filter__button" data-filter=".category-a" type="button">Furnitures</button>
       </li>
-      <li class="filter__wrapper">
+      <li class="products-filter__wrapper">
         <span class="sr-only">Products of the week Chairs</span>
-        <button class="filter__button" data-filter=".category-b" type="button">Chairs</button>
+        <button class="products-filter__button" data-filter=".category-b" type="button">Chairs</button>
       </li>
-      <li class="filter__wrapper">
+      <li class="products-filter__wrapper">
         <span class="sr-only">Products of the week Lighting</span>
-        <button class="filter__button" data-filter=".category-c" type="button">Lighting</button>
+        <button class="products-filter__button" data-filter=".category-c" type="button">Lighting</button>
       </li>
-      <li class="filter__wrapper">
+      <li class="products-filter__wrapper">
         <span class="sr-only">Products of the week Decor</span>
-        <button class="filter__button" data-filter=".category-d" type="button">Decor</button>
+        <button class="products-filter__button" data-filter=".category-d" type="button">Decor</button>
       </li>
     </ul>
     <!-- !---------------------------товары------------------------------- -->
@@ -503,9 +528,12 @@
           <img class="view-more__img" src="../images/lampa.png" alt="Mirum Notare Tellus">
         </div>
         <div class="view-more__info">
-          <div class="view-more__name">
+          <p class="view-more__name">
+            Mirum Notare Tellus
+          </p>
+          <!-- <div class="view-more__name">
             <p>Mirum Notare Tellus</p>
-          </div>
+          </div> -->
           <div class="view-more__descr">
             <p>LEDCornBulb Lamp 5W 7W 10W 12W 15W E26 E27 LED CornLight</p>
           </div>
@@ -521,9 +549,12 @@
           <img class="view-more__img view-more__img--right" src="../images/lampa2.png" alt="Mirum Notare Tellus">
         </div>
         <div class="view-more__info view-more__info--right">
-          <div class="view-more__name view-more__name--right">
+          <!-- <div class="view-more__name view-more__name--right">
             <p>Malesuada Tempor Euismod</p>
-          </div>
+          </div> -->
+          <p class="view-more__name view-more__name--right">
+            Malesuada Tempor Euismod
+          </p>
           <div class="view-more__descr view-more__descr--right">
             <p>50W 8000lm Compact Size for HID Street Light Replacement LED CornLight</p>
           </div>
@@ -543,27 +574,27 @@
       New Design
     </h2>
     <!-- ?---------------------------фильтр------------------------------- -->
-    <ul class="filter">
+    <ul class="products-filter">
       <span class="sr-only">Products of the week filter</span>
-      <li class="filter__wrapper">
+      <li class="products-filter__wrapper">
         <span class="sr-only">Products of the week all</span>
-        <button class="filter__button filter__button--active" data-filter="all" type="button">All</button>
+        <button class="products-filter__button products-filter__button--active" data-filter="all" type="button">All</button>
       </li>
-      <li class="filter__wrapper">
+      <li class="products-filter__wrapper">
         <span class="sr-only">Products of the week Furnitures</span>
-        <button class="filter__button" data-filter=".category-a" type="button">Furnitures</button>
+        <button class="products-filter__button" data-filter=".category-a" type="button">Furnitures</button>
       </li>
-      <li class="filter__wrapper">
+      <li class="products-filter__wrapper">
         <span class="sr-only">Products of the week Chairs</span>
-        <button class="filter__button" data-filter=".category-b" type="button">Chairs</button>
+        <button class="products-filter__button" data-filter=".category-b" type="button">Chairs</button>
       </li>
-      <li class="filter__wrapper">
+      <li class="products-filter__wrapper">
         <span class="sr-only">Products of the week Lighting</span>
-        <button class="filter__button" data-filter=".category-c" type="button">Lighting</button>
+        <button class="products-filter__button" data-filter=".category-c" type="button">Lighting</button>
       </li>
-      <li class="filter__wrapper">
+      <li class="products-filter__wrapper">
         <span class="sr-only">Products of the week Decor</span>
-        <button class="filter__button" data-filter=".category-d" type="button">Decor</button>
+        <button class="products-filter__button" data-filter=".category-d" type="button">Decor</button>
       </li>
     </ul>
     <!-- ?---------------------------товары------------------------------- -->
@@ -654,6 +685,7 @@
     <span class="sr-only">Follow the links to find out new ideas and read articles about the interior</span>
 
     <ul class="articles__items">
+
       <li class="articles__item">
         <article class="news-card">
           <div class="news-card__images">
@@ -662,11 +694,11 @@
           </div>
           <a class="news-card__news" href="#">News</a>
           <div class="news-card__info">
-            <div class="news-card__text">
-              <h3 class="news-card__title">
-                Diusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
-              </h3>
-            </div>
+
+            <h3 class="news-card__title">
+              Diusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+            </h3>
+
             <div class="news-card__bottom">
               <time class="news-card__date" datetime="2020-01-28">28 january, 2020</time>
               <a class="news-card__user" href="#">by admin</a>
@@ -683,11 +715,9 @@
           </div>
           <a class="news-card__news" href="#">News</a>
           <div class="news-card__info">
-            <div class="news-card__text">
-              <h3 class="news-card__title">
-                Aonsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              </h3>
-            </div>
+            <h3 class="news-card__title">
+              Aonsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            </h3>
             <div class="news-card__bottom">
               <time class="news-card__date" datetime="2020-01-28">28 january, 2020</time>
               <a class="news-card__user" href="#">by admin</a>
@@ -704,11 +734,9 @@
           </div>
           <a class="news-card__news" href="#">News</a>
           <div class="news-card__info">
-            <div class="news-card__text">
-              <h3 class="news-card__title">
-                Rncididunt ut labore et dolore magna aliqua. Ut enim
-              </h3>
-            </div>
+            <h3 class="news-card__title">
+              Rncididunt ut labore et dolore magna aliqua. Ut enim
+            </h3>
             <div class="news-card__bottom">
               <time class="news-card__date" datetime="2020-01-28">28 january, 2020</time>
               <a class="news-card__user" href="#">by admin</a>

@@ -64,8 +64,8 @@
   &__items {
     display: flex;
 
-    @include bp($md) {
-      flex-wrap: wrap;
+    @include bp($lg) {
+      flex-direction: column;
       justify-content: center;
       align-items: center;
     }
@@ -86,6 +86,10 @@
     background-color: $white;
     transition: box-shadow 0.2s, transform 0.2s;
 
+    @include bp($lg) {
+      background-color: rgba(163, 187, 200, 0.267);
+    }
+
     &:hover {
       box-shadow: 0 0 20px 10px $icon-burger;
       transform: translateY(-2px);
@@ -94,7 +98,7 @@
     &:not(:last-child) {
       margin-right: 30px;
 
-      @include bp($md) {
+      @include bp($lg) {
         margin-right: 0;
         margin-bottom: 30px;
       }

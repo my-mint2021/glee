@@ -40,11 +40,10 @@ img {
 
   &__img {
     @include bp($sm) {
-      width: 70px;
-      height: 20px;
+      width: 100px;
+      height: 25px;
     }
 
-    // это уже большая вложенность?или читаемо?
     &--header {
       @include bp($sm) {
         position: absolute;
@@ -158,44 +157,22 @@ img {
   }
 }
 
+
 .menu {
   display: flex;
 
-  &--header {
-    @include bp($lg) {
-      position: fixed;
-      z-index: 10;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      opacity: 0.9;
-      flex-direction: column;
-      align-items: center;
-      padding: 150px 0 100px;
-      background-color: $icon-burger;
-      overflow: auto;
-      transform: translateY(-200%);
-      transition: transform 0.3s;
-    }
-
-    @include bp($sm) {
-      padding: 70px 0 30px;
-    }
-  }
-
   &__item--header {
+
+    @include bp($lg) {
+      margin-right: 0;
+      width: 100%;
+    }
 
     &:not(:last-child) {
       margin-right: 35px;
 
       @include bp($xl) {
         margin-right: 10px;
-      }
-
-      @include bp($lg) {
-        margin-right: 0;
-        width: 100%;
       }
     }
   }
@@ -220,7 +197,7 @@ img {
       }
 
       @include bp($sm) {
-        padding: 13px 0;
+        padding: 20px 0;
         font-size: 1.2em;
       }
     }
@@ -238,11 +215,94 @@ img {
       outline-color: $icon-head;
     }
   }
-
-  &--active {
-    transform: translateY(0%);
-  }
 }
+
+
+// .menu {
+//   display: flex;
+
+//   &--header {
+//     @include bp($lg) {
+//       position: fixed;
+//       z-index: 10;
+//       top: 0;
+//       left: 0;
+//       right: 0;
+//       bottom: 0;
+//       opacity: 0.9;
+//       flex-direction: column;
+//       align-items: center;
+//       padding: 150px 0 100px;
+//       background-color: $icon-burger;
+//       overflow: auto;
+//       transform: translateY(-200%);
+//       transition: transform 0.3s;
+//     }
+
+//     @include bp($sm) {
+//       padding: 70px 0 30px;
+//     }
+//   }
+
+//   &__item--header {
+
+//     @include bp($lg) {
+//       margin-right: 0;
+//       width: 100%;
+//     }
+
+//     &:not(:last-child) {
+//       margin-right: 35px;
+
+//       @include bp($xl) {
+//         margin-right: 10px;
+//       }
+//     }
+//   }
+
+//   &__link {
+//     padding-bottom: 5px;
+//     font-family: $rubik;
+//     font-weight: 500;
+//     font-size: 15px;
+//     color: $subtitle;
+//     border-bottom: 1px solid transparent;
+//     transition: border-color 0.2s ease-in;
+//     outline: 2px solid transparent;
+
+//     &--header {
+//       @include bp($lg) {
+//         color: $white;
+//         font-size: 1.5em;
+//         display: block;
+//         padding: 35px 0;
+//         text-align: center;
+//       }
+
+//       @include bp($sm) {
+//         padding: 20px 0;
+//         font-size: 1.2em;
+//       }
+//     }
+
+//     &:hover {
+//       color: $black;
+//       border-color: $black;
+//     }
+
+//     &:active {
+//       font-weight: 700;
+//     }
+
+//     &:focus {
+//       outline-color: $icon-head;
+//     }
+//   }
+
+//   &--active {
+//     transform: translateY(0%);
+//   }
+// }
 
 .title {
   margin-bottom: 35px;

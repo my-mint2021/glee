@@ -48,7 +48,7 @@
     background-repeat: no-repeat;
 
     @include bp($lg) {
-      padding: 10px 10px 10px 80px;
+      // padding: 10px 10px 10px 80px;
     }
 
     @include bp($sm) {
@@ -84,6 +84,9 @@
     line-height: 2.2;
     color: $slider-subtitle;
 
+    @include bp($lg){
+      line-height: 1.5;
+    }
     @include bp($md) {
       line-height: 1.2;
       margin-bottom: 10px;
@@ -92,6 +95,9 @@
   }
 
   &__text {
+    @include bp($lg){
+      line-height: 1.5;
+    }
     @include line-clamp(3);
     font-family: $dmsans;
     font-weight: 400;
@@ -116,7 +122,11 @@
 
   &__content--delivery {
     background-image: url(../images/icon/delivery-truck.svg);
-
+    @include bp($lg){
+      background-position: 0 13px;
+    }
+    
+    
     &::after {
       top: 27px;
       left: 35px;
