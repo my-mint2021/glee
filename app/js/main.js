@@ -5,6 +5,12 @@ $(function () {
     $('.num-page__btn').removeClass('num-page__btn--active');
     $(this).addClass('num-page__btn--active');
   });
+
+
+  $('.shop__btn').on("click", function () {
+    $('.shop__btn').removeClass('shop__btn--active');
+    $(this).addClass('shop__btn--active');
+  });
   
  
     $('.burger-btn').on("click", function () {

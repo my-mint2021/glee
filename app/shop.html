@@ -280,12 +280,29 @@
           <!------------------- --------?content--------------------------- -->
           <div class="shop__content">
             <div class="shop__top-filter">
-              
-              <div class="shop__icons">
-              </div>
               <div class="shop__sort">
-
+                <select class="shop__select">
+                  <option value="">sort by name</option>
+                  <option value="">sort by price</option>
+                  <option value="">sort by popularity</option>
+                  <option value="">sort by rating</option>
+                  <option value="">sort by date</option>
+                </select>
               </div>
+
+              <div class="shop__icons">
+                <button class="shop__btn shop__btn--active" type="button">
+                  <svg class="shop__btn-grid">
+                    <use xlink:href="images/sprite.svg#grid-icon"></use>
+                  </svg>
+                </button>
+                <button class="shop__btn" type="button">
+                  <svg class="shop__btn-list">
+                    <use xlink:href="images/sprite.svg#list-icon"></use>
+                  </svg>
+                </button>
+              </div>
+
             </div>
             <ul class="shop__list">
               <li class="shop__item">
