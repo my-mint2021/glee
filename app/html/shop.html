@@ -172,22 +172,22 @@
             <div class="shop__top-filter">
               <div class="shop__sort">
                 <select class="shop__select">
+                  <option value="">default sort</option>
                   <option value="">sort by name</option>
                   <option value="">sort by price</option>
-                  <option value="">sort by popularity</option>
                   <option value="">sort by rating</option>
                   <option value="">sort by date</option>
                 </select>
               </div>
 
               <div class="shop__icons">
-                <button class="shop__btn shop__btn--active" type="button">
-                  <svg class="shop__btn-grid">
+                <button class="shop__btn btn-grid shop__btn--active" type="button">
+                  <svg class="shop__icon-grid">
                     <use xlink:href="images/sprite.svg#grid-icon"></use>
                   </svg>
                 </button>
                 <button class="shop__btn" type="button">
-                  <svg class="shop__btn-list">
+                  <svg class="shop__icon-list btn-list">
                     <use xlink:href="images/sprite.svg#list-icon"></use>
                   </svg>
                 </button>
@@ -198,16 +198,21 @@
               <li class="shop__item">
                 <article class="product-card">
                   <a class="product-card__link" href="#" target="_blank"></a>
+                
                   <div class="product-card__images">
                     <img class="product-card__img" src="../images/product-list/1.png" width="240" height="170"
                       alt="product name">
                   </div>
-                  <h3 class="product-card__name">
-                    Wooden radio
+                  <div class="product-card__content">
+                     <h3 class="product-card__name">
+                    11Wooden radio
                   </h3>
+                  <div class="star product-card__star" data-rateyo-rating="3"></div>
                   <p class="product-card__cost">
                     <span>$</span>29.00
                   </p>
+                  <p class="product-card__descr">consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
+                  <button class="product-card__basket">Add to card</button>
                   <div class="product-card__nav">
                     <a class="nav-btn product-card__btn product-card__btn--search" href="#" target="_blank">
                       <svg class="product-card__icon product-card__icon--search">
@@ -225,6 +230,8 @@
                       </svg>
                     </button>
                   </div>
+                  </div>
+                 
                 </article>
               </li>
 

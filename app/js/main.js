@@ -1,15 +1,28 @@
 $(function () {
 
+$('.shop__select').styler();
+
+// номера страниц снизу
   $('.num-page__btn').on("click", function () {
 
     $('.num-page__btn').removeClass('num-page__btn--active');
     $(this).addClass('num-page__btn--active');
   });
 
-
+// кнопки грид и лист
   $('.shop__btn').on("click", function () {
     $('.shop__btn').removeClass('shop__btn--active');
     $(this).addClass('shop__btn--active');
+  });
+
+  //смена грид/лист
+  $('.btn-list').on("click", function () {
+    $('.shop__list').addClass('shop__list--list');
+    $('.product-card').addClass('product-card--list');
+  });
+  $('.btn-grid').on("click", function () {
+    $('.shop__list').removeClass('shop__list--list');
+    $('.product-card').removeClass('product-card--list');
   });
   
  
