@@ -1,6 +1,11 @@
 $(function () {
 
+  $('.num-page__btn').on("click", function () {
 
+    $('.num-page__btn').removeClass('num-page__btn--active');
+    $(this).addClass('num-page__btn--active');
+  });
+  
  
     $('.burger-btn').on("click", function () {
       $('.burger-btn').toggleClass('burger-btn--active');
@@ -97,6 +102,8 @@ $(function () {
     ratedFill: "#ffcc00",
     readOnly: true,
   });
+
+
 
   var mixer1 = mixitup(mixEl1, config);
   var mixer2 = mixitup(mixEl2, config);
