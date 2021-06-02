@@ -1,0 +1,116 @@
+.about {
+
+  // .about__inner
+
+  &__inner {
+    display: flex;
+    font-family: $rubik;
+  }
+
+  // .about__images
+
+  &__images {
+    min-width: 570px;
+    // max-width: 100%;
+    margin-right: 45px;
+  }
+
+  // .about__img
+
+  &__img {
+    // width: 100%;
+  }
+
+  // .about__content
+
+  &__content {}
+
+  // .about__top
+
+  &__top {
+    display: flex;
+    margin-bottom: 50px;
+  }
+
+  // .about__years
+
+  &__years {
+margin-right: 30px;
+    font-size: 140px;
+    color: $icon-burger;
+    font-weight: 700;
+  }
+
+  &__subtext {
+    width: 85px;
+    padding-top: 40px;
+    line-height: 2;
+    color: $slider-title;
+  }
+
+  // .about__title
+
+  &__title {
+    font-family: $dmsans;
+    font-size: 36px;
+    font-weight: 400;
+    margin-bottom: 50px;
+    color: $slider-title;
+  }
+
+  // .about__text
+
+  &__text {
+    padding-bottom: 65px;
+    border-bottom: 1px solid #e6eaf0;
+  }
+
+  // .about__items
+
+  &__items {
+    display: flex;
+    justify-content: space-between; 
+    padding: 40px 0;
+    font-family: $dmsans;
+    font-weight: 700
+  }
+
+  // .about__item
+
+  &__item {
+    padding-left: 50px;
+  }
+  &__item--project{
+    background-image: url(../images/icon/about-projects.svg);
+    background-repeat: no-repeat;
+    background-position: left center;
+  }
+  &__item--revenue{
+    background-image: url(../images/icon/about-projects.svg);
+    background-repeat: no-repeat;
+    background-position: left center;
+  }
+  &__item--awards{
+    background-image: url(../images/icon/about-projects.svg);
+    background-repeat: no-repeat;
+    background-position: left center;
+  }
+
+  // .about__num
+
+  &__num {
+
+    color: $slider-title;
+    font-size: 36px;
+;
+  }
+
+  // .about__num-item
+
+  &__num-item {
+    font-size: 16px;
+    color: #4c4c4c;
+  }
+}
+
+.container {}
