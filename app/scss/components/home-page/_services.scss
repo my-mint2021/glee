@@ -1,0 +1,152 @@
+.services {
+
+  @include bp($md) {
+    margin-bottom: 10px;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    background-color: $slider-descr-bg;
+
+    @include bp($sm) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-height: 170px;
+    padding: 35px;
+    overflow: hidden;
+
+    @include bp($xl) {
+      max-height: 180px;
+    }
+
+    @include bp($lg) {
+      padding: 10px;
+      max-height: none;
+    }
+
+    @include bp($md) {
+      padding: 10px 10px 0 10px;
+    }
+
+    &:not(:last-child) {
+      border-right: 1px solid rgba(36, 63, 77, .1);
+    }
+  }
+
+  &__content {
+    position: relative;
+    padding-left: 80px;
+    max-width: 315px;
+    background-position: 0 8px;
+    background-repeat: no-repeat;
+
+    @include bp($lg) {
+      // padding: 10px 10px 10px 80px;
+    }
+
+    @include bp($sm) {
+      max-width: 100%;
+      text-align: center;
+      padding: 0;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: #dfe3e294;
+
+      @include bp($md) {
+        width: 0;
+        height: 0;
+      }
+    }
+
+    @include bp($md) {
+      padding-left: 10px;
+    }
+  }
+
+  &__title {
+    @include line-clamp(2);
+    font-family: $dmsans;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2.2;
+    color: $slider-subtitle;
+
+    @include bp($lg){
+      line-height: 1.5;
+    }
+    @include bp($md) {
+      line-height: 1.2;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+  }
+
+  &__text {
+    @include bp($lg){
+      line-height: 1.5;
+    }
+    @include line-clamp(3);
+    font-family: $dmsans;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.9;
+    color: $slider-descr;
+
+    @include bp($md) {
+      line-height: 1.2;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__content--support {
+    background-image: url(../images/icon/time.svg);
+
+    &::after {
+      top: 40px;
+      left: 35px;
+    }
+  }
+
+  &__content--delivery {
+    background-image: url(../images/icon/delivery-truck.svg);
+    @include bp($lg){
+      background-position: 0 13px;
+    }
+    
+    
+    &::after {
+      top: 27px;
+      left: 35px;
+    }
+  }
+
+  &__content--card {
+    background-image: url(../images/icon/credit-card.svg);
+
+    &::after {
+      top: 45px;
+      left: 35px;
+    }
+  }
+
+  &__content--support,
+  &__content--delivery,
+  &__content--card {
+    @include bp($md) {
+      background-image: none;
+    }
+  }
+}

@@ -1,0 +1,277 @@
+html,
+body {
+  height: 100%;
+}
+
+img {
+  object-fit: cover;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  font-family: $rubik;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: $white;
+
+  &--lock {
+    overflow: hidden;
+  }
+}
+
+.main {
+  flex: 1 0 auto;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+
+  &--large {
+    max-width: 1800px;
+  }
+}
+
+.logo {
+  outline: 2px solid transparent;
+
+  &__img {
+    @include bp($sm) {
+      width: 100px;
+      height: 25px;
+    }
+
+    &--header {
+      @include bp($sm) {
+        position: absolute;
+        top: 10px;
+      }
+    }
+
+    &--footer {
+      @include bp($sm) {
+        margin: 0 auto;
+      }
+    }
+  }
+
+  &:focus {
+    outline-color: $icon-head;
+  }
+}
+
+.link-more {
+  @include link-more;
+}
+
+.burger-btn {
+  position: absolute;
+  right: 15px;
+  display: none;
+  width: 40px;
+  height: 31px;
+  position: relative;
+  border: none;
+  z-index: 151;
+  background-color: transparent;
+
+  span {
+    position: absolute;
+    background-color: $subtitle;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    top: 13px;
+    transition: all 0.3s ease 0s;
+
+    @include bp($sm) {
+      top: 11px;
+      height: 3px;
+    }
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    background-color: $subtitle;
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    left: 0;
+    transition: all 0.3s ease 0s;
+
+    @include bp($sm) {
+      height: 3px;
+    }
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    bottom: 0;
+  }
+
+  &--active {
+    span {
+      transform: scale(0);
+    }
+
+    &::before {
+      background-color: $white;
+      transform: rotate(45deg);
+      top: 13px;
+
+      @include bp($sm) {
+        top: 11px;
+      }
+    }
+
+    &::after {
+      background-color: $white;
+      transform: rotate(-45deg);
+      bottom: 13px;
+
+      @include bp($sm) {
+        bottom: 11px;
+      }
+    }
+  }
+
+  @include bp($lg) {
+    display: flex;
+    z-index: 151;
+  }
+
+  @include bp($sm) {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    width: 30px;
+    height: 25px;
+  }
+}
+
+
+.menu {
+  display: flex;
+
+  &__item--header {
+
+    @include bp($lg) {
+      margin-right: 0;
+      width: 100%;
+    }
+
+    &:not(:last-child) {
+      margin-right: 35px;
+
+      @include bp($xl) {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  &__link {
+    padding-bottom: 5px;
+    font-family: $rubik;
+    font-weight: 500;
+    font-size: 15px;
+    color: $subtitle;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s ease-in;
+    outline: 2px solid transparent;
+
+    &--header {
+      @include bp($lg) {
+        color: $white;
+        font-size: 1.5em;
+        display: block;
+        padding: 35px 0;
+        text-align: center;
+      }
+
+      @include bp($sm) {
+        padding: 20px 0;
+        font-size: 1.2em;
+      }
+    }
+
+    &:hover {
+      color: $black;
+      border-color: $black;
+    }
+
+    &:active {
+      font-weight: 700;
+    }
+
+    &:focus {
+      outline-color: $icon-head;
+    }
+  }
+}
+
+.title {
+  margin-bottom: 35px;
+  font-family: $dmsans;
+  font-weight: 700;
+  text-align: center;
+  font-size: 36px;
+  color: $title;
+
+  @include bp($sm) {
+    font-size: 28px;
+  }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.form {
+  width: 270px;
+  display: flex;
+
+  &__input {
+    margin: 0;
+    padding: 10px 20px;
+    width: 175px;
+    border: none;
+    font-size: 12px;
+    color: #234969;
+    outline: transparent;
+    background-color: $slider-descr-bg;
+    transition: background-color 0.2s ease-in;
+    outline: 2px solid transparent;
+
+    &:focus {
+      background-color: $icon-head;
+      outline-color: $subtitle;
+    }
+  }
+
+  &__btn {
+    margin: 0;
+    padding: 9px 17px;
+    @include btn;
+    font-family: $dmsans;
+    font-weight: 400;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+  }
+}

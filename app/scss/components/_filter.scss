@@ -1,0 +1,50 @@
+.products-filter {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 80px;
+
+  @include bp($xl) {
+    margin-bottom: 40px;
+  }
+
+  @include bp($lg) {
+    margin-bottom: 30px;
+  }
+
+  @include bp($md) {
+    margin-bottom: 20px;    flex-wrap: wrap;
+  }
+
+
+  &__wrapper {
+    &:not(:last-child) {
+      margin-right: 30px;
+
+      @include bp($sm) {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  &__button {
+    padding: 0;
+    font-family: $dmsans;
+    font-weight: 700;
+    border: none;
+    background-color: transparent;
+    font-size: 16px;
+    color: #8b8b8b;
+    cursor: pointer;
+    transition: color 0.2s ease-in;
+    outline: 2px solid transparent;
+
+    &--active,
+    &:hover {
+      color: $black;
+    }
+
+    &:focus {
+      outline-color: $icon-head;
+    }
+  }
+}

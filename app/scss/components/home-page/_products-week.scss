@@ -1,0 +1,46 @@
+.products-week {
+  padding: 62px 0 90px;
+  margin-bottom: 25px;
+  margin-bottom: 0;
+
+  @include bp($xl) {
+    padding: 30px 0;
+  }
+
+  @include bp($lg) {
+    padding: 15px 0 5px;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+
+    @include bp($lg) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 45px 30px;
+    margin-bottom: 185px;
+
+    @include bp($xl) {
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 25px 20px;
+    }
+
+    @include bp($lg) {
+      margin-bottom: 55px;
+    }
+
+    @include bp($md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include bp($sm) {
+      grid-template-columns: 1fr;
+      margin-bottom: 10px;
+    }
+  }
+}

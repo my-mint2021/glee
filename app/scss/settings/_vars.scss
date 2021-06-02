@@ -1,0 +1,45 @@
+
+//-----------colors---------------
+$title:            #191919;
+$subtitle:         #436372;
+$icon-head:        #fcd7b6;
+$icon-burger:      #a3bbc8;
+
+$blue:             #0000ff;
+$footer-title:     #1f2044;
+$slider-title:     #243f4d;
+$bread:            #edf1f4;
+
+$black:            #000000;
+$slider-subtitle:  #414141;
+$slider-descr:     #585858;
+$tab-off:          #585858;
+$footer-text:      #7b7b7b;
+
+$white:            #ffffff;
+$slider-descr-bg:  #fef7f0;
+$slider-btn:       #fde3cc;
+$icon:             #edf1f4;
+$more-bg:          #feefe2;
+$tabs-bg:          #f8f8f8;
+
+
+//-----------fonts---------------
+$dmsans: 'DMSans', serif;
+$rubik  : 'Rubik', serif;
+$poppins: 'Poppins', serif;
+
+//-----------breackpoints---------------
+$xxl: 1800;
+$xl: 1220; 
+$lg: 992;
+$md: 768; 
+$sm: 576;
+
+
+@function max ($numbers...) {
+  @return m#{a}x(#{$numbers});
+}
+@function min ($numbers...) {
+  @return m#{i}n(#{$numbers});
+}

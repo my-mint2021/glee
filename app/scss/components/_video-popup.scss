@@ -1,0 +1,79 @@
+.video-popup {
+  position: relative;
+  height: 500px;
+  display: block;
+  margin-bottom: 107px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  @include bp($xl) {
+    margin-bottom: 0;
+  }
+
+  @include bp($lg) {
+    height: 350px;
+  }
+
+  @include bp($sm) {
+    height: 250px;
+  }
+
+  &::before,
+  &::after,
+  &__icon {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    border: none;
+    background-color: $icon-burger;
+  }
+
+  &::before {
+    width: 98px;
+    height: 98px;
+
+    @include bp($sm) {
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  &:after {
+    width: 127px;
+    height: 127px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+
+    @include bp($sm) {
+      width: 70px;
+      height: 70px;
+    }
+  }
+
+  &:hover {
+    &::after {
+      opacity: 0.4;
+    }
+
+    svg {
+      fill: $subtitle;
+    }
+  }
+
+  &__icon {
+    width: 22px;
+    height: 25px;
+    fill: $white;
+    border-radius: 0;
+    transition: fill 0.5s ease-in;
+
+    @include bp($sm) {
+      width: 11px;
+      height: 50px;
+    }
+  }
+}

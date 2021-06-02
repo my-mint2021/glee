@@ -1,0 +1,201 @@
+.top-slider {
+
+  &__inner {
+    background-color: $icon-head;
+  }
+
+  &__item {
+    height: 820px;
+    display: flex !important;
+
+    @include bp($xl) {
+      height: 550px;
+    }
+
+    @include bp($lg) {
+      height: 375px;
+    }
+
+    @include bp($md) {
+      height: 310px;
+      text-align: center;
+    }
+
+    @include bp($sm) {
+      flex-direction: row;
+    }
+  }
+
+  &__wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 15px;
+    max-width: 1200px;
+
+    @include bp($sm) {
+      flex-direction: column;
+      padding: 10px 15px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: calc(100vw + 43%);
+      // попробовал через относительные единицы, при уменьшении экрана круг встает по центру картинки, можно вообще удалить на сенсорах, оставил на всякий случай,может есть лучший вариант удерживать круг правее дивана не знаю
+      top: 51%;
+      max-width: 634px;
+      max-height: 634px;
+      width: 50vw;
+      height: 50vw;
+      border-radius: 50%;
+      background-image: linear-gradient(to left, $white 0%, rgba($white, 0) 100%);
+      transform: translateY(-50%);
+
+      @include bp($sm) {
+        display: none;
+      }
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    max-height: 450px;
+    overflow: hidden;
+    margin-right: 40px;
+
+    @include bp($sm) {
+      flex-direction: column;
+      margin: 0 auto;
+    }
+  }
+
+  &__name {
+    margin-top: auto;
+    margin-bottom: 40px;
+    max-width: 500px;
+    @include line-clamp(2);
+    font-family: $rubik;
+    font-weight: 500;
+    font-size: 72px;
+    line-height: 1;
+    text-transform: uppercase;
+    color: $slider-title;
+    overflow: hidden;
+
+    @include bp($xl) {
+      font-size: 60px;
+    }
+
+    @include bp($lg) {
+      font-size: 45px;
+      margin-bottom: 10px;
+    }
+
+    @include bp($md) {
+      font-size: 30px;
+      @include line-clamp(3);
+    }
+
+    @include bp($sm) {
+      font-size: 25px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 40px;
+    max-width: 385px;
+    @include line-clamp(3);
+    font-family: $rubik;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.7;
+    color: $slider-subtitle;
+
+    @include bp($md) {
+      font-size: 16px;
+      margin-bottom: 10px;
+      max-width: 100%;
+    }
+  }
+
+  &__link {
+    margin-bottom: 70px;
+    @include btn;
+    font-family: $rubik;
+    font-weight: 500;
+
+    @include bp($xl) {
+      margin-bottom: 0;
+    }
+
+    @include bp($md) {
+      padding: 10px 50px 10px 10px;
+      margin: 0 auto;
+    }
+
+    @include bp($sm) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__images {
+    position: relative;
+    z-index: 5;
+  }
+
+  &__img {
+    object-fit: contain;
+
+    @include bp($sm) {
+      width: 260px;
+      height: auto;
+    }
+  }
+
+  .slick-dots {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    bottom: 40px;
+    width: 100%;
+
+    @include bp($md) {
+      bottom: 10px;
+    }
+
+    li {
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+
+      button {
+        width: 30px;
+        height: 30px;
+        font-size: 11px;
+        border: none;
+        border-radius: 50%;
+        color: #667983;
+        background-color: $slider-btn;
+        cursor: pointer;
+        transition: color 0.2s ease-in, background-color 0.2s ease-in;
+
+        &:focus {
+          outline-color: $subtitle;
+        }
+
+        @include bp($sm) {
+          width: 20px;
+          height: 20px;
+        }
+      }
+
+      &.slick-active button {
+        color: $slider-title;
+        background-color: $white;
+      }
+    }
+  }
+}

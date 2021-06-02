@@ -1,0 +1,38 @@
+//-------------global-----------------
+@import 'settings/fonts';
+@import 'settings/vars';
+@import 'settings/reset';
+@import 'settings/libs';
+@import 'settings/mixins';
+@import 'settings/global';
+
+//------------project---------------
+@import 'components/header';
+
+//-------------home-page------------------
+@import 'components/home-page/top-slider';
+@import 'components/home-page/services';
+@import 'components/home-page/products-week.scss';
+@import 'components/home-page/design.scss';
+@import 'components/home-page/articles.scss';
+@import 'components/home-page/partners.scss';
+
+//--------------------login-----------------
+@import 'components/registration/modal.scss';
+
+
+//--------------shop-------------------------
+@import 'components/shop.scss';
+
+//--------------components-------------------
+@import 'components/product-card.scss';
+@import 'components/design-card.scss';
+@import 'components/breadcrumbs.scss';
+@import 'components/video-popup.scss';
+@import 'components/view-more.scss';
+@import 'components/news-card.scss';
+@import 'components/nav-btn.scss';
+@import 'components/filter.scss';
+
+
+@import 'components/footer';

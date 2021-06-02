@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+@include('./components/head.html')
+
+<body>
+  @include('./components/header.html')
+  <main class="main">
+    @include('./components/breadcrumbs.html')
+
+    <form class="modal" action="#">
+      <label class="modal__label" name="modal__label" required>
+        Username or email address *
+        <input class="modal__input" type="text">
+      </label>
+
+      <label class="modal__label" name="modal__label" required>
+        Password *
+        <input class="modal__input" type="password">
+      </label>
+      <button class="modal__btn" type="submit">Login</button>
+      <div class="modal__wrap">
+        <input class="modal__checkbox" type="checkbox" name="checkbox" id="checkbox">
+        <label class="modal__check-label" name="modal__label" for="checkbox">
+          Remember me
+        </label>
+        <a class="modal__link" href="#">Lost your password?</a>
+      </div>
+      <span class="modal__text">Not registered? No problem</span>
+      <a class="modal__link-create" href="#">Create an account</a>
+    </form>
+
+    @include('./components/home-page/partners.html')
+  </main>
+  @include('./components/footer.html')
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>

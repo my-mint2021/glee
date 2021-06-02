@@ -1,0 +1,260 @@
+.product-card {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 25px 15px 35px;
+  max-width: 270px;
+  background-color: $white;
+  border-radius: 10px;
+  box-shadow: 0 0 20px 20px $tabs-bg;
+  outline: 2px solid transparent;
+  border: 1px solid transparent;
+  transition: border-color 0.2s, box-shadow 0.2s;
+
+  @include bp($xl) {
+    margin: 0 auto;
+  }
+
+  @include bp($sm) {
+    padding: 10px 15px 10px;
+  }
+
+  &:hover {
+    border-color: $icon-burger;
+    box-shadow: 0 0 10px $slider-title;
+  }
+
+  &:hover {
+    .product-card__nav {
+      opacity: 1;
+      transform: translatey(0);
+    }
+  }
+
+  &__icon {
+    fill: $icon-burger;
+
+    &--search {
+      width: 20px;
+      height: 20px;
+    }
+
+    &--basket {
+      width: 22px;
+      height: 20px;
+    }
+
+    &--like {
+      width: 22px;
+      height: 18px;
+    }
+  }
+
+  &__link {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    &:focus {
+      outline-color: $icon-head;
+    }
+  }
+
+  &__images {
+    margin-bottom: auto;
+    padding: 33px 0 65px;
+  }
+
+  &__img {
+    margin: 0 auto;
+    object-fit: contain;
+  }
+
+  &__nav {
+    position: absolute;
+    top: 50%;
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    transform: translatey(350%);
+    transition: opacity 0.5s ease-in, transform 0.3s;
+
+    @include bp($lg) {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  &__btn {
+    width: 45px;
+    height: 45px;
+    border: 1px solid $icon-burger;
+    background-color: $white;
+    box-shadow: 0 0 10px 5px $tabs-bg;
+    transition: fill 0.2s ease-in;
+    outline: 2px solid transparent;
+
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+
+    &:hover {
+      background-color: $icon-burger;
+
+      svg {
+        fill: $white;
+      }
+    }
+
+    &:active {
+      background-color: $black;
+    }
+  }
+
+  &__name,
+  &__cost {
+    @include line-clamp(1);
+    font-family: $dmsans;
+
+  }
+
+  &__name {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 2;
+    color: $slider-title;
+  }
+
+  &__cost {
+    font-weight: 700;
+    color: $icon-burger;
+  }
+
+  &__basket {
+    display: none;
+  }
+
+  &__star,
+  &__descr,
+  &__hide-span {
+    display: none;
+  }
+
+  &__hide-span {
+    display: none;
+
+    font-family: $rubik;
+    font-weight: 400;
+    font-size: 15px;
+    letter-spacing: 0.7;
+    text-transform: uppercase;
+    color: $white;
+  }
+
+  //--------------------смена грид на лист------------------------------
+
+  &--list {
+    height: 500px;
+    flex-direction: row;
+    min-width: 100%;
+    justify-content: flex-start;
+    padding: 0;
+    margin-bottom: 45px;
+    box-shadow: none;
+
+    .product-card__images {
+      width: 370px;
+      margin: 0;
+      align-self: normal;
+      padding: 80px 20px;
+      margin-right: 57px;
+      border: 1px solid #ccc;
+      background-color: #fefefe;
+    }
+
+    .product-card__img {
+      height: 100%;
+    }
+
+    .product-card__content {
+      max-width: 420px;
+      padding: 30px 0 40px;
+    }
+
+    .product-card__name {
+      font-size: 40px;
+    }
+
+    .product-card__cost {
+      margin-bottom: 17px;
+      font-size: 30px;
+      font-weight: 400;
+      color: #333333;
+    }
+
+    .product-card__descr {
+      font-size: 16px;
+      line-height: 1.9;
+    }
+
+    .product-card__star,
+    .product-card__descr {
+      display: flex;
+      margin-bottom: 31px;
+    }
+
+    .jq-ry-group-wrapper svg {
+      width: 18px;
+      height: 18px;
+      margin-right: 14px;
+    }
+
+    .product-card__btn--search {
+      display: none;
+    }
+
+    .product-card__nav {
+      opacity: 1;
+      transform: translatey(0);
+      display: flex;
+      align-items: flex-end;
+      position: relative;
+      left: 0;
+      display: flex;
+      justify-content: start;
+    }
+
+    .nav-btn {
+      border-radius: 0;
+    }
+
+    .product-card__btn--basket {
+      background-color: $icon-burger;
+      transition: width 0.2s;
+
+      &:hover {
+        width: 150px;
+        border-radius: 5px;
+        border: none;
+        background-color: $icon-burger;
+
+        .product-card__icon--basket {
+          display: none;
+        }
+
+        .product-card__hide-span {
+          display: block;
+        }
+      }
+    }
+
+    .product-card__icon--basket {
+      fill: $white;
+    }
+  }
+}
