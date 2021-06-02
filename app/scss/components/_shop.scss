@@ -12,8 +12,8 @@
   // .shop__filters
 
   &__sidebar {
-    width: 270px;
-    background-color: #f2f2f27c;
+    min-width: 270px;
+    // background-color: #f2f2f27c;
     margin-right: 35px;
 
     @include bp($lg) {
@@ -32,6 +32,10 @@
       height: 100%;
       z-index: 150;
       background-color: #edf1f4;
+
+      @include bp($sm) {
+        width: 90%;
+      }
     }
   }
 
@@ -46,6 +50,10 @@
     justify-content: space-between;
     width: 100%;
     margin-bottom: 40px;
+
+    @include bp($lg) {
+      margin-bottom: 10px;
+    }
   }
 
   &__icons {
@@ -74,9 +82,21 @@
 
   // ---------кнопка вызова фильтра
   &__btn-filters {
-    font-size: 15px;
-    text-transform: uppercase;
-    color: #000;
+    border: none;
+    background-color: transparent;
+  }
+
+  &__icon-filters {
+    display: none;
+    position: relative;
+    z-index: 200;
+    width: 27px;
+    height: 27px;
+    fill: rgba(0, 0, 0, 0.678);
+
+    @include bp($lg) {
+      display: block;
+    }
   }
 
   &__icon-grid,
@@ -92,12 +112,27 @@
     justify-content: space-between;
     flex-wrap: wrap;
 
+    @include bp($xl) {
+      justify-content: center;
+    }
+
     li {
       margin-bottom: 37px;
+
+      @include bp($md) {
+        margin-bottom: 10px;
+      }
     }
 
     &--list {
       display: block;
+
+      @include bp($md) {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+      }
+
 
       .shop__item--none {
         display: none;
@@ -109,6 +144,11 @@
 // -------------номера страниц внизу страницы-------------
 .num-page {
   padding: 20px 0 110px;
+
+  @include bp($md) {
+    padding: 0 0 20px;
+  }
+
   // .num-page__list
 
   &__list {
@@ -117,6 +157,10 @@
 
     &--list {
       justify-content: start;
+
+      @include bp($md) {
+        justify-content: center;
+      }
     }
   }
 
@@ -149,20 +193,21 @@
 .hidden-category,
 .hidden-price,
 .hidden-brand,
-.hidden-recent
-{
+.hidden-recent {
   display: none;
-  &--active{
+
+  &--active {
     display: block;
   }
 }
+
 .filters {
   color: $slider-title;
   // .filters__item 
 
   &__item {
     margin-bottom: 46px;
-    border: 1px solid #ccc;
+    // border: 1px solid #ccc;
   }
 
   // .filters__title
@@ -254,7 +299,7 @@
 
 //------------filter-price--------------
 .irs--flat .irs-line {
-  width: 270px;
+  width: 100%;
   height: 3px;
   top: 0;
   opacity: 66%;

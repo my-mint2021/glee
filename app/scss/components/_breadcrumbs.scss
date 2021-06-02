@@ -3,9 +3,15 @@
   font-family: $rubik;
   text-align: center;
   margin-bottom: 119px;
+  @include bp($lg){
+    margin-bottom: 10px;
+  }
 
   &__inner {
     padding: 30px 0;
+    @include bp($lg){
+     padding: 15px 0;
+    }
   }
 
   &__title {
@@ -13,6 +19,9 @@
     font-size: 36px;
     line-height: 1;
     font-weight: 100;
+    @include bp($lg){
+      font-size: 25px;
+    }
   }
 
   &__list {
