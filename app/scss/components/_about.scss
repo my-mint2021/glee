@@ -1,41 +1,42 @@
 .about {
-
   // .about__inner
 
   &__inner {
     display: flex;
     font-family: $rubik;
+    margin-bottom: 120px;
   }
 
   // .about__images
 
   &__images {
     min-width: 570px;
-    // max-width: 100%;
     margin-right: 45px;
   }
 
   // .about__img
 
   &__img {
-    // width: 100%;
+    width: 100%;
   }
 
   // .about__content
 
-  &__content {}
+  &__content {
+    padding: 60px 0;
+  }
 
   // .about__top
 
   &__top {
     display: flex;
-    margin-bottom: 50px;
+    margin-bottom: 5px;
   }
 
   // .about__years
 
   &__years {
-margin-right: 30px;
+    margin-right: 30px;
     font-size: 140px;
     color: $icon-burger;
     font-weight: 700;
@@ -51,10 +52,7 @@ margin-right: 30px;
   // .about__title
 
   &__title {
-    font-family: $dmsans;
-    font-size: 36px;
-    font-weight: 400;
-    margin-bottom: 50px;
+    margin-bottom: 35px;
     color: $slider-title;
   }
 
@@ -63,14 +61,15 @@ margin-right: 30px;
   &__text {
     padding-bottom: 65px;
     border-bottom: 1px solid #e6eaf0;
+    line-height: 1.8;
   }
 
   // .about__items
 
   &__items {
     display: flex;
-    justify-content: space-between; 
-    padding: 40px 0;
+    justify-content: space-between;
+    padding: 30px 26px 30px 10px;
     font-family: $dmsans;
     font-weight: 700
   }
@@ -80,29 +79,31 @@ margin-right: 30px;
   &__item {
     padding-left: 50px;
   }
-  &__item--project{
-    background-image: url(../images/icon/about-projects.svg);
+
+  &__item--project,
+  &__item--revenue,
+  &__item--awards {
     background-repeat: no-repeat;
     background-position: left center;
   }
-  &__item--revenue{
+
+  &__item--project {
     background-image: url(../images/icon/about-projects.svg);
-    background-repeat: no-repeat;
-    background-position: left center;
   }
-  &__item--awards{
-    background-image: url(../images/icon/about-projects.svg);
-    background-repeat: no-repeat;
-    background-position: left center;
+
+  &__item--revenue {
+    background-image: url(../images/icon/about-revenue.svg);
+  }
+
+  &__item--awards {
+    background-image: url(../images/icon/about-awards.svg);
   }
 
   // .about__num
 
   &__num {
-
     color: $slider-title;
     font-size: 36px;
-;
   }
 
   // .about__num-item
@@ -111,6 +112,241 @@ margin-right: 30px;
     font-size: 16px;
     color: #4c4c4c;
   }
+
+  &__results {
+    padding: 85px 0;
+    background-color: $icon-head;
+  }
+
+  &__team {
+    padding: 115px 0 77px;
+  }
 }
 
-.container {}
+// -------------results------------------
+.results {
+
+  // .results__items
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 70px 0 40px;
+    font-family: $dmsans;
+    font-weight: 700;
+    color: $slider-title;
+  }
+
+  // .results__item
+
+  &__item {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 80px;
+  }
+
+  // .results__text
+  &__num {
+    font-size: 36px;
+  }
+
+  &__text {
+    font-size: 18px;
+  }
+
+  // .results__item--rate
+
+  &__item--rate {
+    background-image: url(../images/icon/about-rate.svg);
+    background-repeat: no-repeat;
+    background-position-x: center;
+  }
+
+  // .results__item--delivered
+
+  &__item--delivered {
+    background-image: url(../images/icon/about-delivered.svg);
+    background-repeat: no-repeat;
+    background-position-x: center;
+  }
+
+  // .results__item--time
+
+  &__item--time {
+    background-image: url(../images/icon/about-time.svg);
+    background-repeat: no-repeat;
+    background-position-x: center;
+  }
+
+  // .results__item--store
+
+  &__item--store {
+    background-image: url(../images/icon/about-store.svg);
+    background-repeat: no-repeat;
+    background-position-x: center;
+  }
+}
+
+// .result__num
+
+// ----------------team--------------
+.team {
+
+  // .team__inner
+
+  &__inner {
+    display: flex;
+  }
+
+  // .team__text
+
+  &__text {
+    width: 300px;
+    margin-right: 100px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  // .team__title
+
+  &__title {
+    margin-bottom: 20px;
+    color: $slider-title;
+    text-align: left;
+  }
+
+  // .team__descr
+
+  &__descr {
+    font-family: $rubik;
+    color: $slider-title;
+    line-height: 1.9;
+    margin-bottom: 35px;
+  }
+
+  // .team__btn
+
+  &__btn {
+    position: relative;
+    align-self: flex-start;
+    padding: 18px 70px 13px 15px;
+    background-color: $icon-burger;
+    border-radius: 5px;
+    color: $white;
+    transition: background-color 0.2s;
+    &:hover{
+      background-color: $slider-title;
+    }
+    &::after {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 20%;
+      content: '';
+      width: 16px;
+      height: 12px;
+      background-image: url(../images/icon/team-arrow.svg);
+      background-repeat: no-repeat;
+    }
+  }
+
+  // .team__photo
+
+  &__photo {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 770px;
+  }
+
+  // .team__member
+
+  &__member {
+    position: relative;
+    width: 370px;
+    height: 380px;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    margin-bottom: 40px;
+  }
+
+  &__box {
+    position: absolute;
+    bottom: 0;
+    left: -1px;
+    padding: 30px 10px 10px 25px;
+    background-color: $white;
+    display: flex;
+    width: 325px;
+  }
+
+  &__text-box {
+    margin-right: auto;
+    color: $slider-title;
+  }
+
+  // .team__name
+
+  &__name {
+    margin-bottom: 20px;
+    font-family: $dmsans;
+    font-weight: 700;
+    font-size: 22px;
+
+  }
+
+  // .team__position
+
+  &__position {
+    font-family: $rubik;
+    font-weight: 400;
+    font-size: 16px;
+  }
+
+  // .team__icons
+
+  &__icons {
+    display: flex;
+  }
+
+  // .team__link
+
+  &__link {
+    position: relative;
+    margin-right: 25px;
+    align-self: center;
+
+    &:hover {
+      svg {
+        fill: $white;
+      }
+
+      &::before {
+        background-color: $icon-burger;
+      }
+    }
+
+    &::before {
+      position: absolute;
+      content: '';
+      top: -11px;
+      left: -11px;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: #f6f6f6;
+      transition: background-color 0.2s;
+    }
+  }
+
+  // .team__icon
+
+  &__icon {
+    position: relative;
+    width: 17px;
+    height: 17px;
+    fill: #888888;
+    transition: fill 0.2s;
+  }
+}
