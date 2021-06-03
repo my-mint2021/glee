@@ -195,6 +195,9 @@ img {
         padding: 35px 0;
         text-align: center;
       }
+      @media screen and (max-width: 992px) and (orientation: landscape){
+        padding: 15px 0;
+            }
 
       @include bp($sm) {
         padding: 20px 0;

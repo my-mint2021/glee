@@ -126,7 +126,7 @@
             <a class="breadcrumbs__link" href="#">Home</a>
           </li>
           <li class="breadcrumbs__item">
-            <span class="breadcrumbs__link" href="#">Product list 1</span>
+            <span class="breadcrumbs__span" href="#">Product list 1</span>
           </li>
         </ul>
       </div>
@@ -135,11 +135,11 @@
     <section class="shop">
       <div class="container">
         <div class="shop__inner">
-          <ul class="shop__sidebar filters">
+          <ul class="shop__sidebar filters ">
             <!-- !------------------category------------------- -->
             <li class="filters__item filters-category">
               <!-- класс в заголовке для js -->
-              <h3 class="filters__title js-category">category</h3>
+              <h3 class="filters__title js-category ">category</h3>
               <form class="filters-category__form hidden-category" action="#">
                 <label class="filters-category__label check-label">
                   <input class="filters-category__input sr-only check-input" type="checkbox">
@@ -242,7 +242,8 @@
               <h3 class="filters__title filters-recent__title js-recent">recent products</h3>
               <ul class="filters-recent__items hidden-recent">
 
-                <li class="filters-recent_item">
+                <li class="filters-recent__item">
+                  <a class="filters-recent__link" href="#"></a>
                   <div class="filters-recent__photo">
                     <img class="filters-recent__img" src="./images/sidebar/1.png" alt="recent product 1">
                   </div>
@@ -253,7 +254,8 @@
                   </div>
                 </li>
 
-                <li class="filters-recent_item">
+                <li class="filters-recent__item">
+                  <a class="filters-recent__link" href="#"></a>
                   <div class="filters-recent__photo">
                     <img class="filters-recent__img" src="./images/sidebar/2.png" alt="recent product 2">
                   </div>
@@ -264,7 +266,8 @@
                   </div>
                 </li>
 
-                <li class="filters-recent_item">
+                <li class="filters-recent__item">
+                  <a class="filters-recent__link" href="#"></a>
                   <div class="filters-recent__photo">
                     <img class="filters-recent__img" src="./images/sidebar/3.png" alt="recent product 3">
                   </div>
@@ -280,20 +283,6 @@
           <!------------------- --------?content--------------------------- -->
           <div class="shop__content">
             <div class="shop__top-filter">
-              <div class="shop__sort">
-                <select class="shop__select">
-                  <option value="">default sort</option>
-                  <option value="">sort by name</option>
-                  <option value="">sort by price</option>
-                  <option value="">sort by rating</option>
-                  <option value="">sort by date</option>
-                </select>
-              </div>
-
-
-             
-
-
               <div class="shop__icons">
                 
                 <button class="shop__btn btn-grid shop__btn--active" type="button">
@@ -313,8 +302,8 @@
                 </button>
               </div>
             </div>
-            <ul class="shop__list">
 
+            <ul class="shop__list">
               <!-- ------------------------------------!---------------------- -->
               <li class="shop__item">
                 <article class="product-card">
@@ -326,7 +315,7 @@
 
                   <div class="product-card__content">
                     <h3 class="product-card__name">
-                      Wooden radio123
+                      Wooden radio
                     </h3>
                     <div class="star product-card__star" data-rateyo-rating="4"></div>
                     <p class="product-card__cost">
@@ -371,7 +360,7 @@
 
                   <div class="product-card__content">
                     <h3 class="product-card__name">
-                      Wooden radio123
+                      Wooden radio
                     </h3>
                     <div class="star product-card__star" data-rateyo-rating="4"></div>
                     <p class="product-card__cost">
@@ -412,7 +401,7 @@
 
                   <div class="product-card__content">
                     <h3 class="product-card__name">
-                      Wooden radio123
+                      Wooden radio
                     </h3>
                     <div class="star product-card__star" data-rateyo-rating="4"></div>
                     <p class="product-card__cost">
@@ -453,7 +442,7 @@
 
                   <div class="product-card__content">
                     <h3 class="product-card__name">
-                      Wooden radio123
+                      Wooden radio
                     </h3>
                     <div class="star product-card__star" data-rateyo-rating="4"></div>
                     <p class="product-card__cost">
@@ -768,16 +757,16 @@
             <div class="num-page">
               <ul class="num-page__list">
                 <li class="num-page__item">
-                  <button class="num-page__btn num-page__btn--active">1</button>
+                  <a class="num-page__btn num-page__btn--active" href="#">1</a>
                 </li>
                 <li class="num-page__item">
-                  <button class="num-page__btn">2</button>
+                  <a class="num-page__btn" href="#">2</a>
                 </li>
                 <li class="num-page__item">
-                  <button class="num-page__btn">3</button>
+                  <a class="num-page__btn" href="#">3</a>
                 </li>
                 <li class="num-page__item">
-                  <button class="num-page__btn">Next</button>
+                  <a class="num-page__btn" href="#">Next</a>
                 </li>
               </ul>
             </div>

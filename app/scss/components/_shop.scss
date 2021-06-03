@@ -15,6 +15,8 @@
     min-width: 270px;
     // background-color: #f2f2f27c;
     margin-right: 35px;
+   
+    transition: transform 0.3s;
 
     @include bp($lg) {
       display: none;
@@ -24,17 +26,18 @@
     &--active {
       display: block;
       position: fixed;
-      top: 10px;
-      left: 10px;
+      top: 0;
+      left: 0;
+      padding: 10px;
       overflow: auto;
       width: 50%;
       overflow-y: auto;
       height: 100%;
-      z-index: 150;
+      z-index: 300;
       background-color: #edf1f4;
 
       @include bp($sm) {
-        width: 90%;
+        width: 100%;
       }
     }
   }
@@ -47,12 +50,12 @@
 
   &__top-filter {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     width: 100%;
     margin-bottom: 40px;
 
     @include bp($lg) {
-      margin-bottom: 10px;
+      margin-bottom: 25px;
     }
   }
 
@@ -113,14 +116,15 @@
     flex-wrap: wrap;
 
     @include bp($xl) {
-      justify-content: center;
+      justify-content: space-evenly;
+      margin-bottom: 30px;
     }
 
     li {
       margin-bottom: 37px;
 
       @include bp($md) {
-        margin-bottom: 10px;
+        margin-bottom: 30px;
       }
     }
 
@@ -137,16 +141,18 @@
       .shop__item--none {
         display: none;
       }
+
+
     }
   }
 }
 
 // -------------номера страниц внизу страницы-------------
 .num-page {
-  padding: 20px 0 110px;
+  padding: 70px 0 110px;
 
   @include bp($md) {
-    padding: 0 0 20px;
+    padding: 0 0 30px;
   }
 
   // .num-page__list
@@ -169,7 +175,11 @@
   &__item {
     &:not(:last-child) {
       margin-right: 15px;
+      @include bp($sm){
+        margin-right: 5px;
+      }
     }
+  
   }
 
   &__btn {
@@ -181,10 +191,22 @@
     background-color: transparent;
     border: 1px solid $icon-burger;
     cursor: pointer;
+    transition: background-color 0.2s;
+
+    @include bp($sm){
+      padding: 10px 15px;
+    }
+    &:hover {
+      background-color: #a3bbc86e;
+    }
 
     &--active {
       color: #fff;
       background-color: $icon-burger;
+
+      &:hover {
+        background-color: $icon-burger;
+      }
     }
   }
 }
@@ -194,10 +216,10 @@
 .hidden-price,
 .hidden-brand,
 .hidden-recent {
-  display: none;
+  display: block;
 
   &--active {
-    display: block;
+    display: none;
   }
 }
 
@@ -222,7 +244,7 @@
     font-size: 18px;
     text-transform: uppercase;
 
-    &::after {
+    &::before {
       content: '';
       position: absolute;
       top: 11px;
@@ -239,7 +261,7 @@
   &__input {
 
     &:checked+.filters-category__checkbox::after {
-      transform: rotate(90deg);
+      transform: rotate(540deg);
     }
   }
 
@@ -370,11 +392,26 @@
 
   // .filters-recent_item
 
-  &_item {
+  &__item {
     display: flex;
+    position: relative;
 
     &:not(:last-child) {
       margin-bottom: 25px;
+    }
+  }
+
+  &__link {
+    position: absolute;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    transition: background-color 0.2s;
+
+    &:hover {
+      background-color: #a3bbc831;
     }
   }
 

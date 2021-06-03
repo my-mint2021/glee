@@ -43,17 +43,11 @@ $('.shop__select').styler();
 
 
 
-
+// кнопка фильтра
   $('.shop__btn-filters').on("click", function() {
     $('.shop__sidebar').toggleClass('shop__sidebar--active');
-    // если прописать как для бургера body--lock то он отваливается от бургера и там не работает
-    // $('body').toggleClass('body--lock');
+    $('body').toggleClass('body--lock');
   });
-  $('.user-nav__menu').on("click", function() {
-    $('.shop__sidebar').removeClass('shop__sidebar--active');
-    // $('body').removeClass('body--lock');
-  });
-
 
   // ------------------фильтры товаров скрыть/показать-------------
 $('.js-category').on("click", function () {

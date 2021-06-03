@@ -28,9 +28,13 @@
       transform: translateY(-200%);
       transition: transform 0.3s;
     }
+// не смог добавить к инклюду ориентацию
+    @media screen and (max-width: 992px) and (orientation: landscape) {
+      padding: 20px 30px;
+    }
 
-    @include bp($sm) {
-      padding: 70px 0 30px;
+    @media screen and (max-width: 576px) and (orientation: portrait) {
+      padding: 80px 0;
     }
 
     &--active {
