@@ -20,17 +20,21 @@ img {
     overflow: hidden;
   }
 }
-.sidebar{
+
+.sidebar {
   width: 370px;
-  @include bp($lg){
+
+  @include bp($lg) {
     display: none;
   }
 }
+
 .main {
   flex: 1 0 auto;
 
 }
-.main-wrap{
+
+.main-wrap {
   width: 100%;
 }
 
@@ -204,9 +208,10 @@ img {
         padding: 35px 0;
         text-align: center;
       }
-      @media screen and (max-width: 992px) and (orientation: landscape){
+
+      @media screen and (max-width: 992px) and (orientation: landscape) {
         padding: 15px 0;
-            }
+      }
 
       @include bp($sm) {
         padding: 20px 0;
@@ -317,11 +322,12 @@ img {
   &__item {
     &:not(:last-child) {
       margin-right: 15px;
-      @include bp($sm){
+
+      @include bp($sm) {
         margin-right: 5px;
       }
     }
-  
+
   }
 
   &__btn {
@@ -335,9 +341,10 @@ img {
     cursor: pointer;
     transition: background-color 0.2s;
 
-    @include bp($sm){
+    @include bp($sm) {
       padding: 10px 15px;
     }
+
     &:hover {
       background-color: #a3bbc86e;
     }
@@ -359,6 +366,7 @@ img {
   padding: 0;
   margin: 0 0 10px 0;
 }
+
 .check-label {
   cursor: pointer;
 }
@@ -372,4 +380,23 @@ img {
 
 .check-input:checked+.check-div {
   background-color: hsla(201, 25%, 71%, 0.205);
+}
+
+// показ/скрытие фильтров по кнопке
+.aside {
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__btn {
+    width: 25px;
+    height: 25px;
+    background-color: transparent;
+    display: none;
+
+    @include bp($lg) {
+      display: block;
+    }
+  }
 }

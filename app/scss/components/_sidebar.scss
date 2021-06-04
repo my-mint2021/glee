@@ -1,18 +1,5 @@
 // ------------------sidebar filters--------------
-.aside__wrap{
-  display: flex;
-  justify-content: space-between;
-}
-.aside__btn{
-  width: 25px;
-  height: 25px;
-  background-color: transparent;
-  display: none;
 
-  @include bp($lg){
-    display: block;
-  }
-}
 .hidden-filter {
   display: block;
 
