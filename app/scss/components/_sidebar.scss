@@ -1,12 +1,8 @@
-
 // ------------------sidebar filters--------------
-.hidden-category,
-.hidden-price,
-.hidden-brand,
-.hidden-recent {
+.hidden-filter {
   display: block;
 
-  &--active {
+  &--hide {
     display: none;
   }
 }
@@ -123,7 +119,7 @@
 .irs--flat .irs-min,
 .irs--flat .irs-max,
 .irs--flat .irs-from,
-.irs--flat .irs-to{
+.irs--flat .irs-to {
   display: none;
 }
 
@@ -134,9 +130,11 @@
   &__title {
     margin-bottom: 35px;
   }
-  &__form{
+
+  &__form {
     position: relative;
   }
+
   &__num {
     font-size: 15px;
     position: absolute;

@@ -50,19 +50,14 @@ $('.shop__select').styler();
   });
 
   // ------------------фильтры товаров скрыть/показать-------------
-$('.js-category').on("click", function () {
-  $('.hidden-category').toggleClass('hidden-category--active');
-});
-$('.js-price').on("click", function () {
-  $('.hidden-price').toggleClass('hidden-price--active');
-});
-$('.js-brand').on("click", function () {
-  $('.hidden-brand').toggleClass('hidden-brand--active');
-});
-$('.js-recent').on("click", function () {
-$('.hidden-recent').toggleClass('hidden-recent--active');
-});
 
+const filtersTitle = document.querySelectorAll('.filters__title');
+
+filtersTitle.forEach(item =>{
+  item.addEventListener('click', () => {
+    item.nextElementSibling.classList.toggle('hidden-filter--hide');
+  })
+})
 
   $('.top-slider__inner').slick({
     dots: true,
