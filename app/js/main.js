@@ -49,6 +49,11 @@ $('.shop__select').styler();
     $('body').toggleClass('body--lock');
   });
 
+
+  
+  $('.aside__btn').on("click", function () {
+    $('.shop__sidebar').removeClass('shop__sidebar--active');
+  });
   // ------------------фильтры товаров скрыть/показать-------------
 
 const filtersTitle = document.querySelectorAll('.filters__title');
