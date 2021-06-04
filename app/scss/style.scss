@@ -25,7 +25,7 @@
 @import 'components/about';
 
 //--------------shop-------------------------
-@import 'components/shop.scss';
+@import 'components/shop/shop.scss';
 
 //--------------components-------------------
 @import 'components/product-card.scss';
@@ -36,6 +36,7 @@
 @import 'components/news-card.scss';
 @import 'components/nav-btn.scss';
 @import 'components/filter.scss';
+@import 'components/sidebar.scss';
 
 
 @import 'components/footer';

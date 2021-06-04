@@ -185,6 +185,11 @@
     @include bp($md) {
       flex-direction: column;
       align-items: center;
+
+      &:hover{
+        border-color: transparent;
+        box-shadow: none;
+      }
       // height: auto;
     }
 
@@ -210,7 +215,7 @@
 
       @include bp($md) {
         width: 100%;
-        align-self: center;
+        align-self: normal;
       }
 
 

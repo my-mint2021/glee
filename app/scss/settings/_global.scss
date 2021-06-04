@@ -20,9 +20,18 @@ img {
     overflow: hidden;
   }
 }
-
+.sidebar{
+  width: 370px;
+  @include bp($lg){
+    display: none;
+  }
+}
 .main {
   flex: 1 0 auto;
+
+}
+.main-wrap{
+  width: 100%;
 }
 
 .container {
@@ -277,4 +286,90 @@ img {
     border: none;
     cursor: pointer;
   }
+}
+
+
+// -------------номера страниц внизу страницы shop-------------
+.num-page {
+  padding: 70px 0 110px;
+
+  @include bp($md) {
+    padding: 0 0 30px;
+  }
+
+  // .num-page__list
+
+  &__list {
+    display: flex;
+    justify-content: center;
+
+    &--list {
+      justify-content: start;
+
+      @include bp($md) {
+        justify-content: center;
+      }
+    }
+  }
+
+  // .num-page__item
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 15px;
+      @include bp($sm){
+        margin-right: 5px;
+      }
+    }
+  
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 20px;
+    color: $slider-title;
+    background-color: transparent;
+    border: 1px solid $icon-burger;
+    cursor: pointer;
+    transition: background-color 0.2s;
+
+    @include bp($sm){
+      padding: 10px 15px;
+    }
+    &:hover {
+      background-color: #a3bbc86e;
+    }
+
+    &--active {
+      color: #fff;
+      background-color: $icon-burger;
+
+      &:hover {
+        background-color: $icon-burger;
+      }
+    }
+  }
+}
+
+// ---------------------shop.html------------
+
+.star {
+  padding: 0;
+  margin: 0 0 10px 0;
+}
+.check-label {
+  cursor: pointer;
+}
+
+.check-div {
+  margin-bottom: 0;
+  padding: 13px 14px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.check-input:checked+.check-div {
+  background-color: hsla(201, 25%, 71%, 0.205);
 }
