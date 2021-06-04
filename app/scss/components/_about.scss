@@ -6,9 +6,18 @@
     font-family: $rubik;
     margin-bottom: 120px;
 
+    @include bp($xl) {
+      margin-bottom: 30px;
+    }
+
     @include bp($lg) {
       flex-direction: column;
       align-items: center;
+
+    }
+
+    @include bp($md) {
+      margin-bottom: 10px;
     }
   }
 
@@ -23,6 +32,16 @@
       overflow: hidden;
       object-fit: cover;
       margin: 0 auto;
+      margin-right: 20px;
+    }
+
+    @include bp($lg) {
+      margin: 0 auto;
+      min-width: 280px;
+    }
+
+    @media screen and (max-width: 992px) and (orientation: landscape) {
+      width: 40%;
     }
   }
 
@@ -49,7 +68,7 @@
     margin-bottom: 5px;
 
     @include bp($lg) {
-      justify-content: flex-end;
+      justify-content: center;
     }
   }
 
@@ -83,7 +102,7 @@
     margin-bottom: 35px;
     color: $slider-title;
 
-    @include bp($lg) {
+    @include bp($xl) {
       margin-bottom: 10px;
     }
   }
@@ -95,90 +114,118 @@
     border-bottom: 1px solid #e6eaf0;
     line-height: 1.8;
 
+    @include bp($xl) {
+      padding-bottom: 20px;
+    }
+
     @include bp($lg) {
       width: 80%;
       margin: 0 auto;
       text-align: justify;
     }
-  }
 
-
-// .about__items
-
-&__items {
-  display: flex;
-  justify-content: space-between;
-  padding: 30px 26px 30px 10px;
-  font-family: $dmsans;
-  font-weight: 700;
-
-  @include bp($xl) {
-    padding: 20px;
-    justify-content: start;
-  }
-  @include bp($xl) {
-    justify-content: center;
-  }
-}
-
-// .about__item
-
-&__item {
-  padding-left: 50px;
-
-  @include bp($xl) {
-    &:not(:last-child) {
-      margin-right: 30px;
+    @include bp($md) {
+      padding-bottom: 30px;
     }
   }
-  @include bp($lg) {
-    &:not(:last-child) {
-      margin-right: 60px;
+
+
+  // .about__items
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 26px 30px 10px;
+    font-family: $dmsans;
+    font-weight: 700;
+
+    @include bp($xl) {
+      padding: 20px;
+      justify-content: center;
+    }
+
+    @include bp($sm) {
+      flex-direction: column;
+      align-items: center;
     }
   }
-}
 
-&__item--project,
-&__item--revenue,
-&__item--awards {
-  background-repeat: no-repeat;
-  background-position: left center;
-}
+  // .about__item
 
-&__item--project {
-  background-image: url(../images/icon/about-projects.svg);
-}
+  &__item {
+    padding-left: 50px;
 
-&__item--revenue {
-  background-image: url(../images/icon/about-revenue.svg);
-}
+    @include bp($xl) {
+      &:not(:last-child) {
+        margin-right: 30px;
+      }
+    }
 
-&__item--awards {
-  background-image: url(../images/icon/about-awards.svg);
-}
+    @include bp($lg) {
+      &:not(:last-child) {
+        margin-right: 60px;
+      }
+    }
 
-// .about__num
+    @include bp($sm) {
+      text-align: center;
 
-&__num {
-  color: $slider-title;
-  font-size: 36px;
-}
+      &:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+    }
+  }
 
-// .about__num-item
+  &__item--project,
+  &__item--revenue,
+  &__item--awards {
+    background-repeat: no-repeat;
+    background-position: left center;
+  }
 
-&__num-item {
-  font-size: 16px;
-  color: #4c4c4c;
-}
+  &__item--project {
+    background-image: url(../images/icon/about-projects.svg);
+  }
 
-&__results {
-  padding: 85px 0;
-  background-color: $icon-head;
-}
+  &__item--revenue {
+    background-image: url(../images/icon/about-revenue.svg);
+  }
 
-&__team {
-  padding: 115px 0 77px;
-}
+  &__item--awards {
+    background-image: url(../images/icon/about-awards.svg);
+  }
+
+  // .about__num
+
+  &__num {
+    color: $slider-title;
+    font-size: 36px;
+    // @include bp($lg){
+    //   font-size: 30px;
+    // }
+  }
+
+  // .about__num-item
+
+  &__text {
+    font-size: 16px;
+    color: #4c4c4c;
+
+  }
+
+  &__results {
+    padding: 85px 0;
+    background-color: $icon-head;
+
+    @include bp($xl) {
+      padding: 40px 0;
+    }
+  }
+
+  &__team {
+    padding: 115px 0 77px;
+  }
 }
 
 // -------------results------------------
@@ -193,6 +240,21 @@
     font-family: $dmsans;
     font-weight: 700;
     color: $slider-title;
+
+    @include bp($lg) {
+      padding: 0 20px;
+    }
+
+    @include bp($md) {
+      flex-wrap: wrap;
+      width: 75%;
+      margin: 0 auto;
+    }
+
+    @include bp($sm) {
+      flex-direction: column;
+
+    }
   }
 
   // .results__item
@@ -202,15 +264,32 @@
     align-items: center;
     flex-direction: column;
     padding-top: 80px;
+
+    &:not(:last-child) {
+      @include bp($sm) {
+        margin-bottom: 30px;
+      }
+    }
+    @include bp($sm) {
+      padding-top: 60px;
+    }
   }
 
   // .results__text
   &__num {
     font-size: 36px;
+
+    @include bp($lg) {
+      font-size: 30px;
+    }
   }
 
   &__text {
     font-size: 18px;
+
+    @include bp($lg) {
+      text-align: center;
+    }
   }
 
   // .results__item--rate
@@ -244,17 +323,37 @@
     background-repeat: no-repeat;
     background-position-x: center;
   }
+
+  &__item--rate,
+  &__item--delivered {
+    @include bp($md) {
+      margin-bottom: 40px;
+    }
+  }
+
 }
 
 // .result__num
 
 // ----------------team--------------
 .team {
+  @include bp($xl) {
+    padding: 50px 0;
+  }
+
+  @include bp($md) {
+    padding: 20px 0;
+  }
 
   // .team__inner
 
   &__inner {
     display: flex;
+
+    @include bp($xl) {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   // .team__text
@@ -264,6 +363,13 @@
     margin-right: 100px;
     display: flex;
     flex-direction: column;
+
+    @include bp($xl) {
+      width: 74%;
+      margin-bottom: 30px;
+      width: 90%;
+      margin-right: 0;
+    }
   }
 
   // .team__title
@@ -294,6 +400,10 @@
     color: $white;
     transition: background-color 0.2s;
 
+    @include bp($xl) {
+      align-self: flex-end;
+    }
+
     &:hover {
       background-color: $slider-title;
     }
@@ -318,6 +428,13 @@
     justify-content: space-between;
     flex-wrap: wrap;
     width: 770px;
+    @include bp($lg){
+      justify-content: space-evenly;
+      width: 100%;
+    }
+  @include bp($sm){
+    background-color: #a3bbc83b;
+  }
   }
 
   // .team__member
@@ -329,6 +446,10 @@
     background-repeat: no-repeat;
     object-fit: cover;
     margin-bottom: 40px;
+    @include bp($lg){
+      width: 322px;
+      height: 380px;
+    }
   }
 
   &__box {
@@ -339,6 +460,10 @@
     background-color: $white;
     display: flex;
     width: 325px;
+    @include bp($sm){
+      width: 280px;
+  
+    }
   }
 
   &__text-box {

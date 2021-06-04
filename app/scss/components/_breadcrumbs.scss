@@ -3,6 +3,9 @@
   font-family: $rubik;
   text-align: center;
   margin-bottom: 119px;
+  @include bp($xl){
+    margin-bottom: 30px;
+}
   @include bp($lg){
     margin-bottom: 10px;
   }
