@@ -293,7 +293,6 @@ img {
   }
 }
 
-
 // -------------номера страниц внизу страницы shop-------------
 .num-page {
   padding: 70px 0 110px;
@@ -327,7 +326,6 @@ img {
         margin-right: 5px;
       }
     }
-
   }
 
   &__btn {
@@ -380,23 +378,4 @@ img {
 
 .check-input:checked+.check-div {
   background-color: hsla(201, 25%, 71%, 0.205);
-}
-
-// показ/скрытие фильтров по кнопке
-.aside {
-  &__wrap {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  &__btn {
-    width: 25px;
-    height: 25px;
-    background-color: transparent;
-    display: none;
-
-    @include bp($lg) {
-      display: block;
-    }
-  }
 }

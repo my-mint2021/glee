@@ -1,5 +1,4 @@
-
-.shop-wrapper{
+.shop-wrapper {
   display: flex;
 }
 
@@ -10,6 +9,7 @@
   font-weight: 400;
   max-width: 870px;
   width: 100%;
+
   // width: 870px;
   &__inner {
     display: flex;
@@ -88,23 +88,39 @@
     }
   }
 
-  // ---------кнопка вызова фильтра
-  &__btn-filters {
-    border: none;
-    background-color: transparent;
+  // показ/скрытие фильтров по кнопке
+  &__wrap {
+    display: flex;
+    justify-content: flex-end;
   }
 
-  &__icon-filters {
+  &__button {
+    width: 25px;
+    height: 25px;
+    background-color: transparent;
     display: none;
-    position: relative;
-    // z-index: 200;
-    width: 27px;
-    height: 27px;
-    fill: rgba(0, 0, 0, 0.678);
 
     @include bp($lg) {
       display: block;
     }
+  }
+
+  // ---------кнопка вызова фильтра
+  &__btn-filters {
+    border: none;
+    background-color: transparent;
+    display: none;
+
+    @include bp($lg) {
+      display: block;
+    }
+  }
+
+  &__icon-filters {
+    position: relative;
+    width: 27px;
+    height: 27px;
+    fill: rgba(0, 0, 0, 0.678);
   }
 
   &__icon-grid,
@@ -142,7 +158,6 @@
         align-content: center;
         margin-bottom: 0;
       }
-
 
       .shop__item--none {
         display: none;

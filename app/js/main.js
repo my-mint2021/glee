@@ -50,9 +50,10 @@ $('.shop__select').styler();
   });
 
 
-  
-  $('.aside__btn').on("click", function () {
+
+  $('.shop__button').on("click", function () {
     $('.shop__sidebar').removeClass('shop__sidebar--active');
+    $('body').removeClass('body--lock');
   });
   // ------------------фильтры товаров скрыть/показать-------------
 

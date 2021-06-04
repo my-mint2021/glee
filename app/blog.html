@@ -91,23 +91,118 @@
     </nav>
   </div>
 </header>
-
-  <main class="main">
-  
-    <div class="breadcrumbs">
-      <div class="breadcrumbs__inner">
-        <h1 class="breadcrumbs__title">TEST</h1>
-        <ul class="breadcrumbs__list">
-          <li class="breadcrumbs__item">
-            <a class="breadcrumbs__link" href="#">Home</a>
-          </li>
-          <li class="breadcrumbs__item">
-            <span class="breadcrumbs__span" href="#">TEST</span>
-          </li>
-        </ul>
-      </div>
+  <div class="breadcrumbs">
+    <div class="breadcrumbs__inner">
+      <h1 class="breadcrumbs__title">Blog</h1>
+      <ul class="breadcrumbs__list">
+        <li class="breadcrumbs__item">
+          <a class="breadcrumbs__link" href="#">Home</a>
+        </li>
+        <li class="breadcrumbs__item">
+          <span class="breadcrumbs__span" href="#">Blog</span>
+        </li>
+      </ul>
     </div>
-    <div class="partners">
+  </div>
+
+
+  <div class="blog-wrapper">
+      <div class="container">
+      <ul class="shop__sidebar filters ">
+        <li class="filters__item filters-category">
+          <aside class="aside">
+             <div class="aside__wrap">
+               <h2 class="filters__title js-category ">category</h2>
+               <button class="aside__btn" type="button">X</button>
+             </div>
+          
+          <form class="filters-category__form hidden-filter" action="#">
+            <label class="filters-category__label check-label">
+              <input class="filters-category__input sr-only check-input" type="checkbox">
+              <div class="filters-category__checkbox check-div">
+                <p>Chair</p>
+              </div>
+            </label>
+    
+            <label class="filters-category__label check-label">
+              <input class="filters-category__input sr-only check-input" type="checkbox">
+              <div class="filters-category__checkbox check-div">
+                <p>Table</p>
+              </div>
+            </label>
+            <label class="filters-category__label check-label">
+              <input class="filters-category__input sr-only check-input" type="checkbox">
+              <div class="filters-category__checkbox check-div">
+                <p>Lamp</p>
+              </div>
+            </label>
+            <label class="filters-category__labe check-labell">
+              <input class="filters-category__input sr-only check-input" type="checkbox">
+              <div class="filters-category__checkbox check-div">
+                <p>Watch</p>
+              </div>
+            </label>
+            <label class="filters-category__label check-label">
+              <input class="filters-category__input sr-only check-input" type="checkbox">
+              <div class="filters-category__checkbox check-div">
+                <p>Clock</p>
+              </div>
+            </label>
+          </form>
+          </aside>
+        </li>
+
+        <li class="filters__item filters-recent">
+          <aside class="aside">
+            <h2 class="filters__title filters-recent__title js-recent">recent posts</h2>
+          <ul class="filters-recent__items hidden-filter">
+    
+            <li class="filters-recent__item">
+              <a class="filters-recent__link" href="#"></a>
+              <div class="filters-recent__photo">
+                <img class="filters-recent__img" src="./images/sidebar/1.png" alt="recent product 1">
+              </div>
+              <div class="filters-recent__content">
+                <h4 class="filters-recent__name">Pendant lamp</h4>
+                <div class="star" data-rateyo-rating="4"></div>
+                <p class="filters-recent__cost">23 <span>$</span> </p>
+              </div>
+            </li>
+    
+            <li class="filters-recent__item">
+              <a class="filters-recent__link" href="#"></a>
+              <div class="filters-recent__photo">
+                <img class="filters-recent__img" src="./images/sidebar/2.png" alt="recent product 2">
+              </div>
+              <div class="filters-recent__content">
+                <h4 class="filters-recent__name">Pendant lamp</h4>
+                <div class="star" data-rateyo-rating="2.5"></div>
+                <p class="filters-recent__cost">23 <span>$</span> </p>
+              </div>
+            </li>
+    
+            <li class="filters-recent__item">
+              <a class="filters-recent__link" href="#"></a>
+              <div class="filters-recent__photo">
+                <img class="filters-recent__img" src="./images/sidebar/3.png" alt="recent product 3">
+              </div>
+              <div class="filters-recent__content">
+                <h4 class="filters-recent__name">Pendant lamp</h4>
+                <div class="star" data-rateyo-rating="5"></div>
+                <p class="filters-recent__cost">23 <span>$</span> </p>
+              </div>
+            </li>
+          </ul>
+          </aside>
+        </li>
+      </ul>
+    </div>
+
+
+
+
+      <main class="main">
+        <div class="partners">
   <div class="container">
     <ul class="partners__list">
 
@@ -174,7 +269,13 @@
     </ul>
   </div>
 </div>
-  </main>
+      </main>
+  </div>
+
+
+
+
+
 
   <footer class="footer">
   <h2 class="sr-only">footer</h2>

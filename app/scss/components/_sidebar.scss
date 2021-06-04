@@ -16,7 +16,10 @@
 
   &__item {
     margin-bottom: 46px;
-    // border: 1px solid #ccc;
+  }
+
+  &__close {
+    margin-bottom: 10px;
   }
 
   // .filters__title
@@ -88,7 +91,6 @@
   &__checkbox {
     display: flex;
     justify-content: space-between;
-
   }
 }
 
