@@ -20,111 +20,230 @@
   </div>
 
 
-  <div class="blog-wrapper">
-      <div class="container">
-      <ul class="shop__sidebar filters ">
+  <div class="container">
+    <div class="container__aside">
+
+      <ul class="shop__sidebar filters aside-order">
+        <li class="filters__item filters-search">
+          <form class="form-search" action="#">
+            <label class="form-search__label">
+              <input class="form-search__input" type="text">
+            </label>
+            <button class="form-search__btn" type="submit">
+              <svg class="form-search__icon">
+                <use xlink:href="images/sprite.svg#blog-search"></use>
+              </svg>
+            </button>
+          </form>
+
+          <button class="form-search__close" type="button">X</button>
+        </li>
+
         <li class="filters__item filters-category">
           <aside class="aside">
-             <div class="aside__wrap">
-               <h2 class="filters__title js-category ">category</h2>
-               <button class="aside__btn" type="button">X</button>
-             </div>
-          
-          <form class="filters-category__form hidden-filter" action="#">
-            <label class="filters-category__label check-label">
-              <input class="filters-category__input sr-only check-input" type="checkbox">
-              <div class="filters-category__checkbox check-div">
-                <p>Chair</p>
-              </div>
-            </label>
-    
-            <label class="filters-category__label check-label">
-              <input class="filters-category__input sr-only check-input" type="checkbox">
-              <div class="filters-category__checkbox check-div">
-                <p>Table</p>
-              </div>
-            </label>
-            <label class="filters-category__label check-label">
-              <input class="filters-category__input sr-only check-input" type="checkbox">
-              <div class="filters-category__checkbox check-div">
-                <p>Lamp</p>
-              </div>
-            </label>
-            <label class="filters-category__labe check-labell">
-              <input class="filters-category__input sr-only check-input" type="checkbox">
-              <div class="filters-category__checkbox check-div">
-                <p>Watch</p>
-              </div>
-            </label>
-            <label class="filters-category__label check-label">
-              <input class="filters-category__input sr-only check-input" type="checkbox">
-              <div class="filters-category__checkbox check-div">
-                <p>Clock</p>
-              </div>
-            </label>
-          </form>
+            <h2 class="filters__title js-category ">category</h2>
+            <form class="filters-category__form hidden-filter" action="#">
+              <label class="filters-category__label check-label">
+                <input class="filters-category__input sr-only check-input" type="checkbox">
+                <div class="filters-category__checkbox check-div">
+                  <p>Chair</p>
+                </div>
+              </label>
+
+              <label class="filters-category__label check-label">
+                <input class="filters-category__input sr-only check-input" type="checkbox">
+                <div class="filters-category__checkbox check-div">
+                  <p>Table</p>
+                </div>
+              </label>
+              <label class="filters-category__label check-label">
+                <input class="filters-category__input sr-only check-input" type="checkbox">
+                <div class="filters-category__checkbox check-div">
+                  <p>Lamp</p>
+                </div>
+              </label>
+              <label class="filters-category__labe check-labell">
+                <input class="filters-category__input sr-only check-input" type="checkbox">
+                <div class="filters-category__checkbox check-div">
+                  <p>Watch</p>
+                </div>
+              </label>
+              <label class="filters-category__label check-label">
+                <input class="filters-category__input sr-only check-input" type="checkbox">
+                <div class="filters-category__checkbox check-div">
+                  <p>Clock</p>
+                </div>
+              </label>
+            </form>
           </aside>
         </li>
 
         <li class="filters__item filters-recent">
           <aside class="aside">
             <h2 class="filters__title filters-recent__title js-recent">recent posts</h2>
-          <ul class="filters-recent__items hidden-filter">
-    
-            <li class="filters-recent__item">
-              <a class="filters-recent__link" href="#"></a>
-              <div class="filters-recent__photo">
-                <img class="filters-recent__img" src="./images/sidebar/1.png" alt="recent product 1">
-              </div>
-              <div class="filters-recent__content">
-                <h4 class="filters-recent__name">Pendant lamp</h4>
-                <div class="star" data-rateyo-rating="4"></div>
-                <p class="filters-recent__cost">23 <span>$</span> </p>
-              </div>
+            <ul class="filters-recent__items hidden-filter">
+
+              <li class="filters-recent__item">
+                <a class="filters-recent__link" href="#"></a>
+                <div class="filters-recent__photo">
+                  <img class="filters-recent__img" src="./images/blog/11.jpg" alt="recent product 1">
+                </div>
+                <div class="filters-recent__content">
+                  <p class="filters-recent__name">Corem ipsum dolor tetur adipisicing elit</p>
+                  <p class="filters-recent__date">28 january, 2020</p>
+                </div>
+              </li>
+
+              <li class="filters-recent__item">
+                <a class="filters-recent__link" href="#"></a>
+                <div class="filters-recent__photo">
+                  <img class="filters-recent__img" src="./images/blog/22.jpg" alt="recent product 2">
+                </div>
+                <div class="filters-recent__content">
+                  <p class="filters-recent__name">Fdipisicing elit, sed do eiusmod tempor</h4>
+                    <p class="filters-recent__date">28 january, 2020</p>
+                </div>
+              </li>
+
+              <li class="filters-recent__item">
+                <a class="filters-recent__link" href="#"></a>
+                <div class="filters-recent__photo">
+                  <img class="filters-recent__img" src="./images/blog/33.jpg" alt="recent product 3">
+                </div>
+                <div class="filters-recent__content">
+                  <p class="filters-recent__name">Eonsectetur adipisicing elit, sed do eiusmod </p>
+                  <p class="filters-recent__date">28 january, 2020</p>
+                </div>
+              </li>
+
+              <li class="filters-recent__item">
+                <a class="filters-recent__link" href="#"></a>
+                <div class="filters-recent__photo">
+                  <img class="filters-recent__img" src="./images/blog/44.jpg" alt="recent product 3">
+                </div>
+                <div class="filters-recent__content">
+                  <p class="filters-recent__name">gnim ad minim veniam, quis nostrud </p>
+                  <p class="filters-recent__date">28 january, 2020</p>
+                </div>
+              </li>
+            </ul>
+          </aside>
+        </li>
+      </ul>
+
+
+      <main class="main">
+        <section class="blog">
+          <ul class="blog__list">
+            <li class="blog__item">
+              <article class="blog__article">
+                <div class="blog__images">
+                  <img class="blog__img" src="./images/blog/1.jpg" alt="blog images">
+                  <div class="blog__descr news-card__bottom">
+                    <time class="news-card__date blog__txt" datetime="2020-01-28">28 january, 2020</time>
+                    <a class="news-card__user blog__txt" href="#">by admin</a>
+                  </div>
+                </div>
+                <h2 class="blog__title">Fonsectetur adipisicing  eiusmod </h2>
+                <div class="blog__text">
+                  <p>consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut alLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna </p>
+                </div>
+                <a class="blog__link link-more view-more__link" href="#">
+                  View More
+                </a>
+              </article>
+
             </li>
-    
-            <li class="filters-recent__item">
-              <a class="filters-recent__link" href="#"></a>
-              <div class="filters-recent__photo">
-                <img class="filters-recent__img" src="./images/sidebar/2.png" alt="recent product 2">
-              </div>
-              <div class="filters-recent__content">
-                <h4 class="filters-recent__name">Pendant lamp</h4>
-                <div class="star" data-rateyo-rating="2.5"></div>
-                <p class="filters-recent__cost">23 <span>$</span> </p>
-              </div>
+
+            <li class="blog__item">
+              <article class="blog__article">
+                <div class="blog__images">
+                  <img class="blog__img" src="./images/blog/2.jpg" alt="blog images">
+                  <div class="blog__descr news-card__bottom">
+                    <time class="news-card__date blog__txt" datetime="2020-01-28">28 january, 2020</time>
+                    <a class="news-card__user blog__txt" href="#">by admin</a>
+                  </div>
+                </div>
+                <h2 class="blog__title">Fonsectetur adipisicing elit, </h2>
+                <div class="blog__text">
+                  <p>consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut alLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna </p>
+                </div>
+                <a class="blog__link link-more view-more__link" href="#">
+                  View More
+                </a>
+              </article>
+
             </li>
-    
-            <li class="filters-recent__item">
-              <a class="filters-recent__link" href="#"></a>
-              <div class="filters-recent__photo">
-                <img class="filters-recent__img" src="./images/sidebar/3.png" alt="recent product 3">
-              </div>
-              <div class="filters-recent__content">
-                <h4 class="filters-recent__name">Pendant lamp</h4>
-                <div class="star" data-rateyo-rating="5"></div>
-                <p class="filters-recent__cost">23 <span>$</span> </p>
-              </div>
+
+            <li class="blog__item">
+              <article class="blog__article">
+                <div class="blog__images">
+                  <img class="blog__img" src="./images/blog/3.jpg" alt="blog images">
+                  <div class="blog__descr news-card__bottom">
+                    <time class="news-card__date blog__txt" datetime="2020-01-28">28 january, 2020</time>
+                    <a class="news-card__user blog__txt" href="#">by admin</a>
+                  </div>
+                </div>
+                <h2 class="blog__title">Fsectetur adipisicing tempor incididunt  </h2>
+                <div class="blog__text">
+                  <p>consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut alLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna </p>
+                </div>
+                <a class="blog__link link-more view-more__link" href="#">
+                  View More
+                </a>
+              </article>
+
+            </li>
+
+            <li class="blog__item">
+              <article class="blog__article">
+                <div class="blog__images">
+                  <img class="blog__img" src="./images/blog/4.jpg" alt="blog images">
+                  <div class="blog__descr news-card__bottom">
+                    <time class="news-card__date blog__txt" datetime="2020-01-28">28 january, 2020</time>
+                    <a class="news-card__user blog__txt" href="#">by admin</a>
+                  </div>
+                </div>
+                <h2 class="blog__title">vonsectetur adipisicing elit</h2>
+                <div class="blog__text">
+                  <p>consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut alLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna </p>
+                </div>
+                <a class="blog__link link-more view-more__link" href="#">
+                  View More
+                </a>
+              </article>
+
             </li>
           </ul>
-          </aside>
+        </section>
+      </main>
+
+    </div>
+
+    <div class="num-page">
+      <ul class="num-page__list num-page__list--list blog__num">
+        <li class="num-page__item">
+          <a class="num-page__btn num-page__btn--active" href="#">1</a>
+        </li>
+        <li class="num-page__item">
+          <a class="num-page__btn" href="#">2</a>
+        </li>
+        <li class="num-page__item">
+          <a class="num-page__btn" href="#">3</a>
+        </li>
+        <li class="num-page__item">
+          <a class="num-page__btn" href="#">Next</a>
         </li>
       </ul>
     </div>
 
-
-
-
-      <main class="main">
-        @include('./components/home-page/partners.html')
-      </main>
   </div>
 
 
 
 
 
-
+  @include('./components/home-page/partners.html')
   @include('./components/footer.html')
   <script src="js/main.min.js"></script>
 </body>

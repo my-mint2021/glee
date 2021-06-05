@@ -202,10 +202,30 @@
     height: 70px;
     border: 1px solid #f2f2f2;
   }
-
+  &__img{
+    max-width: 70px;
+  }
   &__name {
     font-size: 14px;
     font-weight: 400;
     margin-bottom: 10px;
+  }
+
+  &__date{
+    position: relative;
+    padding-left: 20px;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #9a9a9a;
+    &::before{
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 13px;
+      height: 13px;
+      background-image: url(../images/icon/calendar.svg);
+      background-repeat: no-repeat;
+    }
   }
 }

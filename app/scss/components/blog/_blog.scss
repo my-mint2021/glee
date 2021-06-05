@@ -1,0 +1,156 @@
+.aside-order {
+  order: 2;
+  width: 270px;
+
+  @include bp($xl) {
+    display: none;
+  }
+
+}
+
+.form-search {
+  display: flex;
+  border: 2px solid #edf1f4;
+  border-radius: 5px;
+  margin-bottom: 55px;
+
+  &__input {
+    width: 220px;
+    height: 40px;
+    border: none;
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 40px;
+    border: none;
+    background-color: #edf1f4;
+  }
+
+  &__icon {
+    width: 20px;
+    height: 20px;
+    fill: #094074;
+  }
+
+  &__close {
+    display: none;
+  }
+}
+
+.blog {
+  width: 830px;
+  margin-right: 70px;
+  font-family: $rubik;
+  font-weight: 400;
+  color: $slider-title;
+
+  // .blog__list
+  @include bp($xl) {
+    margin: 0 auto;
+  }
+
+  @include bp($lg) {
+    max-width: 550px;
+  }
+
+  @include bp($sm) {
+    max-width: 300px;
+  }
+
+  &__list {
+    @include bp($md) {
+      margin-bottom: 30px;
+    }
+  }
+
+  // .blog__item
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 50px;
+    }
+  }
+
+  // .blog__article
+
+  &__article {}
+
+  // .blog__images
+
+  &__images {
+    position: relative;
+    margin-bottom: 35px;
+  }
+
+  // .blog__img
+
+  &__img {}
+
+  &__descr {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 24px !important;
+
+    background-color: $icon-burger;
+    color: $white;
+
+    @include bp($sm) {
+      padding: 5px !important;
+    }
+  }
+
+  &__txt {
+    padding-bottom: 5px;
+  }
+
+  // .blog__title
+
+  &__title {
+    font-size: 36px;
+    font-weight: 400;
+    margin-bottom: 25px;
+
+    @include bp($md) {
+      margin-bottom: 15px;
+    }
+
+    @include bp($sm) {
+      font-size: 26px;
+      text-align: center;
+    }
+  }
+
+  // .blog__text
+
+  &__text {
+    margin-bottom: 32px;
+    line-height: 1.9;
+
+    @include bp($md) {
+      margin-bottom: 15px;
+      text-align: justify;
+    }
+  }
+
+  &__link {
+    margin-bottom: 0 !important;
+  }
+
+  &__num{
+    @include bp($xl) {
+      justify-content: center;
+    }
+    
+  }
+}
+
+// .num-page__list--list{
+// @include bp($xl){
+//   justify-content: center;
+// }
+// }

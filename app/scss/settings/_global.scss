@@ -46,6 +46,9 @@ img {
   &--large {
     max-width: 1800px;
   }
+  &__aside{
+    display: flex;
+  }
 }
 
 .logo {
