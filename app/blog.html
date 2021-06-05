@@ -110,11 +110,19 @@
     <div class="container__aside">
 
       <ul class="shop__sidebar filters aside-order">
+
+
+        <li class="filters__item filters-wrapper">
+        <div class="shop__wrap">
+          <button class="shop__button" type="button">X</button>
+        </div>
+        </li>
+
         <li class="filters__item filters-search">
           <form class="form-search" action="#">
-            <label class="form-search__label">
+            <!-- <label class="form-search__label"> -->
               <input class="form-search__input" type="text">
-            </label>
+            <!-- </label> -->
             <button class="form-search__btn" type="submit">
               <svg class="form-search__icon">
                 <use xlink:href="images/sprite.svg#blog-search"></use>
@@ -217,9 +225,14 @@
         </li>
       </ul>
 
-
       <main class="main">
         <section class="blog">
+          <button class="shop__btn-filters blog__filter">
+            <svg class="shop__icon-filters">
+              <use xlink:href="images/sprite.svg#filter-icon"></use>
+            </svg>
+          </button>
+          <h1 class="blog sr-only">this is blog</h1>
           <ul class="blog__list">
             <li class="blog__item">
               <article class="blog__article">
@@ -306,19 +319,19 @@
 
     </div>
 
-    <div class="num-page">
-      <ul class="num-page__list num-page__list--list blog__num">
-        <li class="num-page__item">
-          <a class="num-page__btn num-page__btn--active" href="#">1</a>
+    <div class="pagination">
+      <ul class="pagination__list pagination__list--list blog__num">
+        <li class="pagination__item">
+          <a class="pagination__btn pagination__btn--active" href="#">1</a>
         </li>
-        <li class="num-page__item">
-          <a class="num-page__btn" href="#">2</a>
+        <li class="pagination__item">
+          <a class="pagination__btn" href="#">2</a>
         </li>
-        <li class="num-page__item">
-          <a class="num-page__btn" href="#">3</a>
+        <li class="pagination__item">
+          <a class="pagination__btn" href="#">3</a>
         </li>
-        <li class="num-page__item">
-          <a class="num-page__btn" href="#">Next</a>
+        <li class="pagination__item">
+          <a class="pagination__btn" href="#">Next</a>
         </li>
       </ul>
     </div>

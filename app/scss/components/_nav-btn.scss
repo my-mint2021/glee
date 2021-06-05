@@ -25,6 +25,10 @@
     }
   }
 
+  &:active{
+    background-color: #000;
+  }
+
   &:focus {
     outline-color: $icon-head;
   }

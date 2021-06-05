@@ -142,6 +142,10 @@
         background-color: $icon-head;
       }
     }
+
+    &:active{
+      background-color: #000;
+    }
   }
 
   &__left {

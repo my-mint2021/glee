@@ -3,10 +3,10 @@ $(function () {
 $('.shop__select').styler();
 
 // номера страниц снизу
-  $('.num-page__btn').on("click", function () {
+  $('.pagination__btn').on("click", function () {
 
-    $('.num-page__btn').removeClass('num-page__btn--active');
-    $(this).addClass('num-page__btn--active');
+    $('.pagination__btn').removeClass('pagination__btn--active');
+    $(this).addClass('pagination__btn--active');
   });
 
 // кнопки грид и лист
@@ -19,12 +19,12 @@ $('.shop__select').styler();
   $('.btn-list').on("click", function () {
     $('.shop__list').addClass('shop__list--list');
     $('.product-card').addClass('product-card--list');
-    $('.num-page__list').addClass('num-page__list--list');
+    $('.pagination__list').addClass('pagination__list--list');
   });
   $('.btn-grid').on("click", function () {
     $('.shop__list').removeClass('shop__list--list');
     $('.product-card').removeClass('product-card--list');
-    $('.num-page__list').removeClass('num-page__list--list');
+    $('.pagination__list').removeClass('pagination__list--list');
   });
   
  
@@ -46,6 +46,7 @@ $('.shop__select').styler();
 // кнопка фильтра
   $('.shop__btn-filters').on("click", function() {
     $('.shop__sidebar').toggleClass('shop__sidebar--active');
+    $('.aside-order').toggleClass('aside-order--active');
     $('body').toggleClass('body--lock');
   });
 
@@ -53,6 +54,7 @@ $('.shop__select').styler();
 
   $('.shop__button').on("click", function () {
     $('.shop__sidebar').removeClass('shop__sidebar--active');
+    $('.aside-order').removeClass('aside-order--active');
     $('body').removeClass('body--lock');
   });
   // ------------------фильтры товаров скрыть/показать-------------

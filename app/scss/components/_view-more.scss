@@ -227,7 +227,9 @@
     }
 
     &:active {
-      background-color: $icon-head;
+      // background-color: $icon-head;
+      background-color: #000;
+      color: $white;
       border-color: transparent;
     }
 

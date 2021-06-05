@@ -1,7 +1,7 @@
 .about {
   // .about__inner
 
-  &__inner {
+  &__info {
     display: flex;
     font-family: $rubik;
     margin-bottom: 120px;
@@ -13,7 +13,6 @@
     @include bp($lg) {
       flex-direction: column;
       align-items: center;
-
     }
 
     @include bp($md) {
@@ -129,7 +128,6 @@
     }
   }
 
-
   // .about__items
 
   &__items {
@@ -201,9 +199,6 @@
   &__num {
     color: $slider-title;
     font-size: 36px;
-    // @include bp($lg){
-    //   font-size: 30px;
-    // }
   }
 
   // .about__num-item
@@ -211,7 +206,6 @@
   &__text {
     font-size: 16px;
     color: #4c4c4c;
-
   }
 
   &__results {
@@ -253,7 +247,6 @@
 
     @include bp($sm) {
       flex-direction: column;
-
     }
   }
 
@@ -270,6 +263,7 @@
         margin-bottom: 30px;
       }
     }
+
     @include bp($sm) {
       padding-top: 60px;
     }
@@ -330,7 +324,6 @@
       margin-bottom: 40px;
     }
   }
-
 }
 
 // .result__num
@@ -408,6 +401,16 @@
       background-color: $slider-title;
     }
 
+    &:active {
+      background-color: #000;
+    }
+
+    &:focus {
+      border: 2px solid $icon-head;
+      border-radius: 5px;
+      outline: transparent;
+    }
+
     &::after {
       position: absolute;
       top: 50%;
@@ -428,14 +431,16 @@
     justify-content: space-between;
     flex-wrap: wrap;
     width: 770px;
-    @include bp($lg){
+
+    @include bp($lg) {
       justify-content: space-evenly;
       width: 100%;
     }
-  @include bp($sm){
-    background-color: #a3bbc83b;
-    padding-top: 30px;
-  }
+
+    @include bp($sm) {
+      background-color: #a3bbc83b;
+      padding-top: 30px;
+    }
   }
 
   // .team__member
@@ -447,7 +452,8 @@
     background-repeat: no-repeat;
     object-fit: cover;
     margin-bottom: 40px;
-    @include bp($lg){
+
+    @include bp($lg) {
       width: 322px;
       height: 380px;
     }
@@ -461,9 +467,9 @@
     background-color: $white;
     display: flex;
     width: 325px;
-    @include bp($sm){
+
+    @include bp($sm) {
       width: 280px;
-  
     }
   }
 
@@ -479,7 +485,6 @@
     font-family: $dmsans;
     font-weight: 700;
     font-size: 22px;
-
   }
 
   // .team__position
@@ -510,6 +515,25 @@
 
       &::before {
         background-color: $icon-burger;
+      }
+    }
+
+    &:active {
+      svg {
+        fill: $white;
+      }
+
+      &::before {
+        background-color: #000;
+      }
+    }
+
+    &:focus {
+
+      &::before {
+        border: 2px solid $icon-head;
+        border-radius: 5px;
+        outline: transparent;
       }
     }
 

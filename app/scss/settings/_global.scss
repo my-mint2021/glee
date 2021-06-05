@@ -188,7 +188,7 @@ img {
       margin-right: 35px;
 
       @include bp($xl) {
-        margin-right: 10px;
+        margin-right: 0;
       }
     }
   }
@@ -297,7 +297,7 @@ img {
 }
 
 // -------------номера страниц внизу страницы shop-------------
-.num-page {
+.pagination {
   padding: 70px 0 110px;
 
   @include bp($md) {
@@ -313,7 +313,7 @@ img {
     &--list {
       justify-content: start;
 
-      @include bp($md) {
+      @include bp($xl) {
         justify-content: center;
       }
     }
@@ -345,11 +345,18 @@ img {
     @include bp($sm) {
       padding: 10px 15px;
     }
-
+    &:focus{
+      border: 2px solid $icon-head;
+      border-radius: 5px;
+      outline: transparent;
+     }
     &:hover {
       background-color: #a3bbc86e;
     }
-
+    &:active{
+      background-color: #000;
+      color: $white;
+    }
     &--active {
       color: #fff;
       background-color: $icon-burger;
@@ -370,6 +377,7 @@ img {
 
 .check-label {
   cursor: pointer;
+
 }
 
 .check-div {
@@ -377,6 +385,14 @@ img {
   padding: 13px 14px;
   border-radius: 5px;
   transition: background-color 0.3s;
+
+ 
+  &:hover{
+    background-color: hsla(201, 25%, 71%, 0.267);
+  }
+  &:focus{
+   border: 1px solid $icon-head;
+  }
 }
 
 .check-input:checked+.check-div {

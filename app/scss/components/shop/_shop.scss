@@ -10,7 +10,6 @@
   max-width: 870px;
   width: 100%;
 
-  // width: 870px;
   &__inner {
     display: flex;
   }
@@ -19,7 +18,6 @@
 
   &__sidebar {
     min-width: 270px;
-    // background-color: #f2f2f27c;
     margin-right: 35px;
     transition: transform 0.3s;
 
@@ -76,6 +74,21 @@
     margin: 0;
     padding: 0;
 
+    svg{
+      transition: fill 0.2s;
+    }
+
+    &:focus{
+      border: 2px solid $icon-head;
+      border-radius: 5px;
+      outline: transparent;
+    }
+    &:hover{
+      svg{
+        fill: $icon-head;
+      }
+    }
+    
     &--active {
 
       svg {
