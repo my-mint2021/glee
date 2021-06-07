@@ -45,6 +45,7 @@ $('.shop__select').styler();
 
 // кнопка фильтра
   $('.shop__btn-filters').on("click", function() {
+    $('.shop__btn-filters').toggleClass('shop__btn-filters--active');
     $('.shop__sidebar').toggleClass('shop__sidebar--active');
     $('.aside-order').toggleClass('aside-order--active');
     $('body').toggleClass('body--lock');
@@ -53,6 +54,7 @@ $('.shop__select').styler();
 
 
   $('.shop__button').on("click", function () {
+    $('.shop__btn-filters').removeClass('shop__btn-filters--active');
     $('.shop__sidebar').removeClass('shop__sidebar--active');
     $('.aside-order').removeClass('aside-order--active');
     $('body').removeClass('body--lock');

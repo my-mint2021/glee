@@ -103,10 +103,14 @@
       justify-content: space-evenly;
       background-color: #a3bbc83b;
       width: 100%;
+      margin-bottom: 20px;
     }
 
     @include bp($md) {
       padding-top: 30px;
+    }
+    @include bp($sm) {
+      margin-bottom: 0;
     }
   }
 

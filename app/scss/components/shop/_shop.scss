@@ -127,13 +127,25 @@
     @include bp($lg) {
       display: block;
     }
+    &:focus {
+      outline: transparent;
+      border: 2px solid $icon-head;
+      border-radius: 5px;
+    }
+    &--active{
+      svg{
+        fill: $icon-head;
+      }
+    }
   }
 
   &__icon-filters {
     position: relative;
     width: 27px;
     height: 27px;
-    fill: rgba(0, 0, 0, 0.678);
+    fill: $icon-burger;
+    // fill: rgba(0, 0, 0, 0.678);
+ 
   }
 
   &__icon-grid,

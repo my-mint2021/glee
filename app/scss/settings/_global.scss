@@ -46,7 +46,8 @@ img {
   &--large {
     max-width: 1800px;
   }
-  &__aside{
+
+  &__aside {
     display: flex;
   }
 }
@@ -300,8 +301,16 @@ img {
 .pagination {
   padding: 70px 0 110px;
 
+  @include bp($xl) {
+    padding: 30px;
+  }
+
   @include bp($md) {
     padding: 0 0 30px;
+  }
+
+  @media screen and (max-width: 992px) and (orientation: landscape) {
+    padding: 20px;
   }
 
   // .num-page__list
@@ -345,18 +354,22 @@ img {
     @include bp($sm) {
       padding: 10px 15px;
     }
-    &:focus{
+
+    &:focus {
       border: 2px solid $icon-head;
       border-radius: 5px;
       outline: transparent;
-     }
+    }
+
     &:hover {
       background-color: #a3bbc86e;
     }
-    &:active{
+
+    &:active {
       background-color: #000;
       color: $white;
     }
+
     &--active {
       color: #fff;
       background-color: $icon-burger;
@@ -386,12 +399,13 @@ img {
   border-radius: 5px;
   transition: background-color 0.3s;
 
- 
-  &:hover{
+
+  &:hover {
     background-color: hsla(201, 25%, 71%, 0.267);
   }
-  &:focus{
-   border: 1px solid $icon-head;
+
+  &:focus {
+    border: 1px solid $icon-head;
   }
 }
 

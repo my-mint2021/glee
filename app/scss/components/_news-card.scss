@@ -126,5 +126,10 @@
     &::before {
       background-image: url('../images/icon/user.svg');
     }
+    &:focus {
+      outline: transparent;
+      border: 2px solid $icon-head;
+      border-radius: 5px;
+    }
   }
 }

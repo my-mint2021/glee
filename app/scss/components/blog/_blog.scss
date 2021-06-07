@@ -5,28 +5,44 @@
   @include bp($xl) {
     display: none;
   }
-  &--active{
+
+  &--active {
     display: block;
     padding: 50px 10px;
     background-color: $white;
     width: 290px;
 
-    @include bp($sm){
+    @include bp($sm) {
       width: 100%;
     }
-    .shop__button, .filters-wrapper{
+
+    .shop__button,
+    .filters-wrapper {
       display: block;
+    }
+
+    .shop__button {
+      outline: transparent;
+
+      &:focus {
+        border: 2px solid $icon-head;
+        border-radius: 5px;
+      }
     }
   }
 }
-.filters-wrapper{
+
+.filters-wrapper {
   display: none;
 }
+
 .form-search {
   display: flex;
   border: 2px solid #edf1f4;
   border-radius: 5px;
   margin-bottom: 55px;
+
+
 
   &__input {
     // width: 220px;
@@ -46,11 +62,22 @@
     background-color: #edf1f4;
     cursor: pointer;
     transition: background-color 0.2s;
-    &:hover{
+
+    &:hover {
       background-color: $slider-title;
+
       svg {
         fill: $white;
       }
+    }
+  }
+
+  &__input,
+  &__btn {
+    &:focus {
+      outline: transparent;
+      border: 2px solid $icon-head;
+      border-radius: 5px;
     }
   }
 
@@ -67,7 +94,7 @@
 }
 
 .blog {
-  // width: 830px;
+
   max-width: 830px;
   width: 100%;
   margin-right: 70px;
@@ -81,19 +108,22 @@
   }
 
   @include bp($lg) {
-    max-width: 550px;
+    max-width: 95vw;
+    // max-width: 550px;
   }
 
   @include bp($sm) {
-    max-width: 300px;
+    max-width: 90vw;
+    // max-width: 290px;
   }
 
-  &__filter{
-    @include bp($xl){
+  &__filter {
+    @include bp($xl) {
       display: block;
       margin-left: auto;
     }
   }
+
   &__list {
     @include bp($md) {
       margin-bottom: 30px;
@@ -105,23 +135,44 @@
   &__item {
     &:not(:last-child) {
       margin-bottom: 50px;
+
+      @include bp($md) {
+        margin-bottom: 30px;
+      }
+
+      @media screen and (max-width: 992px) and (orientation: landscape) {
+        margin-bottom: 35px;
+      }
     }
+
   }
-
-  // .blog__article
-
-  &__article {}
 
   // .blog__images
 
   &__images {
     position: relative;
     margin-bottom: 35px;
+
+    max-height: 50vh;
+    overflow: hidden;
+
+    @include bp($md) {
+      margin-bottom: 10px;
+    }
+
+    @media screen and (max-width: 992px) and (orientation: landscape) {
+      max-width: 70vw;
+      margin: 0 auto 10px;
+    }
+
+
   }
 
   // .blog__img
 
-  &__img {}
+  &__img {
+    width: 100%;
+  }
 
   &__descr {
     position: absolute;
@@ -135,8 +186,13 @@
     @include bp($sm) {
       padding: 5px !important;
     }
-    a{
-      &:hover{
+
+    @media screen and (max-width: 992px) and (orientation: landscape) {
+      padding: 10px !important;
+    }
+
+    a {
+      &:hover {
         color: #000;
       }
     }
@@ -152,6 +208,7 @@
     font-size: 36px;
     font-weight: 400;
     margin-bottom: 25px;
+    @include line-clamp(2);
 
     @include bp($md) {
       margin-bottom: 15px;
@@ -161,6 +218,12 @@
       font-size: 26px;
       text-align: center;
     }
+
+    @media screen and (max-width: 992px) and (orientation: landscape) {
+      margin-bottom: 10px;
+      font-size: 30px;
+      text-align: center;
+    }
   }
 
   // .blog__text
@@ -168,27 +231,38 @@
   &__text {
     margin-bottom: 32px;
     line-height: 1.9;
+    @include line-clamp(10);
 
-   
 
     @include bp($md) {
       margin-bottom: 15px;
       text-align: justify;
-      padding: 0 15px;
+      // padding: 0 15px;
+    }
+
+    @media screen and (max-width: 992px) and (orientation: landscape) {
+      margin-bottom: 10px;
     }
   }
 
   &__link {
+    padding: 20px 90px 20px 17px;
     margin-bottom: 0 !important;
+    &:focus {
+      outline: transparent;
+      border: 2px solid $icon-head;
+      border-radius: 5px;
+    }
   }
 
-  &__num{
+  &__num {
     @include bp($xl) {
       justify-content: center;
     }
   }
-  &__date{
-    &:hover{
+
+  &__date {
+    &:hover {
       color: #000;
     }
   }

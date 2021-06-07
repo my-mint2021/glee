@@ -284,17 +284,18 @@
 
   &__team {
     padding: 120px 0 75px;
+
     @include bp($xl) {
       padding: 50px 0;
     }
-  
+
     @include bp($md) {
       padding: 20px 0;
     }
-  
+
     @media screen and (max-width: 992px) and (orientation: landscape) {
       padding: 20px 0 0;
     }
-  
+
   }
 }

@@ -15,7 +15,8 @@
   // .filters__item 
 
   &__item {
-    margin-bottom: 46px;
+    margin-bottom: 35px;
+    // margin-bottom: 46px;
   }
 
   &__close {
@@ -28,7 +29,7 @@
     cursor: pointer;
     position: relative;
     display: inline-block;
-    margin-bottom: 17px;
+    margin-bottom: 20px;
     font-family: $dmsans;
     font-weight: 700;
     font-size: 18px;
@@ -189,6 +190,11 @@
     &:hover {
       background-color: #a3bbc831;
     }
+    &:focus {
+      outline: transparent;
+      border: 2px solid $icon-head;
+      border-radius: 5px;
+    }
   }
 
   // .filters-recent__photo
@@ -209,6 +215,7 @@
     font-size: 14px;
     font-weight: 400;
     margin-bottom: 10px;
+    @include line-clamp(3);
   }
 
   &__date{
