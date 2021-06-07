@@ -1,0 +1,235 @@
+.team {
+  // .team__inner
+
+  &__inner {
+    display: flex;
+    margin: 0 0 0 -10px;
+
+    @include bp($xl) {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @include bp($sm) {
+      margin: 0 auto;
+    }
+  }
+
+  // .team__text
+
+  &__text {
+    max-width: 300px;
+    margin-right: 103px;
+    display: flex;
+    flex-direction: column;
+
+    @include bp($xl) {
+      max-width: 100%;
+      margin-bottom: 30px;
+
+      margin-right: 0;
+    }
+  }
+
+  // .team__title
+
+  &__title {
+    margin-bottom: 20px;
+    color: $slider-title;
+    text-align: left;
+  }
+
+  // .team__descr
+
+  &__descr {
+    @include line-clamp(20);
+    font-family: $rubik;
+    color: $slider-title;
+    line-height: 1.9;
+    margin-bottom: 31px;
+  }
+
+  // .team__btn
+
+  &__btn {
+    font-family: $dmsans;
+    font-weight: 700;
+    padding: 15px 65px 15px 15px;
+    background-color: $icon-burger;
+    border-radius: 5px;
+    color: $white;
+    transition: background-color 0.2s;
+
+    @include bp($xl) {
+      align-self: flex-end;
+    }
+
+    &:hover {
+      background-color: $slider-title;
+    }
+
+    &:active {
+      background-color: #000;
+    }
+
+    &:focus {
+      border: 2px solid $icon-head;
+      border-radius: 5px;
+      outline: transparent;
+    }
+
+    &::after {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 20%;
+      content: '';
+      width: 16px;
+      height: 12px;
+      background-image: url(../images/icon/team-arrow.svg);
+      background-repeat: no-repeat;
+    }
+  }
+
+  // .team__photo
+
+  &__photo {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 770px;
+
+    @include bp($lg) {
+      justify-content: space-evenly;
+      background-color: #a3bbc83b;
+      width: 100%;
+    }
+
+    @include bp($md) {
+      padding-top: 30px;
+    }
+  }
+
+  // .team__member
+
+  &__member {
+    position: relative;
+    max-width: 370px;
+    height: 380px;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    margin-bottom: 40px;
+
+    @include bp($lg) {
+      max-width: 310px;
+      height: 380px;
+    }
+  }
+
+  &__img {
+
+    margin: 0 auto;
+  }
+
+  &__box {
+    position: absolute;
+    bottom: 0;
+    padding: 25px 15px 25px 25px;
+    background-color: $white;
+    display: flex;
+    max-width: 325px;
+    width: 100%;
+  }
+
+  &__text-box {
+    margin-right: auto;
+    color: $slider-title;
+  }
+
+  // .team__name
+  &__name,
+  &__position {
+    @include line-clamp(2);
+  }
+
+  &__name {
+    margin-bottom: 10px;
+    font-family: $dmsans;
+    font-weight: 700;
+    font-size: 22px;
+  }
+
+  // .team__position
+
+  &__position {
+    font-family: $rubik;
+    font-weight: 400;
+    font-size: 16px;
+  }
+
+  // .team__icons
+
+  &__icons {
+    display: flex;
+    margin-top: 10px;
+  }
+
+  // .team__link
+
+  &__link {
+    position: relative;
+    margin-right: 25px;
+    align-self: center;
+
+    &:hover {
+      svg {
+        fill: $white;
+      }
+
+      &::before {
+        background-color: $icon-burger;
+      }
+    }
+
+    &:active {
+      svg {
+        fill: $white;
+      }
+
+      &::before {
+        background-color: #000;
+      }
+    }
+
+    &:focus {
+
+      &::before {
+        border: 2px solid $icon-head;
+        border-radius: 5px;
+        outline: transparent;
+      }
+    }
+
+    &::before {
+      position: absolute;
+      content: '';
+      top: -11px;
+      left: -11px;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: #f6f6f6;
+      transition: background-color 0.2s;
+    }
+  }
+
+  // .team__icon
+
+  &__icon {
+    position: relative;
+    width: 17px;
+    height: 17px;
+    fill: #888888;
+    transition: fill 0.2s;
+  }
+}

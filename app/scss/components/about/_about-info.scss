@@ -1,0 +1,300 @@
+.about {
+  // .about__inner
+
+  &__info {
+    display: flex;
+    font-family: $rubik;
+    margin-bottom: 120px;
+
+    @include bp($xl) {
+      margin-bottom: 30px;
+    }
+
+    @include bp($lg) {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @include bp($md) {
+      margin-bottom: 10px;
+    }
+
+    @media screen and (max-width: 992px) and (orientation: landscape) {
+      margin-bottom: 0;
+      flex-direction: row;
+    }
+  }
+
+  // .about__images
+
+  &__images {
+    width: 100%;
+    margin-right: 55px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    object-fit: cover;
+
+    @include bp($xl) {
+      margin-right: 20px;
+    }
+
+    @include bp($lg) {
+      height: 50vh;
+      margin-right: 0;
+    }
+
+    @include bp($sm) {
+      width: 95vw;
+    }
+
+    @media screen and (max-width: 992px) and (orientation: landscape) {
+      height: 90vh;
+      margin-right: 20px;
+    }
+
+    @media screen and (max-width: 768px) and (orientation: landscape) {
+      display: none;
+    }
+  }
+
+  // .about__content
+
+  &__content {
+    padding: 60px 0;
+    width: 100%;
+
+    @include bp($xl) {}
+
+    @include bp($md) {
+      padding: 20px 0;
+    }
+
+    @include bp($sm) {
+      padding: 0;
+    }
+
+    @media screen and (max-width: 992px) and (orientation: landscape) {
+      padding: 10px 0;
+    }
+  }
+
+  // .about__top
+
+  &__top {
+    display: flex;
+    margin-bottom: 5px;
+
+    @include bp($lg) {
+      justify-content: center;
+    }
+  }
+
+  // .about__years
+
+  &__years {
+    margin-right: 30px;
+    font-size: 140px;
+    color: $icon-burger;
+    font-weight: 700;
+
+    @include bp($xl) {
+      font-size: 90px;
+    }
+  }
+
+  &__subtext {
+    width: 85px;
+    padding-top: 40px;
+    line-height: 2;
+    color: $slider-title;
+
+    @include bp($xl) {
+      padding-top: 8px;
+    }
+
+    @media screen and (max-width: 992px) and (orientation: landscape) {
+      line-height: 1.5;
+      padding-top: 15px;
+    }
+  }
+
+  // .about__title
+
+  &__title {
+    margin-bottom: 35px;
+    @include line-clamp(2);
+    text-align: left;
+    color: $slider-title;
+
+    @include bp($xl) {
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    @media screen and (max-width: 992px) and (orientation: landscape) {
+      font-size: 28px;
+    }
+  }
+
+  // .about__text
+
+  &__text {
+    padding-bottom: 65px;
+    @include line-clamp(8);
+    overflow: hidden;
+    border-bottom: 1px solid #e6eaf0;
+    line-height: 1.8;
+
+    @include bp($xl) {
+      padding-bottom: 20px;
+    }
+
+    @include bp($lg) {
+      margin: 0 auto;
+    }
+
+    @include bp($md) {
+      padding-bottom: 30px;
+    }
+  }
+
+  // .about__items
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 35px 30px 0px;
+    font-family: $dmsans;
+    font-weight: 700;
+
+    @include bp($xl) {
+      padding: 20px;
+      justify-content: center;
+    }
+
+    @include bp($sm) {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @media screen and (max-width: 992px) and (orientation: landscape) {
+      padding: 10px;
+    }
+
+    @media screen and (max-width: 568px) and (orientation: landscape) {
+      flex-direction: row;
+    }
+  }
+
+  // .about__item
+
+  &__item {
+    position: relative;
+    padding-left: 50px;
+    background-repeat: no-repeat;
+    background-position: left center;
+
+    &:not(:last-child) {
+      &:after {
+        position: absolute;
+        content: '';
+        right: -33px;
+        width: 1px;
+        top: 0;
+        bottom: -10px;
+        background-color: $icon-burger;
+
+        @include bp($xl) {
+          display: none;
+        }
+      }
+    }
+
+    @include bp($xl) {
+      &:not(:last-child) {
+        margin-right: 30px;
+      }
+    }
+
+    @include bp($lg) {
+      &:not(:last-child) {
+        margin-right: 60px;
+      }
+    }
+
+    @include bp($sm) {
+      text-align: center;
+
+      &:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+    }
+
+    @media screen and (max-width: 576px) and (orientation: landscape) {
+      &:not(:last-child) {
+        margin-right: 30px;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__item--project {
+    background-image: url(../images/icon/about-projects.svg);
+  }
+
+  &__item--revenue {
+    background-image: url(../images/icon/about-revenue.svg);
+  }
+
+  &__item--awards {
+    background-image: url(../images/icon/about-awards.svg);
+  }
+
+  // .about__num
+
+  &__num {
+    color: $slider-title;
+    font-size: 36px;
+
+    @media screen and (max-width: 992px) and (orientation: landscape) {
+      font-size: 25px;
+    }
+  }
+
+  // .about__num-item
+
+  &__text {
+    font-size: 16px;
+    color: #4c4c4c;
+  }
+
+  &__results {
+    padding: 85px 0 80px;
+    background-color: $icon-head;
+
+    @include bp($xl) {
+      padding: 40px 0;
+    }
+
+    @media screen and (max-width: 992px) and (orientation: landscape) {
+      padding: 10px 0;
+    }
+  }
+
+  &__team {
+    padding: 120px 0 75px;
+    @include bp($xl) {
+      padding: 50px 0;
+    }
+  
+    @include bp($md) {
+      padding: 20px 0;
+    }
+  
+    @media screen and (max-width: 992px) and (orientation: landscape) {
+      padding: 20px 0 0;
+    }
+  
+  }
+}

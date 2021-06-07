@@ -68,7 +68,7 @@ img {
     }
 
     &--footer {
-      @include bp($sm) {
+      @include bp($md) {
         margin: 0 auto;
       }
     }

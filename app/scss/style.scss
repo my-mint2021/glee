@@ -22,7 +22,11 @@
 
 //--------------------about-----------------
 
-@import 'components/about';
+// @import 'components/about';
+@import 'components/about/team.scss';
+@import 'components/about/results.scss';
+@import 'components/about/about-info.scss';
+
 
 //--------------shop-------------------------
 @import 'components/shop/shop.scss';

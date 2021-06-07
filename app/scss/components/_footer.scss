@@ -5,6 +5,10 @@
   font-size: 14px;
   color: $footer-text;
 
+  @media screen and (max-width: 768px) and (orientation: landscape) {
+    font-size: 12px;
+  }
+
   &__logo {
     display: block;
     margin-bottom: 27px;
@@ -36,24 +40,16 @@
   }
 
   @include bp($lg) {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px;
+    justify-content: space-around;
   }
 
   @include bp($sm) {
-    grid-template-columns: 1fr;
-    justify-items: center;
-    text-align: center;
-    padding: 20px 0;
+    flex-direction: column;
+    align-items: center;
   }
-
 
   &__item {
     padding-top: 20px;
-    // &:not(:first-child) {
-    //   padding-top: 20px;
-    // }
 
     @include bp($lg) {
       margin-right: 20px;
@@ -76,18 +72,41 @@
     margin-right: 185px;
   }
 
+  &__form {
+    @include bp($md) {
+      max-width: 270px;
+    }
+
+    @include bp($sm) {
+      padding: 0;
+    }
+  }
+
   &__address,
   &__services,
   &__account,
   &__item {
 
     @include bp($xl) {
+      margin-right: 50px;
+    }
+
+    @include bp($lg) {
       margin-right: 0;
+    }
+
+    @include bp($md) {
+      text-align: center;
     }
   }
 
   &__wrap {
     display: flex;
+    padding-top: 0;
+
+    @include bp($sm) {
+      margin-bottom: 20px;
+    }
   }
 
   &__wrapper {
