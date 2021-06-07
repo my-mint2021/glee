@@ -11,13 +11,91 @@
 </head>
 
 <body>
-  @include('./components/header.html')
+  <header class="header">
+    <div class="container container--large">
+      <nav class="header__inner">
+        <a class="logo header__logo" href="#">
+          <img class="logo__img logo__img--header" src="images/logo.png" width="150" height="40" alt="logo">
+        </a>
+        
+        <ul class="menu header__menu">
+          <li class="menu__item menu__item--header ">
+            <a class="menu__link menu__link--header" href="#">Home <span>+</span></a>
+          </li>
+  
+          <li class="menu__item menu__item--header">
+            <a class="menu__link menu__link--header" href="#">About</a>
+          </li>
+  
+          <li class="menu__item menu__item--header">
+            <a class="menu__link menu__link--header" href="#">Services</a>
+          </li>
+  
+          <li class="menu__item menu__item--header">
+            <a class="menu__link menu__link--header" href="#">Pages <span>+</span></a>
+          </li>
+  
+          <li class="menu__item menu__item--header">
+            <a class="menu__link menu__link--header" href="#">News</a>
+          </li>
+  
+          <li class="menu__item menu__item--header">
+            <a class="menu__link menu__link--header" href="#">Contact</a>
+          </li>
+        </ul>
+      
+        <div class="user-nav">
+          <button class="user-nav__search nav-btn" type="button">
+            <!-- !альтернативный класс для картинок svg поиск -->
+            <svg class="user-nav__scan">
+              <use xlink:href="images/sprite.svg#search-icon"></use>
+            </svg>
+          </button>
+          <span class="sr-only">Clicking on the button will open the SEARCH window</span>
+  
+          <div class="user-nav__wrap">
+            <div class="user-nav__left">
+              <!-- !доп обертки для hover -->
+              <a class="user-nav__favorites" href="#">
+                <svg class="user-nav__like">
+                  <use xlink:href="images/sprite.svg#like-icon"></use>
+                </svg>
+                <span class="user-nav__num">0</span>
+              </a>
+              <span class="sr-only">When you click on the button, the product will be added to your favorites</span>
+            </div>
+            <div class="user-nav__right">
+              <!-- !доп обертки для hover -->
+              <a class="user-nav__basket" href="#">
+                <svg class="user-nav__card">
+                  <use xlink:href="images/sprite.svg#basket-icon"></use>
+                </svg>
+                <span class="user-nav__num">0</span>
+                <span class="sr-only">When you click on the button, the product will be added to the cart</span>
+              </a>
+            </div>
+          </div>
+  
+          <button class="user-nav__menu nav-btn">
+            <svg class="user-nav__profile">
+              <use xlink:href="images/sprite.svg#menu-icon"></use>
+            </svg>
+            <span class="sr-only">Clicking on the button will open your profile</span>
+          </button>
+        </div>
+        <span class="sr-only">Clicking on the button will open main menu</span>
+        <button class="burger-btn" type="button">
+          <span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
 
   <main class="main">
 
     <div class="breadcrumbs">
       <div class="breadcrumbs__inner">
-        <h2 class="breadcrumbs__title">About Us</h2>
+        <h1 class="breadcrumbs__title">About Us</h1>
         <ul class="breadcrumbs__list">
           <li class="breadcrumbs__item">
             <a class="breadcrumbs__link" href="#">Home</a>

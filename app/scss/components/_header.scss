@@ -39,6 +39,12 @@
 
     &--active {
       transform: translateY(0%);
+
+      .menu__item--header:not(:last-child) {
+        @include bp($xl) {
+        margin-right: 0;
+        }
+    }
     }
   }
 }

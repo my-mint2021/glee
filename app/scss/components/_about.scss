@@ -23,40 +23,44 @@
   // .about__images
 
   &__images {
-    min-width: 570px;
-    margin-right: 45px;
+    // flex: 0 0 50%;
+    flex-basis: 50%;
+    max-width: 570px;
+    width: 100%;
+    margin-right: 55px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    object-fit: cover;
 
     @include bp($xl) {
-      min-width: 350px;
-      overflow: hidden;
-      object-fit: cover;
-      margin: 0 auto;
       margin-right: 20px;
     }
 
     @include bp($lg) {
-      margin: 0 auto;
-      min-width: 280px;
+      height: 100%;
+      // flex-basis: 100%;
+      // flex: 0 0 100%;
     }
 
-    @media screen and (max-width: 992px) and (orientation: landscape) {
-      width: 40%;
-    }
+    // @media screen and (max-width: 992px) and (orientation: landscape) {
+    //   width: 40%;
+    // }
   }
 
   // .about__img
 
-  &__img {
-    width: 100%;
-  }
+  // &__img {
+  //   width: 100%;
+  // }
 
   // .about__content
 
   &__content {
     padding: 60px 0;
+    flex-basis: 50%;
 
     @include bp($xl) {
-      padding: 10px 0;
+      // height: 100%;
     }
   }
 
@@ -99,10 +103,13 @@
 
   &__title {
     margin-bottom: 35px;
+    @include line-clamp(2);
+    text-align: left;
     color: $slider-title;
 
     @include bp($xl) {
       margin-bottom: 10px;
+      text-align: center;
     }
   }
 
@@ -110,6 +117,8 @@
 
   &__text {
     padding-bottom: 65px;
+    @include line-clamp(8);
+    overflow: hidden;
     border-bottom: 1px solid #e6eaf0;
     line-height: 1.8;
 
@@ -118,9 +127,9 @@
     }
 
     @include bp($lg) {
-      width: 80%;
+      // width: 80%;
       margin: 0 auto;
-      text-align: justify;
+      // text-align: justify;
     }
 
     @include bp($md) {
@@ -133,7 +142,7 @@
   &__items {
     display: flex;
     justify-content: space-between;
-    padding: 30px 26px 30px 10px;
+    padding: 30px 35px 30px 0px;
     font-family: $dmsans;
     font-weight: 700;
 
@@ -151,7 +160,24 @@
   // .about__item
 
   &__item {
+    position: relative;
     padding-left: 50px;
+
+    &:not(:last-child) {
+      &:after {
+        position: absolute;
+        content: '';
+        right: -33px;
+        width: 1px;
+        top: 0;
+        bottom: -10px;
+        background-color: $icon-burger;
+
+        @include bp($xl) {
+          display: none;
+        }
+      }
+    }
 
     @include bp($xl) {
       &:not(:last-child) {
@@ -209,7 +235,7 @@
   }
 
   &__results {
-    padding: 85px 0;
+    padding: 85px 0 80px;
     background-color: $icon-head;
 
     @include bp($xl) {
@@ -218,7 +244,7 @@
   }
 
   &__team {
-    padding: 115px 0 77px;
+    padding: 120px 0 75px;
   }
 }
 
@@ -256,7 +282,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding-top: 80px;
+    padding-top: 75px;
 
     &:not(:last-child) {
       @include bp($sm) {
@@ -272,6 +298,8 @@
   // .results__text
   &__num {
     font-size: 36px;
+    line-height: 1.4;
+    margin-bottom: 5px;
 
     @include bp($lg) {
       font-size: 30px;
@@ -300,6 +328,7 @@
     background-image: url(../images/icon/about-delivered.svg);
     background-repeat: no-repeat;
     background-position-x: center;
+    background-position-y: 10px;
   }
 
   // .results__item--time
@@ -342,10 +371,15 @@
 
   &__inner {
     display: flex;
+    margin: 0 0 0 -10px;
 
     @include bp($xl) {
       flex-direction: column;
       align-items: center;
+    }
+
+    @include bp($sm) {
+      margin: 0 auto;
     }
   }
 
@@ -353,7 +387,7 @@
 
   &__text {
     width: 300px;
-    margin-right: 100px;
+    margin-right: 103px;
     display: flex;
     flex-direction: column;
 
@@ -376,18 +410,19 @@
   // .team__descr
 
   &__descr {
+    @include line-clamp(20);
     font-family: $rubik;
     color: $slider-title;
     line-height: 1.9;
-    margin-bottom: 35px;
+    margin-bottom: 31px;
   }
 
   // .team__btn
 
   &__btn {
-    position: relative;
-    align-self: flex-start;
-    padding: 18px 70px 13px 15px;
+    font-family: $dmsans;
+    font-weight: 700;
+    padding: 15px 65px 15px 15px;
     background-color: $icon-burger;
     border-radius: 5px;
     color: $white;
@@ -459,17 +494,21 @@
     }
   }
 
+  &__img {
+
+    margin: 0 auto;
+  }
+
   &__box {
     position: absolute;
     bottom: 0;
-    left: -1px;
-    padding: 30px 10px 10px 25px;
+    padding: 25px 15px 25px 25px;
     background-color: $white;
     display: flex;
     width: 325px;
 
     @include bp($sm) {
-      width: 280px;
+      width: 290px;
     }
   }
 
@@ -479,9 +518,13 @@
   }
 
   // .team__name
+  &__name,
+  &__position {
+    @include line-clamp(2);
+  }
 
   &__name {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     font-family: $dmsans;
     font-weight: 700;
     font-size: 22px;
@@ -499,6 +542,7 @@
 
   &__icons {
     display: flex;
+    margin-top: 10px;
   }
 
   // .team__link

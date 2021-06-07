@@ -188,7 +188,7 @@ img {
       margin-right: 35px;
 
       @include bp($xl) {
-        margin-right: 0;
+        margin-right: 20px;
       }
     }
   }

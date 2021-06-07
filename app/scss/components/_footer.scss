@@ -27,7 +27,7 @@
 
 .footer-top {
   display: flex;
-  padding: 80px 0 75px;
+  padding: 70px 0;
   border-bottom: 1px solid #dae4e9;
 
   @include bp($xl) {
@@ -48,29 +48,32 @@
     padding: 20px 0;
   }
 
-  &__address {
-    max-width: 220px;
-    margin-right: 82px;
-  }
-
-  &__services {
-    width: 155px;
-    margin-right: 175px;
-  }
-
-  &__account {
-    width: 115px;
-    margin-right: 205px;
-  }
 
   &__item {
-    &:not(:first-child) {
-      padding-top: 20px;
-    }
+    padding-top: 20px;
+    // &:not(:first-child) {
+    //   padding-top: 20px;
+    // }
 
     @include bp($lg) {
       margin-right: 20px;
     }
+  }
+
+  &__address {
+    padding-top: 0;
+    max-width: 220px;
+    margin-right: 73px;
+  }
+
+  &__services {
+    width: 155px;
+    margin-right: 145px;
+  }
+
+  &__account {
+    width: 115px;
+    margin-right: 185px;
   }
 
   &__address,
@@ -83,13 +86,18 @@
     }
   }
 
+  &__wrap {
+    display: flex;
+  }
+
   &__wrapper {
     &:not(:last-child) {
-      margin-bottom: 11px;
+      margin-bottom: 8px;
     }
   }
 
   &__link {
+    line-height: 1.7;
     outline: 2px solid transparent;
     transition: color 0.2s;
 
@@ -103,7 +111,7 @@
   }
 
   &__name {
-    margin-bottom: 16px;
+    margin-bottom: 20px;
     font-family: $dmsans;
     font-weight: 700;
     font-size: 16px;
@@ -113,7 +121,8 @@
   }
 
   &__text {
-    margin-bottom: 42px;
+    margin-bottom: 34px;
+    line-height: 1.7;
 
     @include bp($lg) {
       margin-bottom: 20px;

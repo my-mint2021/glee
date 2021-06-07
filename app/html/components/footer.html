@@ -1,8 +1,11 @@
 <footer class="footer">
-  <h2 class="sr-only">footer</h2>
+  <section>
+      <h2 class="sr-only">footer</h2>
+  </section>
+
   <div class="container">
-    <ul class="footer-top">
-      <li class="footer-top__item footer-top__address">
+    <div class="footer-top">
+      <div class="footer-top__item footer-top__address">
         <address class="footer-top__addr">
           <a class="logo footer__logo" href="#">
             <img class="logo__img logo__img--footer" src="images/logo.png" alt="logo">
@@ -25,12 +28,13 @@
             </li>
           </ul>
         </address>
-      </li>
+      </div>
+      <ul class="footer-top__wrap">
 
-      <li class="footer-top__item footer-top__services">
-        <p class="footer-top__name">
+        <li class="footer-top__item footer-top__services">
+        <h3 class="footer-top__name">
           Services
-        </p>
+        </h3>
         <ul class="footer-top__list">
           <li class="footer-top__wrapper">
             <a class="footer-top__link " href="#">About us</a>
@@ -51,9 +55,9 @@
       </li>
 
       <li class="footer-top__item footer-top__account">
-        <p class="footer-top__name">
+        <h3 class="footer-top__name">
           Account
-        </p>
+        </h3>
         <ul class="footer-top__list">
           <li class="footer-top__wrapper">
             <a class="footer-top__link " href="#">Your Account</a>
@@ -69,11 +73,13 @@
           </li>
         </ul>
       </li>
+      </ul>
+      
 
-      <li class="footer-top__item footer-top__form">
-        <p class="footer-top__name">
+      <div class="footer-top__item footer-top__form">
+        <h3 class="footer-top__name">
           Newsletter
-        </p>
+        </h3>
         <div class="footer-top__text">
           <p>Subscribe by our newsletter and get update protidin.</p>
         </div>
@@ -82,8 +88,11 @@
           <input class="form__input" type="email" name="email" placeholder="Email address">
           <button class="form__btn" type="submit" name="button">Subscribe</button>
         </form>
-      </li>
-    </ul>
+      </div>
+    </div>
+
+
+
 
     <div class="footer-bottom">
       <p class="footer__copy">©2020 CopyRight Example. All rights reserved. </p>

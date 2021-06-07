@@ -12,91 +12,90 @@
 
 <body>
   <header class="header">
-  <h1 class="sr-only">The best furniture store</h1>
-  <div class="container container--large">
-    <nav class="header__inner">
-      <a class="logo header__logo" href="#">
-        <img class="logo__img logo__img--header" src="images/logo.png" width="150" height="40" alt="logo">
-      </a>
+    <div class="container container--large">
+      <nav class="header__inner">
+        <a class="logo header__logo" href="#">
+          <img class="logo__img logo__img--header" src="images/logo.png" width="150" height="40" alt="logo">
+        </a>
+        
+        <ul class="menu header__menu">
+          <li class="menu__item menu__item--header ">
+            <a class="menu__link menu__link--header" href="#">Home <span>+</span></a>
+          </li>
+  
+          <li class="menu__item menu__item--header">
+            <a class="menu__link menu__link--header" href="#">About</a>
+          </li>
+  
+          <li class="menu__item menu__item--header">
+            <a class="menu__link menu__link--header" href="#">Services</a>
+          </li>
+  
+          <li class="menu__item menu__item--header">
+            <a class="menu__link menu__link--header" href="#">Pages <span>+</span></a>
+          </li>
+  
+          <li class="menu__item menu__item--header">
+            <a class="menu__link menu__link--header" href="#">News</a>
+          </li>
+  
+          <li class="menu__item menu__item--header">
+            <a class="menu__link menu__link--header" href="#">Contact</a>
+          </li>
+        </ul>
       
-      <ul class="menu header__menu">
-        <li class="menu__item menu__item--header ">
-          <a class="menu__link menu__link--header" href="#">Home <span>+</span></a>
-        </li>
-
-        <li class="menu__item menu__item--header">
-          <a class="menu__link menu__link--header" href="#">About</a>
-        </li>
-
-        <li class="menu__item menu__item--header">
-          <a class="menu__link menu__link--header" href="#">Services</a>
-        </li>
-
-        <li class="menu__item menu__item--header">
-          <a class="menu__link menu__link--header" href="#">Pages <span>+</span></a>
-        </li>
-
-        <li class="menu__item menu__item--header">
-          <a class="menu__link menu__link--header" href="#">News</a>
-        </li>
-
-        <li class="menu__item menu__item--header">
-          <a class="menu__link menu__link--header" href="#">Contact</a>
-        </li>
-      </ul>
-    
-      <div class="user-nav">
-        <button class="user-nav__search nav-btn" type="button">
-          <!-- !альтернативный класс для картинок svg поиск -->
-          <svg class="user-nav__scan">
-            <use xlink:href="images/sprite.svg#search-icon"></use>
-          </svg>
-        </button>
-        <span class="sr-only">Clicking on the button will open the SEARCH window</span>
-
-        <div class="user-nav__wrap">
-          <div class="user-nav__left">
-            <!-- !доп обертки для hover -->
-            <a class="user-nav__favorites" href="#">
-              <svg class="user-nav__like">
-                <use xlink:href="images/sprite.svg#like-icon"></use>
-              </svg>
-              <span class="user-nav__num">0</span>
-            </a>
-            <span class="sr-only">When you click on the button, the product will be added to your favorites</span>
+        <div class="user-nav">
+          <button class="user-nav__search nav-btn" type="button">
+            <!-- !альтернативный класс для картинок svg поиск -->
+            <svg class="user-nav__scan">
+              <use xlink:href="images/sprite.svg#search-icon"></use>
+            </svg>
+          </button>
+          <span class="sr-only">Clicking on the button will open the SEARCH window</span>
+  
+          <div class="user-nav__wrap">
+            <div class="user-nav__left">
+              <!-- !доп обертки для hover -->
+              <a class="user-nav__favorites" href="#">
+                <svg class="user-nav__like">
+                  <use xlink:href="images/sprite.svg#like-icon"></use>
+                </svg>
+                <span class="user-nav__num">0</span>
+              </a>
+              <span class="sr-only">When you click on the button, the product will be added to your favorites</span>
+            </div>
+            <div class="user-nav__right">
+              <!-- !доп обертки для hover -->
+              <a class="user-nav__basket" href="#">
+                <svg class="user-nav__card">
+                  <use xlink:href="images/sprite.svg#basket-icon"></use>
+                </svg>
+                <span class="user-nav__num">0</span>
+                <span class="sr-only">When you click on the button, the product will be added to the cart</span>
+              </a>
+            </div>
           </div>
-          <div class="user-nav__right">
-            <!-- !доп обертки для hover -->
-            <a class="user-nav__basket" href="#">
-              <svg class="user-nav__card">
-                <use xlink:href="images/sprite.svg#basket-icon"></use>
-              </svg>
-              <span class="user-nav__num">0</span>
-              <span class="sr-only">When you click on the button, the product will be added to the cart</span>
-            </a>
-          </div>
+  
+          <button class="user-nav__menu nav-btn">
+            <svg class="user-nav__profile">
+              <use xlink:href="images/sprite.svg#menu-icon"></use>
+            </svg>
+            <span class="sr-only">Clicking on the button will open your profile</span>
+          </button>
         </div>
-
-        <button class="user-nav__menu nav-btn">
-          <svg class="user-nav__profile">
-            <use xlink:href="images/sprite.svg#menu-icon"></use>
-          </svg>
-          <span class="sr-only">Clicking on the button will open your profile</span>
+        <span class="sr-only">Clicking on the button will open main menu</span>
+        <button class="burger-btn" type="button">
+          <span></span>
         </button>
-      </div>
-      <span class="sr-only">Clicking on the button will open main menu</span>
-      <button class="burger-btn" type="button">
-        <span></span>
-      </button>
-    </nav>
-  </div>
-</header>
+      </nav>
+    </div>
+  </header>
 
   <main class="main">
 
     <div class="breadcrumbs">
       <div class="breadcrumbs__inner">
-        <h2 class="breadcrumbs__title">About Us</h2>
+        <h1 class="breadcrumbs__title">About Us</h1>
         <ul class="breadcrumbs__list">
           <li class="breadcrumbs__item">
             <a class="breadcrumbs__link" href="#">Home</a>
@@ -112,15 +111,16 @@
       <div class="container">
         <!-- ------------------------!info----------------------- -->
         <div class="about__info">
-  <div class="about__images">
-    <img class="about__img" src="./images/about/about-bg.jpg" alt="about bg">
+  <div class="about__images" style="background-image: url(./images/about/about-bg.jpg);">
+
   </div>
+
   <div class="about__content">
     <div class="about__top">
-      <p class="about__years">12</p>
+      <span class="about__years">12</span>
       <p class="about__subtext">Years Experience Working</p>
     </div>
-    <h3 class="about__title title">Mission of our creative house</h3>
+    <h2 class="about__title title">Mission of our creative house</h2>
     <div class="about__text">
       <p>consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
         enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -130,42 +130,74 @@
     <ul class="about__items">
       <li class="about__item about__item--project">
 
-        <p class="about__num">520+</p>
-        <span>Project</span>
+        <span class="about__num">520+</span>
+        <p>Project</p>
       </li>
       <li class="about__item about__item--revenue">
-        <p class="about__num">$4M</p>
-        <span>Revenue</span>
+        <span class="about__num">$4M</span>
+        <p>Revenue</p>
       </li>
       <li class="about__item about__item--awards">
-        <p class="about__num">250</p>
-        <span>Awards</span>
+        <span class="about__num">250</span>
+        <p>Awards</p>
       </li>
     </ul>
   </div>
 </div>
+<!-- <div class="about__info">
+  <div class="about__images" style="background-image: url(./images/about/about-bg.jpg);">
+  </div>
+  <div class="about__content">
+    <div class="about__top">
+      <span class="about__years">12</span>
+      <p class="about__subtext">Years Experience Working</p>
+    </div>
+    <h2 class="about__title title">Mission of our creative house</h2>
+    <div class="about__text">
+      <p>consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+        enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+      </p>
+    </div>
+    <ul class="about__items">
+      <li class="about__item about__item--project">
+
+        <span class="about__num">520+</span>
+        <p>Project</p>
+      </li>
+      <li class="about__item about__item--revenue">
+        <span class="about__num">$4M</span>
+        <p>Revenue</p>
+      </li>
+      <li class="about__item about__item--awards">
+        <span class="about__num">250</span>
+        <p>Awards</p>
+      </li>
+    </ul>
+  </div>
+</div> -->
       </div>
       <!-- ------------------------!results----------------------- -->
       <div class="about__results results">
   <div class="container">
     <ul class="results__items">
       <li class="results__item results__item--rate">
-        <p class="results__num">99%</p>
+        <spam class="results__num">99%</spam>
         <p class="results__text">Satisﬁed Clients Rate</p>
       </li>
 
       <li class="results__item results__item--delivered">
-        <p class="results__num">5020+</p>
+        <span class="results__num">5020+</span>
         <p class="results__text">Products Delivered</p>
       </li>
 
       <li class="results__item results__item--time">
-        <p class="results__num">23hr</p>
+        <span class="results__num">23hr</span>
         <p class="results__text">Daily Working Time</p>
       </li>
 
       <li class="results__item results__item--store">
-        <p class="results__num">140+</p>
+        <span class="results__num">140+</span>
         <p class="results__text">Brands in Store</p>
       </li>
     </ul>
@@ -177,16 +209,25 @@
   <div class="container">
     <div class="team__inner">
       <div class="team__text">
-        <h3 class="team__title title">Our Team</h3>
-        <p class="team__descr">Lorem ipsum dolor sit amet, conse ctetur adipi sicing elit, sed do eiusmod tempor
+        <h2 class="team__title title">Our Team</h2>
+
+        <div class="team__descr">
+          <p>
+            Lorem ipsum dolor sit amet, conse ctetur adipi sicing elit, sed do eiusmod tempor
           inciLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
           et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. </p>
-        <a class="team__btn" href="#">Join With US</a>
+          aliquip ex ea commodo consequat. 
+          </p>
+          </div>
+        <a class="link-more team__btn" href="#">Join With US</a>
       </div>
 
       <ul class="team__photo">
-        <li class="team__member" style="background-image: url('/../images/about/team1.jpg');">
+        <li class="team__member">
+          <div class="team__image">
+             <img  class="team__img" src="../images/about/team1.jpg" width="370" height="320" alt="team member">
+          </div>
+         
           <div class="team__box">
             <div class="team__text-box">
               <p class="team__name">Eliza Elliot</p>
@@ -207,7 +248,10 @@
           </div>
         </li>
 
-        <li class="team__member" style="background-image: url('/../images/about/team2.jpg');">
+        <li class="team__member">
+          <div class="team__image">
+            <img  class="team__img" src="../images/about/team2.jpg" width="370" height="320" alt="team member">
+         </div>
           <div class="team__box">
             <div class="team__text-box">
               <p class="team__name">Roscoe A.</p>
@@ -228,7 +272,10 @@
           </div>
         </li>
 
-        <li class="team__member" style="background-image: url('/../images/about/team3.jpg');">
+        <li class="team__member">
+          <div class="team__image">
+            <img  class="team__img" src="../images/about/team3.jpg" width="370" height="320" alt="team member">
+         </div>
           <div class="team__box">
             <div class="team__text-box">
               <p class="team__name">Ruby M.</p>
@@ -249,7 +296,10 @@
           </div>
         </li>
 
-        <li class="team__member" style="background-image: url('/../images/about/team4.jpg');">
+        <li class="team__member">
+          <div class="team__image">
+            <img  class="team__img" src="../images/about/team4.jpg" width="370" height="320" alt="team member">
+         </div>
           <div class="team__box">
             <div class="team__text-box">
               <p class="team__name">Marie F. Bloss</p>
@@ -420,10 +470,13 @@
   </main>
 
   <footer class="footer">
-  <h2 class="sr-only">footer</h2>
+  <section>
+      <h2 class="sr-only">footer</h2>
+  </section>
+
   <div class="container">
-    <ul class="footer-top">
-      <li class="footer-top__item footer-top__address">
+    <div class="footer-top">
+      <div class="footer-top__item footer-top__address">
         <address class="footer-top__addr">
           <a class="logo footer__logo" href="#">
             <img class="logo__img logo__img--footer" src="images/logo.png" alt="logo">
@@ -446,12 +499,13 @@
             </li>
           </ul>
         </address>
-      </li>
+      </div>
+      <ul class="footer-top__wrap">
 
-      <li class="footer-top__item footer-top__services">
-        <p class="footer-top__name">
+        <li class="footer-top__item footer-top__services">
+        <h3 class="footer-top__name">
           Services
-        </p>
+        </h3>
         <ul class="footer-top__list">
           <li class="footer-top__wrapper">
             <a class="footer-top__link " href="#">About us</a>
@@ -472,9 +526,9 @@
       </li>
 
       <li class="footer-top__item footer-top__account">
-        <p class="footer-top__name">
+        <h3 class="footer-top__name">
           Account
-        </p>
+        </h3>
         <ul class="footer-top__list">
           <li class="footer-top__wrapper">
             <a class="footer-top__link " href="#">Your Account</a>
@@ -490,11 +544,13 @@
           </li>
         </ul>
       </li>
+      </ul>
+      
 
-      <li class="footer-top__item footer-top__form">
-        <p class="footer-top__name">
+      <div class="footer-top__item footer-top__form">
+        <h3 class="footer-top__name">
           Newsletter
-        </p>
+        </h3>
         <div class="footer-top__text">
           <p>Subscribe by our newsletter and get update protidin.</p>
         </div>
@@ -503,8 +559,11 @@
           <input class="form__input" type="email" name="email" placeholder="Email address">
           <button class="form__btn" type="submit" name="button">Subscribe</button>
         </form>
-      </li>
-    </ul>
+      </div>
+    </div>
+
+
+
 
     <div class="footer-bottom">
       <p class="footer__copy">©2020 CopyRight Example. All rights reserved. </p>
