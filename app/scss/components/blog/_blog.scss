@@ -1,6 +1,7 @@
 .aside-order {
   order: 2;
   width: 270px;
+  border: none;
 
   @include bp($xl) {
     display: none;
@@ -11,6 +12,9 @@
     padding: 50px 10px;
     background-color: $white;
     width: 290px;
+
+    border: 2px solid $footer-title;
+    border-radius: 5px;
 
     @include bp($sm) {
       width: 100%;
@@ -133,8 +137,11 @@
   // .blog__item
 
   &__item {
+    line-height: 1.9;
+
     &:not(:last-child) {
-      margin-bottom: 50px;
+      // margin-bottom: 50px;
+      margin-bottom: 45px;
 
       @include bp($md) {
         margin-bottom: 30px;
@@ -151,10 +158,14 @@
 
   &__images {
     position: relative;
-    margin-bottom: 35px;
-
-    max-height: 50vh;
+    // margin-bottom: 35px;
+    margin-bottom: 25px;
+    max-height: 70vh;
     overflow: hidden;
+
+    &--details {
+      margin-bottom: 20px;
+    }
 
     @include bp($md) {
       margin-bottom: 10px;
@@ -178,7 +189,7 @@
     position: absolute;
     left: 0;
     bottom: 0;
-    padding: 24px !important;
+    padding: 20px 23px !important;
 
     background-color: $icon-burger;
     color: $white;
@@ -207,7 +218,13 @@
   &__title {
     font-size: 36px;
     font-weight: 400;
-    margin-bottom: 25px;
+    // margin-bottom: 25px;
+    margin-bottom: 10px;
+
+    &--details {
+      margin-bottom: 5px;
+    }
+
     @include line-clamp(2);
 
     @include bp($md) {
@@ -226,11 +243,21 @@
     }
   }
 
+  &__subtext {
+    font-weight: 500;
+    margin-bottom: 30px;
+
+    &--details {
+      margin-bottom: 13px;
+    }
+  }
+
   // .blog__text
 
   &__text {
     margin-bottom: 32px;
-    line-height: 1.9;
+    // line-height: 1.9;
+    font-weight: 400;
     @include line-clamp(10);
 
 
@@ -246,8 +273,9 @@
   }
 
   &__link {
-    padding: 20px 90px 20px 17px;
+    padding: 15px 89px 18px 19px !important;
     margin-bottom: 0 !important;
+
     &:focus {
       outline: transparent;
       border: 2px solid $icon-head;

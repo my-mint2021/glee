@@ -74,21 +74,22 @@
     margin: 0;
     padding: 0;
 
-    svg{
+    svg {
       transition: fill 0.2s;
     }
 
-    &:focus{
+    &:focus {
       border: 2px solid $icon-head;
       border-radius: 5px;
       outline: transparent;
     }
-    &:hover{
-      svg{
+
+    &:hover {
+      svg {
         fill: $icon-head;
       }
     }
-    
+
     &--active {
 
       svg {
@@ -110,8 +111,7 @@
   &__button {
     width: 25px;
     height: 25px;
-    background-color: transparent;
-    display: none;
+
 
     @include bp($lg) {
       display: block;
@@ -121,22 +121,29 @@
   // ---------кнопка вызова фильтра
   &__btn-filters {
     border: none;
-    background-color: transparent;
-    display: none;
 
     @include bp($lg) {
       display: block;
     }
+
     &:focus {
       outline: transparent;
       border: 2px solid $icon-head;
       border-radius: 5px;
     }
-    &--active{
-      svg{
+
+    &--active {
+      svg {
         fill: $icon-head;
       }
     }
+  }
+
+  &__btn-filters,
+  &__button {
+    background-color: transparent;
+    display: none;
+    cursor: pointer;
   }
 
   &__icon-filters {
@@ -145,7 +152,7 @@
     height: 27px;
     fill: $icon-burger;
     // fill: rgba(0, 0, 0, 0.678);
- 
+
   }
 
   &__icon-grid,

@@ -22,6 +22,7 @@
     font-size: 36px;
     line-height: 1;
     font-weight: 100;
+    color: #222933;
     @include bp($lg){
       font-size: 25px;
     }
@@ -58,7 +59,7 @@
   &__link,
   &__span {
     font-size: 14px;
-    color: #222933;
+    color: #737980;
   }
 
   &__link {
