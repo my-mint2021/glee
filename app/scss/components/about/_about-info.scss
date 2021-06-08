@@ -286,15 +286,18 @@
     padding: 120px 0 75px;
 
     @include bp($xl) {
-      padding: 50px 0;
+      padding: 50px 10px;
     }
 
     @include bp($md) {
+      padding: 20px 10px;
+    }
+    @include bp($sm) {
       padding: 20px 0;
     }
 
     @media screen and (max-width: 992px) and (orientation: landscape) {
-      padding: 20px 0 0;
+      padding: 20px 10px 0;
     }
 
   }
