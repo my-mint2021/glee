@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+@include('./components/head.html')
+
+<body>
+  @include('./components/header.html')
+  <div class="breadcrumbs">
+    <div class="breadcrumbs__inner">
+      <h1 class="breadcrumbs__title">Product Details</h1>
+      <ul class="breadcrumbs__list">
+        <li class="breadcrumbs__item">
+          <a class="breadcrumbs__link" href="#">Home</a>
+        </li>
+        <li class="breadcrumbs__item">
+          <span class="breadcrumbs__span" href="#">Product details</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
+
+
+
+  <main class="main">
+    <div class="container">
+      <section class="details">
+        
+        <div class="details-item">
+          <div class="details-item__inner">
+
+            <div class="details-item__slide details-slide">
+
+              <ul class="details-slide__small">
+                <li class="details-slide__small-item">
+                  <img class="details-slide__small-img" src="./images/details/1.png" alt="product pic">
+                </li>
+                <li class="details-slide__small-item">
+                  <img class="details-slide__small-img" src="./images/details/2.png" alt="product pic">
+                </li>
+                <li class="details-slide__small-item">
+                  <img class="details-slide__small-img" src="./images/details/3.png" alt="product pic">
+                </li>
+              </ul>
+
+              <div class="details-slide__big">
+                <div class="details-slide__big-item">
+                  <img class="details-slide__big-img" src="./images/details/4.png" alt="product pic">
+                </div>
+                <div class="details-slide__big-item">
+                  <img class="details-slide__big-img" src="./images/details/4.png" alt="product pic">
+                </div>
+                <div class="details-slide__big-item">
+                  <img class="details-slide__big-img" src="./images/details/4.png" alt="product pic">
+                </div>
+              </div>
+            </div>
+
+
+            <div class="details-item__content">
+              <h3 class="details-item__title">
+                Pedant lamp
+              </h3>
+              <div class="star" data-rateyo-rating="4"></div>
+              <p class="product-card__cost details-item__cost">
+                <span>$</span>23
+              </p>
+              <p class="details-item__descr">consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
+                <input class="abc" type="number" value="1">
+              </div>
+
+
+          </div>
+        </div>
+        <div class="details-tabs">tabs</div>
+        <div class="details-reviews">reviews</div>
+      </section>
+    </div>
+
+  </main>
+
+
+
+
+
+  @include('./components/home-page/articles.html')
+  @include('./components/footer.html')
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>

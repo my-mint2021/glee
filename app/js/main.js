@@ -1,6 +1,23 @@
 $(function () {
 
-$('.shop__select').styler();
+$('.details-slide__small').slick({
+  asNavFor: '.details-slide__big',
+  focusOnSelect: true,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  vertical: true,
+  draggable: false,
+});
+
+$('.details-slide__big').slick({
+  asNavFor: '.details-slide__small',
+  draggable: false,
+  arrows: false,
+});
+
+
+
+$('.shop__select, .abc').styler();
 
 // номера страниц снизу
   $('.pagination__btn').on("click", function () {
