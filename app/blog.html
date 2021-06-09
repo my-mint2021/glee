@@ -108,122 +108,118 @@
 
   <div class="container">
     <div class="container__aside">
-
       <ul class="shop__sidebar filters aside-order">
 
+  <li class="filters__item filters-wrapper">
+    <div class="shop__wrap">
+      <button class="shop__button" type="button">X</button>
+    </div>
+  </li>
 
-        <li class="filters__item filters-wrapper">
-        <div class="shop__wrap">
-          <button class="shop__button" type="button">X</button>
-        </div>
+  <li class="filters__item filters-search">
+    <form class="form-search" action="#">
+      <input class="form-search__input" type="text">
+      <button class="form-search__btn" type="submit">
+        <svg class="form-search__icon">
+          <use xlink:href="images/sprite.svg#blog-search"></use>
+        </svg>
+      </button>
+    </form>
+
+    <button class="form-search__close" type="button">X</button>
+  </li>
+
+  <li class="filters__item filters-category">
+    <aside class="aside">
+      <h2 class="filters__title js-category ">category</h2>
+      <form class="filters-category__form hidden-filter" action="#">
+        <label class="filters-category__label check-label">
+          <input class="filters-category__input sr-only check-input" type="checkbox">
+          <div class="filters-category__checkbox check-div">
+            <p>Chair</p>
+          </div>
+        </label>
+
+        <label class="filters-category__label check-label">
+          <input class="filters-category__input sr-only check-input" type="checkbox">
+          <div class="filters-category__checkbox check-div">
+            <p>Table</p>
+          </div>
+        </label>
+        <label class="filters-category__label check-label">
+          <input class="filters-category__input sr-only check-input" type="checkbox">
+          <div class="filters-category__checkbox check-div">
+            <p>Lamp</p>
+          </div>
+        </label>
+        <label class="filters-category__labe check-labell">
+          <input class="filters-category__input sr-only check-input" type="checkbox">
+          <div class="filters-category__checkbox check-div">
+            <p>Watch</p>
+          </div>
+        </label>
+        <label class="filters-category__label check-label">
+          <input class="filters-category__input sr-only check-input" type="checkbox">
+          <div class="filters-category__checkbox check-div">
+            <p>Clock</p>
+          </div>
+        </label>
+      </form>
+    </aside>
+  </li>
+
+  <li class="filters__item filters-recent">
+    <aside class="aside">
+      <h2 class="filters__title filters-recent__title js-recent">recent posts</h2>
+      <ul class="filters-recent__items hidden-filter">
+
+        <li class="filters-recent__item">
+          <a class="filters-recent__link" href="#"></a>
+          <div class="filters-recent__photo">
+            <img class="filters-recent__img" src="./images/blog/11.jpg" alt="recent product 1">
+          </div>
+          <div class="filters-recent__content">
+            <p class="filters-recent__name">Corem ipsum dolor tetur adipisicing elit</p>
+            <p class="filters-recent__date">28 january, 2020</p>
+          </div>
         </li>
 
-        <li class="filters__item filters-search">
-          <form class="form-search" action="#">
-            <!-- <label class="form-search__label"> -->
-              <input class="form-search__input" type="text">
-            <!-- </label> -->
-            <button class="form-search__btn" type="submit">
-              <svg class="form-search__icon">
-                <use xlink:href="images/sprite.svg#blog-search"></use>
-              </svg>
-            </button>
-          </form>
-
-          <button class="form-search__close" type="button">X</button>
+        <li class="filters-recent__item">
+          <a class="filters-recent__link" href="#"></a>
+          <div class="filters-recent__photo">
+            <img class="filters-recent__img" src="./images/blog/22.jpg" alt="recent product 2">
+          </div>
+          <div class="filters-recent__content">
+            <p class="filters-recent__name">Fdipisicing elit, sed do eiusmod tempor</h4>
+              <p class="filters-recent__date">28 january, 2020</p>
+          </div>
         </li>
 
-        <li class="filters__item filters-category">
-          <aside class="aside">
-            <h2 class="filters__title js-category ">category</h2>
-            <form class="filters-category__form hidden-filter" action="#">
-              <label class="filters-category__label check-label">
-                <input class="filters-category__input sr-only check-input" type="checkbox">
-                <div class="filters-category__checkbox check-div">
-                  <p>Chair</p>
-                </div>
-              </label>
-
-              <label class="filters-category__label check-label">
-                <input class="filters-category__input sr-only check-input" type="checkbox">
-                <div class="filters-category__checkbox check-div">
-                  <p>Table</p>
-                </div>
-              </label>
-              <label class="filters-category__label check-label">
-                <input class="filters-category__input sr-only check-input" type="checkbox">
-                <div class="filters-category__checkbox check-div">
-                  <p>Lamp</p>
-                </div>
-              </label>
-              <label class="filters-category__labe check-labell">
-                <input class="filters-category__input sr-only check-input" type="checkbox">
-                <div class="filters-category__checkbox check-div">
-                  <p>Watch</p>
-                </div>
-              </label>
-              <label class="filters-category__label check-label">
-                <input class="filters-category__input sr-only check-input" type="checkbox">
-                <div class="filters-category__checkbox check-div">
-                  <p>Clock</p>
-                </div>
-              </label>
-            </form>
-          </aside>
+        <li class="filters-recent__item">
+          <a class="filters-recent__link" href="#"></a>
+          <div class="filters-recent__photo">
+            <img class="filters-recent__img" src="./images/blog/33.jpg" alt="recent product 3">
+          </div>
+          <div class="filters-recent__content">
+            <p class="filters-recent__name">Eonsectetur adipisicing elit, sed do eiusmod </p>
+            <p class="filters-recent__date">28 january, 2020</p>
+          </div>
         </li>
 
-        <li class="filters__item filters-recent">
-          <aside class="aside">
-            <h2 class="filters__title filters-recent__title js-recent">recent posts</h2>
-            <ul class="filters-recent__items hidden-filter">
-
-              <li class="filters-recent__item">
-                <a class="filters-recent__link" href="#"></a>
-                <div class="filters-recent__photo">
-                  <img class="filters-recent__img" src="./images/blog/11.jpg" alt="recent product 1">
-                </div>
-                <div class="filters-recent__content">
-                  <p class="filters-recent__name">Corem ipsum dolor tetur adipisicing elit</p>
-                  <p class="filters-recent__date">28 january, 2020</p>
-                </div>
-              </li>
-
-              <li class="filters-recent__item">
-                <a class="filters-recent__link" href="#"></a>
-                <div class="filters-recent__photo">
-                  <img class="filters-recent__img" src="./images/blog/22.jpg" alt="recent product 2">
-                </div>
-                <div class="filters-recent__content">
-                  <p class="filters-recent__name">Fdipisicing elit, sed do eiusmod tempor</h4>
-                    <p class="filters-recent__date">28 january, 2020</p>
-                </div>
-              </li>
-
-              <li class="filters-recent__item">
-                <a class="filters-recent__link" href="#"></a>
-                <div class="filters-recent__photo">
-                  <img class="filters-recent__img" src="./images/blog/33.jpg" alt="recent product 3">
-                </div>
-                <div class="filters-recent__content">
-                  <p class="filters-recent__name">Eonsectetur adipisicing elit, sed do eiusmod </p>
-                  <p class="filters-recent__date">28 january, 2020</p>
-                </div>
-              </li>
-
-              <li class="filters-recent__item">
-                <a class="filters-recent__link" href="#"></a>
-                <div class="filters-recent__photo">
-                  <img class="filters-recent__img" src="./images/blog/44.jpg" alt="recent product 3">
-                </div>
-                <div class="filters-recent__content">
-                  <p class="filters-recent__name">gnim ad minim veniam, quis nostrud </p>
-                  <p class="filters-recent__date">28 january, 2020</p>
-                </div>
-              </li>
-            </ul>
-          </aside>
+        <li class="filters-recent__item">
+          <a class="filters-recent__link" href="#"></a>
+          <div class="filters-recent__photo">
+            <img class="filters-recent__img" src="./images/blog/44.jpg" alt="recent product 3">
+          </div>
+          <div class="filters-recent__content">
+            <p class="filters-recent__name">gnim ad minim veniam, quis nostrud </p>
+            <p class="filters-recent__date">28 january, 2020</p>
+          </div>
         </li>
       </ul>
+    </aside>
+  </li>
+</ul>
 
       <main class="main">
         <section class="blog">
@@ -316,7 +312,6 @@
           </ul>
         </section>
       </main>
-
     </div>
 
     <div class="pagination">
@@ -335,12 +330,7 @@
         </li>
       </ul>
     </div>
-
   </div>
-
-
-
-
 
   <div class="partners">
   <div class="container">

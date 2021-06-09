@@ -234,6 +234,7 @@
     @include bp($sm) {
       font-size: 26px;
       text-align: center;
+      line-height: 1.2;
     }
 
     @media screen and (max-width: 992px) and (orientation: landscape) {
@@ -275,6 +276,11 @@
   &__link {
     padding: 15px 89px 18px 19px !important;
     margin-bottom: 0 !important;
+    @include bp($sm){
+          padding: 8px 60px 8px 19px !important;
+    }
+
+    
 
     &:focus {
       outline: transparent;
@@ -295,9 +301,3 @@
     }
   }
 }
-
-// .num-page__list--list{
-// @include bp($xl){
-//   justify-content: center;
-// }
-// }
