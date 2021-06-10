@@ -174,17 +174,17 @@
     position: absolute;
     left: 0;
     bottom: 0;
-    padding: 20px 23px !important;
+    padding: 20px 23px;
 
     background-color: $icon-burger;
     color: $white;
 
     @include bp($sm) {
-      padding: 5px !important;
+      padding: 5px;
     }
 
     @media screen and (max-width: 992px) and (orientation: landscape) {
-      padding: 10px !important;
+      padding: 10px;
     }
 
     a {
