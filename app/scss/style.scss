@@ -6,6 +6,18 @@
 @import 'settings/mixins';
 @import 'settings/global';
 
+
+//--------------components-------------------
+@import 'components/product-card.scss';
+@import 'components/design-card.scss';
+@import 'components/breadcrumbs.scss';
+@import 'components/video-popup.scss';
+@import 'components/view-more.scss';
+@import 'components/news-card.scss';
+@import 'components/nav-btn.scss';
+@import 'components/filter.scss';
+@import 'components/sidebar.scss';
+
 //------------project---------------
 @import 'components/header';
 
@@ -39,16 +51,7 @@
 @import 'components/blog/blog.scss';
 @import 'components/blog/blog-list.scss';
 @import 'components/blog/comments.scss';
-//--------------components-------------------
-@import 'components/product-card.scss';
-@import 'components/design-card.scss';
-@import 'components/breadcrumbs.scss';
-@import 'components/video-popup.scss';
-@import 'components/view-more.scss';
-@import 'components/news-card.scss';
-@import 'components/nav-btn.scss';
-@import 'components/filter.scss';
-@import 'components/sidebar.scss';
+
 
 
 @import 'components/footer';

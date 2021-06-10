@@ -1,26 +1,27 @@
 <ul class="shop__sidebar filters aside-order">
-
-  <li class="filters__item filters-wrapper">
-    <div class="shop__wrap">
-      <button class="shop__button" type="button">X</button>
-    </div>
-  </li>
-
-  <li class="filters__item filters-search">
-    <form class="form-search" action="#">
-      <input class="form-search__input" type="text">
-      <button class="form-search__btn" type="submit">
-        <svg class="form-search__icon">
-          <use xlink:href="images/sprite.svg#blog-search"></use>
-        </svg>
-      </button>
-    </form>
-
-    <button class="form-search__close" type="button">X</button>
-  </li>
-
   <li class="filters__item filters-category">
-    <aside class="aside">
+    <aside class="filters__aside aside">
+      <div class="filters__item filters-wrapper">
+        <div class="shop__wrap">
+          <button class="shop__button" type="button">X</button>
+        </div>
+      </div>
+
+      <div class="filters__item filters-search">
+        <form class="form-search" action="#">
+          <input class="form-search__input" type="text">
+          <button class="form-search__btn" type="submit">
+            <svg class="form-search__icon">
+              <use xlink:href="images/sprite.svg#blog-search"></use>
+            </svg>
+          </button>
+        </form>
+        <button class="form-search__close" type="button">X</button>
+      </div>
+    </aside>
+  </li>
+  <li class="filters__item filters-category">
+    <aside class="filters__aside aside">
       <h2 class="filters__title js-category ">category</h2>
       <form class="filters-category__form hidden-filter" action="#">
         <label class="filters-category__label check-label">
@@ -59,7 +60,7 @@
   </li>
 
   <li class="filters__item filters-recent">
-    <aside class="aside">
+    <aside class="filters__aside aside">
       <h2 class="filters__title filters-recent__title js-recent">recent posts</h2>
       <ul class="filters-recent__items hidden-filter">
 
@@ -109,4 +110,5 @@
       </ul>
     </aside>
   </li>
+
 </ul>

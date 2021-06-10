@@ -1,17 +1,53 @@
-.blog {
-  &__article--details {
-    margin-bottom: 57px;
+.blog-one {
+  margin-bottom: 22px;
 
-    @include bp($md) {
-      margin-bottom: 20px;
+  @include bp($md) {
+    margin-bottom: 20px;
+  }
+
+  &__images {
+    margin-bottom: 20px;
+  }
+
+  h2 {
+    font-family: $dmsans;
+    font-weight: 500;
+    font-size: 36px;
+    font-weight: 400;
+    margin-bottom: 5px;
+
+    @include bp($sm) {
+      margin-bottom: 10px;
+      line-height: 1.2;
+      font-size: 25px;
     }
   }
 
-  &__quote {
+  strong {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 13px;
+  }
+
+  p {
+    margin-bottom: 35px;
+    font-weight: 400;
+    @include line-clamp(10);
+
+    @include bp($md) {
+      margin-bottom: 15px;
+    }
+
+    @media screen and (max-width: 992px) and (orientation: landscape) {
+      margin-bottom: 10px;
+    }
+  }
+
+  blockquote {
     position: relative;
-    background-color: #edf1f4;
-    padding: 25px 45px 25px 40px;
-    margin-bottom: 41px;
+    background-color: $bread;
+    padding: 18px 45px 25px 40px;
+    margin-bottom: 23px;
 
     &::before {
       position: absolute;
@@ -22,9 +58,14 @@
       bottom: 0;
       background-color: $icon-burger;
     }
+
+    p {
+      margin-bottom: 7px;
+    }
   }
 
-  &__author {
+  cite {
+    display: block;
     position: relative;
     padding-left: 40px;
 
@@ -40,33 +81,57 @@
     }
   }
 
-  &__quote-text {
-    margin-bottom: 0;
-  }
-
-  &__example {
-    display: flex;
-    margin-bottom: 30px;
+  h3 {
+    font-family: $dmsans;
+    font-weight: 500;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 500;
 
     @include bp($md) {
-      flex-direction: column;
-      align-items: center;
-      margin-bottom: 0;
+      text-align: center;
+      margin-bottom: 5px;
     }
   }
 
-  &__picture {
+  &__inner {
+    display: flex;
+    align-items: center;
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+
+      @include bp($md) {
+        margin-bottom: 0;
+      }
+    }
+
+    @include bp($md) {
+      flex-direction: column;
+    }
+  }
+
+  &__content {
+    padding-top: 33px;
+
+    @include bp($sm) {
+      padding-top: 20px;
+    }
+  }
+
+  &__left {
     max-width: 320px;
     width: 100%;
     margin-right: 30px;
 
     @include bp($md) {
-      max-width: 600px;
-      max-height: 60vh;
-      margin: 0 auto;
-      overflow: hidden;
+      margin-right: 0;
+      max-width: 550px;
     }
   }
+}
+
+.blog {
 
   &__pic {
     margin: 0 auto;
@@ -82,18 +147,8 @@
     }
   }
 
-  &__subtitle {
-    margin-bottom: 10px;
-    font-size: 18px;
-    font-weight: 500;
-
-    @include bp($md) {
-      text-align: center;
-    }
-  }
-
   &__comment {
-    color: #565872;
+    color: $comment;
 
     @include bp($md) {
       margin-bottom: 0;
@@ -104,13 +159,14 @@
     display: flex;
     justify-content: space-between;
     padding: 27px 20px 25px 0;
-    border-top: 2px solid #ebebeb;
-    border-bottom: 2px solid #ebebeb;
+    border-top: 2px solid $eb;
+    border-bottom: 2px solid $eb;
     margin-bottom: 50px;
 
     @include bp($md) {
       margin-bottom: 10px;
     }
+
     @include bp($sm) {
       flex-direction: column;
       align-items: center;
@@ -119,8 +175,9 @@
 
   &__wrap {
     display: flex;
+
     @include bp($sm) {
-margin-bottom: 20px;
+      margin-bottom: 20px;
     }
   }
 
@@ -140,7 +197,7 @@ margin-bottom: 20px;
   &__creator-name {
     font-size: 18px;
     font-weight: 500;
-    color: #333333;
+    color: $gray;
     transition: color 0.2s;
 
     &:hover {
@@ -148,7 +205,7 @@ margin-bottom: 20px;
     }
 
     &:active {
-      color: #000;
+      color: $black;
     }
 
     &:focus {
@@ -174,7 +231,7 @@ margin-bottom: 20px;
   }
 
   &__social-link {
-    color: #a1a1a1;
+    color: $a1;
     transition: color 0.2s;
 
     &:hover {
@@ -182,7 +239,7 @@ margin-bottom: 20px;
     }
 
     &:active {
-      color: #000;
+      color: $black;
     }
 
     &:focus {
@@ -201,7 +258,7 @@ margin-bottom: 20px;
   &__icon-filters {
     width: 15px;
     height: 15px;
-    fill: #a1a1a1;
+    fill: $a1;
     transition: fill 0.2s;
 
     &:hover {
@@ -209,7 +266,7 @@ margin-bottom: 20px;
     }
 
     &:active {
-      fill: #000;
+      fill: $black;
     }
 
     &:focus {
@@ -219,4 +276,3 @@ margin-bottom: 20px;
     }
   }
 }
-

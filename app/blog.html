@@ -105,32 +105,32 @@
     </div>
   </div>
 
-
   <div class="container">
     <div class="container__aside">
       <ul class="shop__sidebar filters aside-order">
-
-  <li class="filters__item filters-wrapper">
-    <div class="shop__wrap">
-      <button class="shop__button" type="button">X</button>
-    </div>
-  </li>
-
-  <li class="filters__item filters-search">
-    <form class="form-search" action="#">
-      <input class="form-search__input" type="text">
-      <button class="form-search__btn" type="submit">
-        <svg class="form-search__icon">
-          <use xlink:href="images/sprite.svg#blog-search"></use>
-        </svg>
-      </button>
-    </form>
-
-    <button class="form-search__close" type="button">X</button>
-  </li>
-
   <li class="filters__item filters-category">
-    <aside class="aside">
+    <aside class="filters__aside aside">
+      <div class="filters__item filters-wrapper">
+        <div class="shop__wrap">
+          <button class="shop__button" type="button">X</button>
+        </div>
+      </div>
+
+      <div class="filters__item filters-search">
+        <form class="form-search" action="#">
+          <input class="form-search__input" type="text">
+          <button class="form-search__btn" type="submit">
+            <svg class="form-search__icon">
+              <use xlink:href="images/sprite.svg#blog-search"></use>
+            </svg>
+          </button>
+        </form>
+        <button class="form-search__close" type="button">X</button>
+      </div>
+    </aside>
+  </li>
+  <li class="filters__item filters-category">
+    <aside class="filters__aside aside">
       <h2 class="filters__title js-category ">category</h2>
       <form class="filters-category__form hidden-filter" action="#">
         <label class="filters-category__label check-label">
@@ -169,7 +169,7 @@
   </li>
 
   <li class="filters__item filters-recent">
-    <aside class="aside">
+    <aside class="filters__aside aside">
       <h2 class="filters__title filters-recent__title js-recent">recent posts</h2>
       <ul class="filters-recent__items hidden-filter">
 
@@ -219,11 +219,12 @@
       </ul>
     </aside>
   </li>
-</ul>
 
+</ul>
+<!-- shop__btn-filters -->
       <main class="main">
         <section class="blog">
-          <button class="shop__btn-filters blog__filter">
+          <button class=" prod-filter blog__filter">
             <svg class="shop__icon-filters">
               <use xlink:href="images/sprite.svg#filter-icon"></use>
             </svg>
@@ -231,19 +232,20 @@
           <h1 class="blog sr-only">this is blog</h1>
           <ul class="blog__list">
             <li class="blog__item">
+
               <article class="blog__article">
                 <div class="blog__images">
                   <img class="blog__img" src="./images/blog/1.jpg" alt="blog images">
-                  <div class="blog__descr news-card__bottom">
-                    <time class="news-card__date blog__txt" datetime="2020-01-28">28 january, 2020</time>
-                    <a class="news-card__user blog__txt" href="#">by admin</a>
+                  <div class="blog__descr img-bottom">
+                    <time class="blog__txt img-date" datetime="2020-01-28">28 january, 2020</time>
+                    <a class="blog__txt img-user" href="#">by admin</a>
                   </div>
                 </div>
                 <h2 class="blog__title">Fonsectetur adipisicing  eiusmod </h2>
                 <div class="blog__text">
                   <p>consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut alLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna </p>
                 </div>
-                <a class="link-more view-more__link blog__link" href="#">
+                <a class="link-more btn-link blog__link" href="#">
                   View More
                 </a>
               </article>
@@ -254,16 +256,16 @@
               <article class="blog__article">
                 <div class="blog__images">
                   <img class="blog__img" src="./images/blog/2.jpg" alt="blog images">
-                  <div class="blog__descr news-card__bottom">
-                    <time class="news-card__date blog__txt" datetime="2020-01-28">28 january, 2020</time>
-                    <a class="news-card__user blog__txt" href="#">by admin</a>
+                  <div class="blog__descr img-bottom">
+                    <time class="blog__txt img-date" datetime="2020-01-28">28 january, 2020</time>
+                    <a class="blog__txt img-user" href="#">by admin</a>
                   </div>
                 </div>
                 <h2 class="blog__title">Fonsectetur adipisicing elit, </h2>
                 <div class="blog__text">
                   <p>consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut alLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna </p>
                 </div>
-                <a class="blog__link link-more view-more__link" href="#">
+                <a class="blog__link link-more btn-link" href="#">
                   View More
                 </a>
               </article>
@@ -274,16 +276,16 @@
               <article class="blog__article">
                 <div class="blog__images">
                   <img class="blog__img" src="./images/blog/3.jpg" alt="blog images">
-                  <div class="blog__descr news-card__bottom">
-                    <time class="news-card__date blog__txt" datetime="2020-01-28">28 january, 2020</time>
-                    <a class="news-card__user blog__txt" href="#">by admin</a>
+                  <div class="blog__descr img-bottom">
+                    <time class="blog__txt img-date" datetime="2020-01-28">28 january, 2020</time>
+                    <a class="blog__txt img-user" href="#">by admin</a>
                   </div>
                 </div>
                 <h2 class="blog__title">Fsectetur adipisicing tempor incididunt  </h2>
                 <div class="blog__text">
                   <p>consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut alLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna </p>
                 </div>
-                <a class="blog__link link-more view-more__link" href="#">
+                <a class="blog__link link-more btn-link" href="#">
                   View More
                 </a>
               </article>
@@ -294,16 +296,16 @@
               <article class="blog__article">
                 <div class="blog__images">
                   <img class="blog__img" src="./images/blog/4.jpg" alt="blog images">
-                  <div class="blog__descr news-card__bottom">
-                    <time class="news-card__date blog__txt" datetime="2020-01-28">28 january, 2020</time>
-                    <a class="news-card__user blog__txt" href="#">by admin</a>
+                  <div class="blog__descr img-bottom">
+                    <time class="blog__txt img-date" datetime="2020-01-28">28 january, 2020</time>
+                    <a class="blog__txt img-user" href="#">by admin</a>
                   </div>
                 </div>
                 <h2 class="blog__title">vonsectetur adipisicing elit</h2>
                 <div class="blog__text">
                   <p>consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut alLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna </p>
                 </div>
-                <a class="blog__link link-more view-more__link" href="#">
+                <a class="blog__link link-more btn-link" href="#">
                   View More
                 </a>
               </article>
@@ -317,7 +319,7 @@
     <div class="pagination">
       <ul class="pagination__list pagination__list--list blog__num">
         <li class="pagination__item">
-          <a class="pagination__btn pagination__btn--active" href="#">1</a>
+          <span class="pagination__btn pagination__btn--active">1</span>
         </li>
         <li class="pagination__item">
           <a class="pagination__btn" href="#">2</a>

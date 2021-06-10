@@ -193,48 +193,4 @@
       margin-bottom: 20px;
     }
   }
-
-  // .view-more__link
-
-  &__link {
-    background-color: transparent;
-    border: 1px solid $subtitle;
-    border-radius: 5px;
-    margin-bottom: 85px;
-    padding: 20px 90px 20px 25px;
-    transition: background-color 0.3s, border-color 0.3s;
-
-    @include bp($xl) {
-      margin-bottom: 45px;
-    }
-
-    @include bp($lg) {
-      margin-bottom: 20px;
-      padding: 10px 60px 10px 10px;
-    }
-
-    @include bp($sm) {
-      margin-bottom: 15px;
-      padding: 10px 45px 10px 10px;
-    }
-
-    &:after {
-      background-image: url(../images/icon/bg-arrow2-svg.svg);
-    }
-
-    &:hover {
-      background-color: $slider-btn;
-    }
-
-    &:active {
-      // background-color: $icon-head;
-      background-color: #000;
-      color: $white;
-      border-color: transparent;
-    }
-
-    &:focus {
-      outline-color: $subtitle;
-    }
-  }
 }

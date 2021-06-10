@@ -92,6 +92,7 @@
   }
 
   &__date {
+    font-size: 14px;
     color: #e0e0e0;
   }
 
@@ -233,7 +234,7 @@
     background-repeat: no-repeat;
     background-position-x: 98%;
     background-position-y: 20%;
-    border-color: #e5e5e5;
+    border: 1px solid #e5e5e5;
 
     @include bp($sm) {
       margin-bottom: 20px;

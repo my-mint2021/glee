@@ -373,6 +373,7 @@ img {
     &--active {
       color: #fff;
       background-color: $icon-burger;
+      cursor: default;
 
       &:hover {
         background-color: $icon-burger;
@@ -411,4 +412,120 @@ img {
 
 .check-input:checked+.check-div {
   background-color: hsla(201, 25%, 71%, 0.205);
+}
+
+
+.prod-filter {
+  background-color: transparent;
+  display: none;
+  cursor: pointer;
+  border: none;
+
+  @include bp($lg) {
+    display: block;
+  }
+}
+
+.img-bottom {
+  margin-top: auto;
+  border-top: 1px solid#e0e0e0;
+  display: flex;
+  padding-top: 8px;
+  font-family: $rubik;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.img-date,
+.img-user {
+  @include line-clamp(1);
+  position: relative;
+  padding-left: 25px;
+  margin-right: 8px;
+  overflow-wrap: break-word;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+  }
+}
+.img-date{
+  flex: 0 0 auto;
+
+    &::before {
+      background-image: url('../images/icon/calendar.svg');
+    }
+}
+
+.img-user{
+  padding-bottom: 5px;
+    transition: color 0.2s ease-in;
+
+    &:hover {
+      color: $icon-burger;
+    }
+
+    &::before {
+      background-image: url('../images/icon/user.svg');
+    }
+    &:focus {
+      outline: transparent;
+      border: 2px solid $icon-head;
+      border-radius: 5px;
+    }
+}
+
+.prod__icon-filters{
+  position: relative;
+  width: 27px;
+  height: 27px;
+  fill: $icon-burger;
+}
+
+.btn-link{
+  
+  background-color: transparent;
+  border: 1px solid $subtitle;
+  border-radius: 5px;
+  margin-bottom: 85px;
+  padding: 20px 90px 20px 25px;
+  transition: background-color 0.3s, border-color 0.3s;
+
+  @include bp($xl) {
+    margin-bottom: 45px;
+  }
+
+  @include bp($lg) {
+    margin-bottom: 20px;
+    padding: 10px 60px 10px 10px;
+  }
+
+  @include bp($sm) {
+    margin-bottom: 15px;
+    padding: 10px 45px 10px 10px;
+  }
+
+  &:after {
+    background-image: url(../images/icon/bg-arrow2-svg.svg);
+  }
+
+  &:hover {
+    background-color: $slider-btn;
+  }
+
+  &:active {
+    // background-color: $icon-head;
+    background-color: #000;
+    color: $white;
+    border-color: transparent;
+  }
+
+  &:focus {
+    outline-color: $subtitle;
+  }
 }

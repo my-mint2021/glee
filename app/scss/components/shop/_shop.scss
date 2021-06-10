@@ -111,7 +111,8 @@
   &__button {
     width: 25px;
     height: 25px;
-
+    border: none;
+    font-size: 25px;
 
     @include bp($lg) {
       display: block;
