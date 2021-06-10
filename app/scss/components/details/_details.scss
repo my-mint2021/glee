@@ -1,9 +1,16 @@
 .details {
-  padding: 150px 0 60px;
+  // padding: 150px 0 60px;
+  padding-top: 25px 0 60px;
+  font-family: $rubik;
+
+  &__star {
+    margin-bottom: 32px;
+  }
 }
 
 .details-item {
-
+  color: #333;
+  margin-bottom: 80px;
   // .details-item__inner
 
   &__inner {
@@ -14,26 +21,59 @@
 
   &__slide {
     display: flex;
-    margin-right: 70px;
+    margin-right: 64px;
+    // margin-top: -55px;
   }
 
   // .details-item__content
 
   &__content {
+    padding: 25px 10px 25px 0;
     // float: left;
   }
 
   &__title {
     font-size: 40px;
+    font-weight: 400;
+    color: #333;
+    margin-bottom: 15px;
   }
 
   &__cost {
-    font-size: 50px;
+    font-size: 30px;
+    margin-bottom: 25px;
   }
 
   &__descr {
-    font-size: 30px;
+    margin-bottom: 25px;
+    font-size: 16px;
+    line-height: 1.9;
+    color: $slider-title;
   }
+
+  &__wrap {
+    margin-bottom: 55px;
+  }
+
+  &__counter {}
+
+  &__link {
+    margin-left: 13px;
+    padding: 16px 55px;
+    border-radius: 5px;
+    font-size: 15px;
+    text-transform: uppercase;
+  }
+
+  &__item {
+    font-size: 16px;
+    color: $slider-title;
+
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+  }
+
 }
 
 .details-slide {
@@ -42,7 +82,7 @@
 
   &__small {
     width: 140px;
-    margin-right: 30px;
+    margin-right: 23px;
   }
 
   // .details-slide__small-item
@@ -54,6 +94,9 @@
     margin-bottom: 25px;
     overflow: hidden;
     cursor: pointer;
+    display: flex !important; 
+    justify-content: center;
+    align-items: center;
 
     // не смог прописать  отступ вниз для не работает:not(:last-child)
 
@@ -62,28 +105,35 @@
   // .details-slide__img
 
   &__small-img {
-    width: 140px;
-    height: 157px;
-    object-fit: cover;
+ 
+    // width: 140px;
+    // height: 157px;
+    // margin: 0 auto;
+    object-fit: contain;
   }
 
   // .details-slide__big
 
   &__big {
-    width: 390px;
+    max-width: 390px;
+    height: 530px;
+    padding: 50px 0;
+    width: 100%;
+    border: 1px solid #000;
     // width: 100%;
   }
 
   // .details-slide__big-item
 
   &__big-item {
-    border: 1px solid #000;
+    // border: 1px solid #000;
   }
 
   &__big-img {
-    width: 390px;
-    height: 530px;
-    object-fit: cover;
+    margin: 0 auto;
+    // width: 390px;
+    // height: 530px;
+    // object-fit: cover;
   }
 }
 
@@ -106,25 +156,225 @@
   &__descr {}
 }
 
-.jq-number__field {
-  width: 50px;
-  border: 1px solid $icon-burger;
-  border-bottom-color: $icon-burger;
-  border-radius: 0;
-  box-shadow: none;
+// -----------------star----------------
+.jq-ry-container>.jq-ry-group-wrapper>.jq-ry-group>svg {
+  display: inline-block;
+  margin-right: 15px;
+}
 
-  input {
-    text-align: center;
-    padding: 17px 9px;
-    font-family: $rubik;
-    font-size: 15px;
-    color: #333;
+.details__star.jq-ry-container {
+  width: 164px !important;
+}
+
+// --------------------counter-------------------
+.jq-number {
+  display: inline-block;
+  position: relative;
+}
+
+.jq-number__field input {
+  width: 150px;
+  padding: 16px 9px;
+  border: 1px solid $icon-burger;
+  outline: transparent;
+  background: transparent;
+  font-family: $rubik;
+  font-weight: 400;
+  font-size: 15px;
+  color: #333;
+  text-align: center;
+}
+
+.jq-number__spin {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  width: 50px;
+  height: 50px;
+  border: 1px solid $icon-burger;
+  border-top: none;
+  border-bottom: none;
+  border-radius: 0;
+  cursor: pointer;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: $icon-head;
+  }
+
+  &:active {
+    background-color: $icon-burger;
   }
 }
 
+.jq-number__spin.minus {
+  left: 0;
+  top: 50%;
+}
 
-.star {}
+.jq-number__spin::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 1px;
+  background-color: #333;
+  border: none;
+}
 
-.details-tabs {}
+.jq-number__spin.minus:after {
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+}
 
-.details-reviews {}
+.jq-number__spin.plus::before {
+  position: absolute;
+  content: '';
+  top: 50%;
+  right: 22px;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 10px;
+  background-color: #333;
+  border: none;
+}
+
+
+.details-tabs {
+  margin-bottom: 110px;
+
+  // .details-tabs__top
+
+  &__top {
+    display: flex;
+    // justify-content: center;
+    // margin-bottom: 35px;
+    margin-bottom: 30px;
+    margin-left: 166px;
+  }
+
+  // .details-tabs__item
+
+  &__item {
+    max-width: 240px;
+    width: 100%;
+
+    &:not(:last-child) {
+      margin-right: 14px;
+    }
+  }
+
+  // .details-tabs__link
+
+  &__link {
+    display: inline-block;
+    padding: 17px 15px;
+    width: 100%;
+    border-radius: 5px;
+    background-color: #edf1f4;
+    color: $slider-title;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 0;
+
+    &--active {
+      background-color: $icon-burger;
+      color: $white;
+    }
+  }
+
+  // .details-tabs__content
+
+  &__content {}
+
+  // .details-tabs__subcontent
+
+  &__descr {
+    display: none;
+
+    &--active {
+      display: block;
+      line-height: 1.9;
+      color: $slider-title;
+    }
+  }
+}
+
+.details-related {}
+
+.related {
+
+  // .related__inner
+
+  &__inner {}
+
+  // .related__title
+
+  &__title {
+    text-align: left;
+    margin-bottom: 45px;
+  }
+
+  // .related__slider
+
+  &__slider {
+    padding: 20px 0;
+    // margin-top: -50px;
+    margin: 0;
+    margin-bottom: 90px;
+    // margin-left: 30px;
+    // margin-right: 30px;
+
+    // margin:0 -30px
+    // max-width: 1170px;
+    // margin: 0 auto;
+  }
+
+  &__item{
+    // margin-left: -30px;
+    // margin-right: -30px;
+    // margin-right: 40px;
+  }
+}
+
+.slick-list {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  margin: 0;
+  // padding-top: 60px;
+}
+
+.slick-prev.slick-arrow,
+.slick-next.slick-arrow {
+  position: absolute;
+  z-index: 2;
+  top: -90px;
+  font-size: 0;
+  width: 50px;
+  height: 50px;
+  border: 2px solid $icon-burger;
+  border-radius: 5px;
+  background-color: transparent;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.slick-prev.slick-arrow {
+  
+  border-color: #edf1f4;
+  right: 70px;
+  background-image: url(../images/icon/details-left.svg);
+}
+
+.slick-next.slick-arrow {
+  right: 0;
+  background-image: url(../images/icon/details-right.svg);
+}
+
+.title {}

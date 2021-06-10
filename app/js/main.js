@@ -1,5 +1,54 @@
 $(function () {
 
+
+  $('.related__slider').slick({
+    dots: false,
+    arrows: true,
+    infinite: true,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+      // You can unslick at a given breakpoint now by adding:
+      // settings: "unslick"
+      // instead of a settings object
+    ]
+  });
+
+
+// табы страница товара
+  $('.details-tabs__link').on("click", function (e) {
+    e.preventDefault();
+    $('.details-tabs__link').removeClass('details-tabs__link--active');
+    $(this).addClass('details-tabs__link--active');
+    
+    $('.details-tabs__descr').removeClass('details-tabs__descr--active');
+    $($(this).attr('href')).addClass('details-tabs__descr--active');
+    
+  });
+
 $('.details-slide__small').slick({
   asNavFor: '.details-slide__big',
   focusOnSelect: true,
@@ -17,7 +66,7 @@ $('.details-slide__big').slick({
 
 
 
-$('.shop__select, .abc').styler();
+$('.shop__select, .details-item__counter').styler();
 
 // номера страниц снизу
   $('.pagination__btn').on("click", function () {
@@ -153,6 +202,12 @@ filtersTitle.forEach(item =>{
     readOnly: true,
   });
 
+  $(".details__star").rateYo({
+    starWidth: "20px",
+    normalFill: "#d6d6d6",
+    ratedFill: "#ffcc00",
+    readOnly: true,
+  });
 
 
   var mixer1 = mixitup(mixEl1, config);
