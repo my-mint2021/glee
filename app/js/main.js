@@ -12,16 +12,15 @@ $(function () {
         breakpoint: 1024,
         settings: {
           slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesToScroll: 1,
           infinite: true,
-          dots: true
         }
       },
       {
-        breakpoint: 600,
+        breakpoint: 769,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 2
+          slidesToScroll: 1
         }
       },
       {
@@ -56,6 +55,14 @@ $('.details-slide__small').slick({
   slidesToScroll: 1,
   vertical: true,
   draggable: false,
+  responsive: [
+    {
+      breakpoint: 568,
+      settings: {
+        vertical: false
+      }
+    }]
+
 });
 
 $('.details-slide__big').slick({

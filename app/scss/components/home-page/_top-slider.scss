@@ -122,23 +122,23 @@
   }
 
   &__link {
-    margin-bottom: 70px;
-    @include btn;
-    font-family: $rubik;
-    font-weight: 500;
+    // margin-bottom: 70px;
+    // @include btn;
+    // font-family: $rubik;
+    // font-weight: 500;
 
-    @include bp($xl) {
-      margin-bottom: 0;
-    }
+    // @include bp($xl) {
+    //   margin-bottom: 0;
+    // }
 
-    @include bp($md) {
-      padding: 10px 50px 10px 10px;
-      margin: 0 auto;
-    }
+    // @include bp($md) {
+    //   padding: 10px 50px 10px 10px;
+    //   margin: 0 auto;
+    // }
 
-    @include bp($sm) {
-      margin-bottom: 20px;
-    }
+    // @include bp($sm) {
+    //   margin-bottom: 20px;
+    // }
   }
 
   &__images {

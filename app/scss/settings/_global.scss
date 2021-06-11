@@ -454,41 +454,43 @@ img {
     background-repeat: no-repeat;
   }
 }
-.img-date{
+
+.img-date {
   flex: 0 0 auto;
 
-    &::before {
-      background-image: url('../images/icon/calendar.svg');
-    }
+  &::before {
+    background-image: url('../images/icon/calendar.svg');
+  }
 }
 
-.img-user{
+.img-user {
   padding-bottom: 5px;
-    transition: color 0.2s ease-in;
+  transition: color 0.2s ease-in;
 
-    &:hover {
-      color: $icon-burger;
-    }
+  &:hover {
+    color: $icon-burger;
+  }
 
-    &::before {
-      background-image: url('../images/icon/user.svg');
-    }
-    &:focus {
-      outline: transparent;
-      border: 2px solid $icon-head;
-      border-radius: 5px;
-    }
+  &::before {
+    background-image: url('../images/icon/user.svg');
+  }
+
+  &:focus {
+    outline: transparent;
+    border: 2px solid $icon-head;
+    border-radius: 5px;
+  }
 }
 
-.prod__icon-filters{
+.prod__icon-filters {
   position: relative;
   width: 27px;
   height: 27px;
   fill: $icon-burger;
 }
 
-.btn-link{
-  
+.btn-link {
+
   background-color: transparent;
   border: 1px solid $subtitle;
   border-radius: 5px;
@@ -509,7 +511,7 @@ img {
     margin-bottom: 15px;
     padding: 10px 45px 10px 10px;
   }
-  
+
 
   &:after {
     background-image: url(../images/icon/bg-arrow2-svg.svg);
@@ -528,5 +530,25 @@ img {
 
   &:focus {
     outline-color: $subtitle;
+  }
+}
+
+.button-link {
+  margin-bottom: 70px;
+  @include btn;
+  font-family: $rubik;
+  font-weight: 500;
+
+  @include bp($xl) {
+    margin-bottom: 0;
+  }
+
+  @include bp($md) {
+    padding: 10px 50px 10px 10px;
+    margin: 0 auto;
+  }
+
+  @include bp($sm) {
+    margin-bottom: 20px;
   }
 }

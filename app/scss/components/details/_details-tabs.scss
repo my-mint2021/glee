@@ -1,0 +1,101 @@
+.details-tabs {
+  margin-bottom: 110px;
+
+  @include bp($md) {
+    margin-bottom: 30px;
+  }
+
+  @media screen and (max-width: 992px) and (orientation: landscape) {
+    margin-bottom: 30px;
+  }
+
+  // .details-tabs__top
+
+  &__top {
+    display: flex;
+    margin-bottom: 30px;
+    margin-left: 166px;
+
+    @include bp($xl) {
+      margin-left: 0;
+      justify-content: center;
+    }
+
+    @include bp($sm) {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @media screen and (max-width: 568px) and (orientation: landscape) {
+      flex-direction: row;
+      margin-bottom: 10px;
+    }
+  }
+
+  // .details-tabs__item
+
+  &__item {
+    max-width: 240px;
+    width: 100%;
+
+    @include bp($sm) {
+      width: 60%;
+    }
+
+    &:not(:last-child) {
+      margin-right: 14px;
+
+      @include bp($sm) {
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
+
+      @media screen and (max-width: 568px) and (orientation: landscape) {
+        margin-right: 10px;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  // .details-tabs__link
+
+  &__link {
+    display: inline-block;
+    padding: 17px 15px;
+    width: 100%;
+    border-radius: 5px;
+    background-color: $icon;
+    color: $slider-title;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 0;
+
+    &--active {
+      background-color: $icon-burger;
+      color: $white;
+    }
+
+    @include bp($md) {
+      padding: 13px 5px;
+      font-size: 15px;
+    }
+
+    @include bp($md) {
+      padding: 10px 2px;
+      font-size: 12px;
+      @include line-clamp(1);
+    }
+  }
+
+  // .details-tabs__subcontent
+
+  &__descr {
+    display: none;
+
+    &--active {
+      display: block;
+      line-height: 1.9;
+      color: $slider-title;
+    }
+  }
+}

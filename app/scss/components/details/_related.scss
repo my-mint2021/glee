@@ -1,0 +1,35 @@
+.related {
+
+  // .related__title
+
+  &__title {
+    text-align: left;
+    margin-bottom: 45px;
+
+    @media screen and (max-width: 992px) and (orientation: landscape) {
+      margin-bottom: 0;
+    }
+  }
+
+  // .related__slider
+
+  &__slider {
+    padding: 20px 0;
+    margin: 0;
+    margin-bottom: 90px;
+
+    @include bp($md) {
+      margin-bottom: 20px;
+    }
+
+    @include bp($sm) {
+      padding: 50px 0 30px;
+      border-bottom: 1px solid $eb;
+    }
+
+    @media screen and (max-width: 992px) and (orientation: landscape) {
+      padding: 0;
+      margin-bottom: 20px;
+    }
+  }
+}

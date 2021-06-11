@@ -1,0 +1,94 @@
+.details-slide {
+
+  // .details-slide__small
+
+  &__small {
+    width: 140px;
+    margin-right: 23px;
+
+    @include bp($sm) {
+      max-width: 295px;
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+
+    @media screen and (max-width: 992px) and (orientation: landscape) {
+      max-width: 110px;
+    }
+  }
+
+  // .details-slide__small-item
+
+  &__small-item {
+    border: 1px solid #000;
+    width: 140px;
+    height: 157px;
+    margin-bottom: 25px;
+    overflow: hidden;
+    cursor: pointer;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+
+    @include bp($sm) {
+      width: 90px !important;
+      height: 90px;
+      margin-bottom: 10px;
+      margin-right: 25px;
+    }
+
+    @media screen and (max-width: 992px) and (orientation: landscape) {
+      max-height: 90px;
+      margin-bottom: 10px;
+    }
+
+    // не смог прописать  отступ вниз для не работает:not(:last-child)
+  }
+
+  // .details-slide__img
+
+  &__small-img {
+    object-fit: contain;
+  }
+
+  // .details-slide__big
+
+  &__big {
+    max-width: 390px;
+    height: 530px;
+    padding: 50px 0;
+    width: 100%;
+    border: 1px solid $black;
+
+    @include bp($sm) {
+      max-width: 270px;
+      height: 400px;
+      margin: 0 auto;
+      text-align: center;
+      overflow: hidden;
+      padding: 10px;
+    }
+
+    @media screen and (max-width: 992px) and (orientation: landscape) {
+      height: 295px;
+      padding: 10px;
+    }
+  }
+
+  // .details-slide__big-item
+
+  &__big-item {
+    @media screen and (max-width: 992px) and (orientation: landscape) {
+      width: 95%;
+    }
+  }
+
+  &__big-img {
+    margin: 0 auto;
+
+    @media screen and (max-width: 992px) and (orientation: landscape) {
+      max-height: 260px;
+    }
+  }
+}
