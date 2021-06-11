@@ -1,0 +1,66 @@
+.terms {
+  font-family: $rubik;
+  line-height: 1.9;
+  margin-bottom: 100px;
+
+  // .terms__inner
+
+  &__breadcrumbs{
+    margin-bottom: 110px;
+  }
+  &__inner {}
+
+  // .terms__content
+
+  &__content {
+    margin-bottom: 50px;
+  }
+
+  // .terms__title
+
+  &__title {
+    color: $slider-title;
+    margin-bottom: 13px;
+    font-weight: 500;
+  }
+
+  // .terms__list
+
+  &__list {
+    padding-left: 5px;
+    list-style-type: none;
+    /* Убираем исходные маркеры */
+    counter-reset: item;
+    /* Обнуляем счетчик списка */
+  }
+
+  // .terms__item
+
+  &__item {
+    position: relative;
+    &::before{
+      position: absolute;
+      left: -20px;
+    }
+    padding-left: 20px;
+    &:nth-child(-n+9)::before {
+      content: '0'counter(item);
+      counter-increment: item;
+      /* Задаём имя счетчика */
+    }
+
+    &:nth-child(n+10)::before {
+      content: counter(item);
+      counter-increment: item;
+      /* Задаём имя счетчика */
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  // .terms__text
+
+  &__text {}
+}
