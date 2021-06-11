@@ -1,8 +1,21 @@
 .modal {
+  color: $comments;
   position: relative;
   margin: 0 auto;
-  padding: 120px 0;
+  margin-bottom: 110px;
+  // padding: 120px 0;
   max-width: 470px;
+  @media screen and (max-width: 992px) and (orientation: landscape) {
+    margin-bottom: 30px;
+  }
+  @include bp($md){
+    padding: 50px 0;
+    margin-bottom: 0;
+  }
+  @include bp($sm){
+    padding: 30px 0;
+    max-width: 270px;
+  }
 
   &__label {
     margin-bottom: 10px;
@@ -27,10 +40,17 @@
 
   &__input {
     display: block;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     width: 100%;
     height: 60px;
-    border: 1px solid #f6f6f6;
+    border: 1px solid $f6;
+    @include bp($sm){
+      height: 45px;
+      margin-bottom: 15px;
+    }
+    @media screen and (max-width: 992px) and (orientation: landscape) {
+      margin-bottom: 15px;
+    }
   }
 
   &__btn,
@@ -48,17 +68,23 @@
 
   &__btn {
     display: block;
-    margin: 10px 0 30px;
-    padding: 20px 0;
+    margin-bottom: 30px;
+    padding: 19px 0;
     width: 100%;
     border: 2px solid transparent;
     cursor: pointer;
-    color: #fffefe;
+    font-family: $rubik;
+    font-weight: 500;
+    font-size: 18px;
+    color: $ff;
     background-color: $icon-burger;
+    @include bp($md){
+      padding: 15px 0;
+    }
 
     &:hover {
       color: $icon-burger;
-      background-color: #fffefe;
+      background-color: $ff;
       border-color: $icon-burger;
     }
   }
@@ -66,8 +92,12 @@
   &__wrap {
     display: flex;
     justify-content: space-between;
-    padding-bottom: 30px;
-    border-bottom: 1px solid #f6f6f6;
+    padding-bottom: 15px;
+    border-bottom: 1px solid $f6;
+    @include bp($md){
+    flex-direction: column;
+    align-items: center;
+    }
   }
 
   &__check-label,
@@ -76,6 +106,7 @@
     color: $subtitle;
     font-family: $rubik;
     font-weight: 400;
+    font-size: 14px;
   }
 
   // &__check-label,
@@ -120,6 +151,9 @@
 
   &__checkbox {
     opacity: 0;
+    @include bp($sm){
+     margin-bottom: 15px;
+    }
 
     &:hover+.modal__check-label::before {
       background-color: #a3bbc87a;
@@ -134,12 +168,15 @@
     display: block;
     padding: 30px 0 25px;
     text-align: center;
+    @include bp($sm){
+     padding: 15px 0;
+    }
   }
 
   &__link-create {
     display: block;
     width: 100%;
-    padding: 20px 0;
+    padding: 15px 0;
     text-align: center;
     font-family: $rubik;
     font-weight: 500;
@@ -148,7 +185,7 @@
     border: 1px solid $icon-burger;
 
     &:hover {
-      color: #fffefe;
+      color: $ff;
       background-color: $icon-burger;
       border-color: $icon-burger;
     }
