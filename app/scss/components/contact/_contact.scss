@@ -1,0 +1,163 @@
+.contact {
+  font-size: 16px;
+  font-family: $rubik;
+  // .contact__top
+
+  &__top {
+    text-align: center;
+  }
+
+  // .contact__subtext
+
+  &__subtext {
+    font-family: $poppins;
+    color: $icon-burger;
+    font-weight: 70;
+    margin-bottom: 10px;
+  }
+
+  // .contact__title
+
+  &__title {
+    font-family: $dmsans;
+    font-size: 35px;
+    font-weight: 700;
+    margin-bottom: 60px;
+    color: $comments;
+  }
+
+  // .contact__addr
+
+  &__addr {
+    margin-bottom: 100px;
+  }
+
+  // .contact__inner
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  // .contact__item
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 375px;
+    width: 100%;
+    padding: 70px 50px;
+    background-color: $fb;
+    position: relative;
+    border: 2px solid transparent;
+    transition: border-color 0.8s;
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+
+    &:hover {
+      border-color: $icon-burger;
+
+      .contact__item-link {
+        background-color: $icon-burger;
+      }
+
+      .contact__icon {
+        fill: $white;
+      }
+    }
+  }
+
+  &__item-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60px;
+    width: 70px;
+    height: 70px;
+    border-radius: 5px;
+    border: none;
+    background-color: $white;
+    transition: background-color 0.53s;
+  }
+
+  &__icon {
+    fill: $icon-burger;
+    transition: fill 0.5s;
+
+    &--address {
+      width: 30px;
+      height: 45px;
+    }
+
+    &--email {
+      width: 40px;
+      height: 35px;
+    }
+
+    &--phone {
+      width: 40px;
+      height: 47px;
+    }
+  }
+
+  // .contact__subtitle
+
+  &__subtitle {
+    font-family: $dmsans;
+    font-size: 20px;
+    font-weight: 700;
+    color: $lightgray;
+    margin-bottom: 25px;
+  }
+
+  // .contact__text
+
+  &__text {
+    color: #565872;
+
+    span {
+      display: block;
+      margin-bottom: 10px;
+    }
+  }
+
+  // .contact__link
+
+  &__link {
+    margin-bottom: 20px;
+    display: inline-block;
+    transition: color 0.2s;
+
+    &:hover {
+      color: $icon-head;
+    }
+
+    &:active {
+      color: $black;
+    }
+
+    &:focus {
+      outline: transparent;
+      border: 2px solid $icon-head;
+      border-radius: 5px;
+    }
+  }
+
+  &__btn{
+    border-radius: 5px;
+  }
+
+  &__maps{
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+#map {
+  width: 570px;
+  height: 330px;
+}

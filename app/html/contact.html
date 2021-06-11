@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+@include('./components/head.html')
+
+<body>
+  @include('./components/header.html')
+  <div class="breadcrumbs">
+    <div class="breadcrumbs__inner">
+      <h1 class="breadcrumbs__title">Blog Details</h1>
+      <ul class="breadcrumbs__list">
+        <li class="breadcrumbs__item">
+          <a class="breadcrumbs__link" href="#">Home</a>
+        </li>
+        <li class="breadcrumbs__item">
+          <a class="breadcrumbs__link" href="#">Blog</a>
+        </li>
+        <li class="breadcrumbs__item">
+          <span class="breadcrumbs__span" href="#">Blog details</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
+  <main class="main">
+    <div class="container">
+      <section class="contact">
+        <div class="contact__top">
+          <p class="contact__subtext">Write Here</p>
+          <h2 class="contact__title">Get In Touch</h2>
+          <address class="contact__addr">
+
+            <ul class="contact__inner">
+              <li class="contact__item">
+                <a class="contact__item-link" href="#">
+                  <svg class="contact__icon contact__icon--address">
+                    <use xlink:href="images/sprite.svg#contact-addres"></use>
+                  </svg>
+                </a>
+                <p class="contact__subtitle">Address</p>
+                <div class="contact__text">
+                  <span>
+                    2416 Mapleview Drive
+                  </span>
+                  <span>
+                    Tampa, FL 33634
+                  </span>
+                </div>
+              </li>
+
+              <li class="contact__item">
+                <a class="contact__item-link" href="#">
+                  <svg class="contact__icon contact__icon--email">
+                    <use xlink:href="images/sprite.svg#contact-email"></use>
+                  </svg>
+                </a>
+                <p class="contact__subtitle">Our Email</p>
+                <div class="contact__text">
+                  Main Email : <a href="mailto:contact@website.com" class="contact__link">contact@website.com</a>
+                  Inquiries : <a href="mailto:Info@mail.com" class="contact__link">Info@mail.com</a>
+                </div>
+              </li>
+
+              <li class="contact__item">
+                <a class="contact__item-link" href="#">
+                  <svg class="contact__icon contact__icon--phone">
+                    <use xlink:href="images/sprite.svg#contact-phone"></use>
+                  </svg>
+                </a>
+                <p class="contact__subtitle">Our Phone</p>
+                <div class="contact__text">
+                  Office Telephone : <a href="tel:+0029129102320" class="contact__link"> 0029129102320</a>
+                  Mobile : <a href="tel:+000232439493" class="contact__link"> 000 2324 39493</a>
+                </div>
+              </li>
+            </ul>
+          </address>
+        </div>
+
+
+        <div class="contact__maps">
+
+          <form class="comments__form contact-form" action="#">
+            <ul class="contact-form__information">
+              <li class="contact-form__item">
+                <label class="contact-form__label contact-form__label--name">
+                  <input class="contact-form__input" type="text" placeholder="Name">
+                </label>
+              </li>
+
+              <li class="contact-form__item">
+                <label class="contact-form__label contact-form__label--email">
+
+                  <input class="contact-form__input" type="text" placeholder="Email">
+                </label>
+              </li>
+            </ul>
+            <textarea class="contact-form__comment" placeholder="Comment"></textarea>
+            <button class="contact-form__btn button-link contact__btn" type="submit">post comment</button>
+          </form>
+
+          <div class="maps contact__map">
+            <div id="map"></div>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- @include('./components/blog/form-comments.html') -->
+
+    </div>
+  </main>
+
+  @include('./components/home-page/articles.html')
+  @include('./components/home-page/partners.html')
+  @include('./components/footer.html')
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap&libraries=&v=weekly" async></script>
+  <script>
+    let map;
+
+    function initMap() {
+      map = new google.maps.Map(document.getElementById("map"), {
+        center: {
+          lat: 45.0397162,
+          lng: 38.973249
+        },
+        zoom: 8,
+      });
+    }
+  </script>
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>

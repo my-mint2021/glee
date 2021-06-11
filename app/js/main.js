@@ -1,5 +1,7 @@
 $(function () {
 
+ 
+
 
   $('.related__slider').slick({
     dots: false,
