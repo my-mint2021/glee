@@ -108,16 +108,21 @@
 </div>
 
     <form class="modal" action="#">
-      <label class="modal__label" name="modal__label" required>
-        Username or email address *
-        <input class="modal__input" type="text">
-      </label>
+      <div class="modal__wrapper">
+        <span class="modal__descr">Username or email address *</span>
+        <label class="modal__label" name="modal__label" required>
+          <input class="modal__input" type="text">
+        </label>
 
-      <label class="modal__label" name="modal__label" required>
-        Password *
-        <input class="modal__input" type="password">
-      </label>
+        <span class="modal__descr">Password *</span>
+        <label class="modal__label" name="modal__label" required>
+          <input class="modal__input" type="password">
+        </label>
+      </div>
+
+
       <button class="modal__btn" type="submit">Login</button>
+
       <div class="modal__wrap">
         <input class="modal__checkbox" type="checkbox" name="checkbox" id="checkbox">
         <label class="modal__check-label" name="modal__label" for="checkbox">

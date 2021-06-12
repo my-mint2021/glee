@@ -1,20 +1,35 @@
 .modal {
   color: $comments;
+  font-family: $rubik;
   position: relative;
   margin: 0 auto;
   margin-bottom: 110px;
   // padding: 120px 0;
   max-width: 470px;
+
   @media screen and (max-width: 992px) and (orientation: landscape) {
     margin-bottom: 30px;
   }
-  @include bp($md){
-    padding: 50px 0;
-    margin-bottom: 0;
+
+  @include bp($xl) {
+    margin: 30px auto;
   }
-  @include bp($sm){
-    padding: 30px 0;
+
+
+  @include bp($sm) {
+
     max-width: 270px;
+  }
+
+  &__wrapper {
+    margin-bottom: 40px;
+
+    @include bp($sm) {
+      margin-bottom: 30px;
+    }
+    @media screen and (max-width: 992px) and (orientation: landscape) {
+      margin-bottom: 30px;
+    }
   }
 
   &__label {
@@ -23,6 +38,12 @@
     font-weight: 400;
     font-size: 14px;
     color: $subtitle;
+  }
+
+  &__descr {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 14px;
   }
 
   &__input,
@@ -40,15 +61,18 @@
 
   &__input {
     display: block;
-    margin-bottom: 40px;
+    margin-bottom: 25px;
     width: 100%;
     height: 60px;
     border: 1px solid $f6;
-    @include bp($sm){
+
+    @include bp($sm) {
       height: 45px;
       margin-bottom: 15px;
     }
+
     @media screen and (max-width: 992px) and (orientation: landscape) {
+      height: 45px;
       margin-bottom: 15px;
     }
   }
@@ -78,10 +102,13 @@
     font-size: 18px;
     color: $ff;
     background-color: $icon-burger;
-    @include bp($md){
+
+    @include bp($md) {
       padding: 15px 0;
     }
-
+    @media screen and (max-width: 992px) and (orientation: landscape) {
+     padding: 12px 0;
+    }
     &:hover {
       color: $icon-burger;
       background-color: $ff;
@@ -92,12 +119,23 @@
   &__wrap {
     display: flex;
     justify-content: space-between;
-    padding-bottom: 15px;
+    padding-bottom: 29px;
     border-bottom: 1px solid $f6;
-    @include bp($md){
-    flex-direction: column;
-    align-items: center;
+
+    @include bp($md) {
+      flex-direction: column;
+      align-items: center;
     }
+
+    @include bp($sm) {
+      padding-bottom: 0;
+      border: none;
+    }
+    @media screen and (max-width: 992px) and (orientation: landscape) {
+      padding-bottom: 15px;
+    }
+   
+
   }
 
   &__check-label,
@@ -128,7 +166,7 @@
     &::before {
       content: '';
       position: absolute;
-      top: 1px;
+      top: -2px;
       left: -25px;
       width: 20px;
       height: 20px;
@@ -140,7 +178,7 @@
     &::after {
       content: '';
       position: absolute;
-      top: 8px;
+      top: 5px;
       left: -18px;
       width: 6px;
       height: 6px;
@@ -151,8 +189,9 @@
 
   &__checkbox {
     opacity: 0;
-    @include bp($sm){
-     margin-bottom: 15px;
+
+    @include bp($sm) {
+      margin-bottom: 15px;
     }
 
     &:hover+.modal__check-label::before {
@@ -168,8 +207,12 @@
     display: block;
     padding: 30px 0 25px;
     text-align: center;
-    @include bp($sm){
-     padding: 15px 0;
+
+    @include bp($sm) {
+      padding: 15px 0;
+    }
+    @media screen and (max-width: 992px) and (orientation: landscape) {
+      padding: 15px 0;
     }
   }
 

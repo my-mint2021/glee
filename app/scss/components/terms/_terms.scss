@@ -1,8 +1,8 @@
 .terms {
+  margin-bottom: 100px;
   font-family: $rubik;
   line-height: 1.9;
   color: $slider-title;
-  margin-bottom: 100px;
 
   @include bp($md) {
     margin-bottom: 10px;
@@ -26,8 +26,6 @@
     }
   }
 
-  &__inner {}
-
   // .terms__content
 
   &__content {
@@ -46,7 +44,7 @@
 
   &__title {
 
-    margin-bottom: 13px;
+    margin-bottom: 12px;
     font-weight: 500;
 
     @include bp($sm) {
@@ -66,13 +64,12 @@
 
   &__item {
     position: relative;
+    padding-left: 33px;
 
     &::before {
       position: absolute;
       left: 0;
     }
-
-    padding-left: 33px;
 
     &:nth-child(-n+9)::before {
       content: '0'counter(item);
