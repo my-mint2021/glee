@@ -7,16 +7,13 @@
   @include('./components/header.html')
   <div class="breadcrumbs">
     <div class="breadcrumbs__inner">
-      <h1 class="breadcrumbs__title">Blog Details</h1>
+      <h1 class="breadcrumbs__title">Contact</h1>
       <ul class="breadcrumbs__list">
         <li class="breadcrumbs__item">
           <a class="breadcrumbs__link" href="#">Home</a>
         </li>
         <li class="breadcrumbs__item">
-          <a class="breadcrumbs__link" href="#">Blog</a>
-        </li>
-        <li class="breadcrumbs__item">
-          <span class="breadcrumbs__span" href="#">Blog details</span>
+          <span class="breadcrumbs__span" href="#">Contact</span>
         </li>
       </ul>
     </div>
@@ -24,8 +21,8 @@
 
 
   <main class="main">
-    <div class="container">
-      <section class="contact">
+    <section class="contact">
+      <div class="container">
         <div class="contact__top">
           <p class="contact__subtext">Write Here</p>
           <h2 class="contact__title">Get In Touch</h2>
@@ -57,8 +54,14 @@
                 </a>
                 <p class="contact__subtitle">Our Email</p>
                 <div class="contact__text">
-                  Main Email : <a href="mailto:contact@website.com" class="contact__link">contact@website.com</a>
-                  Inquiries : <a href="mailto:Info@mail.com" class="contact__link">Info@mail.com</a>
+                  <p class="contact__wrapper">
+                    <span>Main Email : </span><a class="contact__link"
+                      href="mailto:contact@website.com">contact@website.com</a>
+                  </p>
+                  <p class="contact__wrapper">
+                    <span>Inquiries : </span><a class="contact__link" href="mailto:Info@mail.com">info@mail.com</a>
+                  </p>
+
                 </div>
               </li>
 
@@ -70,8 +73,14 @@
                 </a>
                 <p class="contact__subtitle">Our Phone</p>
                 <div class="contact__text">
-                  Office Telephone : <a href="tel:+0029129102320" class="contact__link"> 0029129102320</a>
-                  Mobile : <a href="tel:+000232439493" class="contact__link"> 000 2324 39493</a>
+                  <p class="contact__wrapper">
+                    <span>Office Telephone : </span> <a href="tel:+0029129102320" class="contact__link">
+                      0029129102320</a>
+                  </p>
+                  <p class="contact__wrapper">
+                    <span>Mobile : </span> <a href="tel:+000232439493" class="contact__link"> 000 2324 39493</a>
+                  </p>
+
                 </div>
               </li>
             </ul>
@@ -81,22 +90,22 @@
 
         <div class="contact__maps">
 
-          <form class="comments__form contact-form" action="#">
-            <ul class="contact-form__information">
-              <li class="contact-form__item">
+          <form class="contact__form contact-form" action="#">
+            <ul class="contact-form__information contact__form-info">
+              <li class="contact-form__item contact__form-item">
                 <label class="contact-form__label contact-form__label--name">
                   <input class="contact-form__input" type="text" placeholder="Name">
                 </label>
               </li>
 
-              <li class="contact-form__item">
+              <li class="contact-form__item contact__form-item">
                 <label class="contact-form__label contact-form__label--email">
 
                   <input class="contact-form__input" type="text" placeholder="Email">
                 </label>
               </li>
             </ul>
-            <textarea class="contact-form__comment" placeholder="Comment"></textarea>
+            <textarea class="contact-form__comment contact__form-comment" placeholder="Message"></textarea>
             <button class="contact-form__btn button-link contact__btn" type="submit">post comment</button>
           </form>
 
@@ -105,15 +114,11 @@
           </div>
         </div>
 
-      </section>
-
-      <!-- @include('./components/blog/form-comments.html') -->
-
-    </div>
+      </div>
+    </section>
   </main>
 
   @include('./components/home-page/articles.html')
-  @include('./components/home-page/partners.html')
   @include('./components/footer.html')
 
   <script src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap&libraries=&v=weekly" async></script>

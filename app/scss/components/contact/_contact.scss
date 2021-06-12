@@ -13,7 +13,6 @@
     font-family: $poppins;
     color: $icon-burger;
     font-weight: 70;
-    margin-bottom: 10px;
   }
 
   // .contact__title
@@ -24,12 +23,32 @@
     font-weight: 700;
     margin-bottom: 60px;
     color: $comments;
+
+    @include bp($md) {
+      margin-bottom: 30px;
+    }
+
+    @include bp($sm) {
+      margin-bottom: 20px;
+    }
+
+    @media screen and (max-width: 992px) and (orientation: landscape) {
+      margin-bottom: 20px;
+    }
   }
 
   // .contact__addr
 
   &__addr {
-    margin-bottom: 100px;
+    margin-bottom: 119px;
+
+    @include bp($lg) {
+      margin-bottom: 50px;
+    }
+
+    @include bp($sm) {
+      margin-bottom: 20px;
+    }
   }
 
   // .contact__inner
@@ -37,6 +56,11 @@
   &__inner {
     display: flex;
     justify-content: space-between;
+
+    @include bp($lg) {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   // .contact__item
@@ -48,14 +72,27 @@
     flex-direction: column;
     max-width: 375px;
     width: 100%;
-    padding: 70px 50px;
+    padding: 74px 50px;
     background-color: $fb;
     position: relative;
     border: 2px solid transparent;
     transition: border-color 0.8s;
 
+    @include bp($sm) {
+      padding: 20px 5px;
+    }
+
+    @media screen and (max-width: 992px) and (orientation: landscape) {
+      padding: 20px 10px;
+    }
+
     &:not(:last-child) {
       margin-right: 30px;
+
+      @include bp($lg) {
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
     }
 
     &:hover {
@@ -75,16 +112,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 60px;
-    width: 70px;
-    height: 70px;
-    border-radius: 5px;
+    margin-bottom: 65px;
+    width: 75px;
+    height: 75px;
+    border-radius: 15px;
     border: none;
     background-color: $white;
     transition: background-color 0.53s;
   }
 
   &__icon {
+
     fill: $icon-burger;
     transition: fill 0.5s;
 
@@ -111,13 +149,18 @@
     font-size: 20px;
     font-weight: 700;
     color: $lightgray;
-    margin-bottom: 25px;
+    margin-bottom: 18px;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: center;
   }
 
   // .contact__text
 
   &__text {
-    color: #565872;
+    color: $comment;
 
     span {
       display: block;
@@ -128,7 +171,7 @@
   // .contact__link
 
   &__link {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     display: inline-block;
     transition: color 0.2s;
 
@@ -147,13 +190,91 @@
     }
   }
 
-  &__btn{
-    border-radius: 5px;
+  &__form-info {
+    @include bp($xl) {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
-  &__maps{
+  &__form-item {
+    @include bp($xl) {
+      max-width: 100%;
+    }
+
+    &:not(:last-child) {
+      @include bp($xl) {
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  &__btn {
+    border-radius: 5px;
+    padding: 15px 41px;
+
+    @include bp($md) {
+      display: block;
+    }
+  }
+
+  &__maps {
     display: flex;
-    justify-content: space-between;
+    margin-bottom: 65px;
+
+    @include bp($md) {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @include bp($sm) {
+      margin-bottom: 20px;
+    }
+
+    @media screen and (max-width: 992px) and (orientation: landscape) {
+      margin-bottom: 30px;
+    }
+
+  }
+
+  &__form {
+    max-width: 620px;
+    width: 100%;
+    margin-right: 50px;
+    margin-bottom: 0;
+
+    @include bp($md) {
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
+
+    @include bp($sm) {
+      margin-bottom: 15px;
+    }
+
+    &-comment {
+      height: 180px;
+      background-position-x: 95%;
+      background-position-y: 15%;
+      margin-bottom: 28px;
+    }
+
+    input,
+    textarea {
+      text-transform: uppercase;
+    }
+
+    textarea {
+      padding: 20px;
+    }
+  }
+
+  &__map {
+    max-width: 500px;
+    width: 100%;
+    height: 335px;
+    overflow: hidden;
   }
 }
 
